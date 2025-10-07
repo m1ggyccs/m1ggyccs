@@ -81,7 +81,3 @@ Leadership · Critical Thinking · Adaptability · Communication
 - 💼 [LinkedIn – @amigsdavid](https://www.linkedin.com/in/amigsdavid)  
 - 💻 [GitHub – @m1ggyccs](https://github.com/m1ggyccs)  
 - ✉️ Email: [amigsdavid@gmail.com](mailto:amigsdavid@gmail.com)
-
----
-
-⭐ *“Turning data into insight, and insight into action.”*  
