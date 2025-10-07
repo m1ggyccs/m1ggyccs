@@ -1,6 +1,6 @@
 <!-- Cover Photo -->
 <p align="center">
-  <img src="YOUR_COVER_PHOTO_LINK_HERE" alt="Andrei Miguel A. David | Data Science & AI Journey" width="100%">
+  <img src="./CovernoBG.png" alt="Andrei Miguel A. David | Data Science & AI Journey" width="100%">
 </p>
 
 <h1 align="center">👋 Hi, I'm Andrei Miguel A. David</h1>
