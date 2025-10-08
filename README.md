@@ -12,11 +12,7 @@
 
 ---
 
-## 🚀 Career Path: From Data to Intelligence  
-My journey began with a passion for solving real-world problems through data-driven solutions.  
-I’m building a career path that merges **data science, artificial intelligence, and cloud computing** — aiming to create intelligent systems that can automate, predict, and assist in decision-making.
-
-**Core Focus Areas:**
+## **Core Focus Areas:**
 - 🧠 Machine Learning & AI (Computer Vision, NLP, Predictive Modeling)  
 - 📊 Data Science (Data Cleaning, Visualization, and Statistical Analysis)  
 - ☁️ Cloud Computing (Azure, AWS)  
