@@ -36,7 +36,7 @@ These certifications strengthened both my **technical foundation** and **analyti
 
 | Project | Description | Stack |
 |----------|--------------|--------|
-| | **Smart Budget Tracking** (2025) | [Smart Budget Tracking](https://github.com/m1ggyccs/Smart-Budget-Tracking) | Personal finance management system for tracking expenses, budgets, and spending insights. | Python · SQLite |
+| [**Smart Budget Tracking** (2025)](https://github.com/m1ggyccs/Smart-Budget-Tracking) | Personal finance management system for tracking expenses, budgets, and spending insights. | Python · SQLite |
 | [**Volleyball Gesture System** (2025)](https://github.com/m1ggyccs/Volleyball-Gesture-System) | AI-powered gesture recognition and scoring system for volleyball matches. | Python · Next.js · MongoDB |
 | [**Medical Certificate Issuance System** (2025)](https://github.com/m1ggyccs/Medical_Certificate_Issuance_System) | Simulated workflow optimization for clinic certificate processing using database-backed automation. | Python · MySQL |
 | [**M1G Laundry Tracker** (2025)](https://github.com/m1ggyccs/M1G-Laundry-Tracker) | Laundry management system with real-time order tracking and staff scheduling. | Next.js · Prisma · MongoDB |
