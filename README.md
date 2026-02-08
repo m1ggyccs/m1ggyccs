@@ -6,7 +6,7 @@
 <h1 align="center">👋 Hi, I'm Andrei Miguel A. David</h1>
 <p align="center">
   🎓 Computer Science Undergrad @ <a href="https://www.tip.edu.ph" target="_blank">Technological Institute of the Philippines – Manila</a><br>
-  💡 Aspiring Data Scientist & AI Engineer | Future Tech Leader<br>
+  💡 Technical Consultant Intern | Aspiring Software Engineer<br>
   🌐 <a href="https://www.linkedin.com/in/amigsdavid" target="_blank">LinkedIn</a> · <a href="https://github.com/m1ggyccs" target="_blank">GitHub</a>
 </p>
 
