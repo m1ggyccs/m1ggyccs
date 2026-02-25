@@ -1,80 +1,36 @@
-<!-- Cover Photo -->
-<p align="center">
-  <img src="./CovernoBG.png" alt="Andrei Miguel A. David | Data Science & AI Journey" width="100%">
-</p>
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-<h1 align="center">👋 Hi, I'm Andrei Miguel A. David</h1>
-<p align="center">
-  🎓 Computer Science Undergrad @ <a href="https://www.tip.edu.ph" target="_blank">Technological Institute of the Philippines – Manila</a><br>
-  💡 Technical Consultant Intern | Aspiring Software Engineer<br>
-  🌐 <a href="https://www.linkedin.com/in/amigsdavid" target="_blank">LinkedIn</a> · <a href="https://github.com/m1ggyccs" target="_blank">GitHub</a>
-</p>
+## Getting Started
 
----
+First, run the development server:
 
-## **Core Focus Areas:**
-- 🧠 Machine Learning & AI (Computer Vision, NLP, Predictive Modeling)  
-- 📊 Data Science (Data Cleaning, Visualization, and Statistical Analysis)  
-- ☁️ Cloud Computing (Azure, AWS)  
-- 🧩 Full-Stack Prototyping (Next.js, MongoDB, Prisma, Express)
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
----
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## 🧾 Certifications
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-| Certification | Provider | Date |
-|---------------|-----------|------|
-| 🧠 Microsoft AI Fundamentals (Azure AI) | Microsoft | June 2025 |
-| 🐍 Python Data Associate | DataCamp | September 2025 |
-| 💼 Business Analysis & Process Management | Coursera | June 2025 |
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-These certifications strengthened both my **technical foundation** and **analytical mindset**, bridging AI technology with business value.
+## Learn More
 
----
+To learn more about Next.js, take a look at the following resources:
 
-## 💻 Featured Projects  
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-| Project | Description | Stack |
-|----------|--------------|--------|
-| [**Smart Budget Tracking** (2025)](https://github.com/m1ggyccs/Smart-Budget-Tracking) | Personal finance management system for tracking expenses, budgets, and spending insights. | Python · SQLite |
-| [**Volleyball Gesture System** (2025)](https://github.com/m1ggyccs/Volleyball-Gesture-System) | AI-powered gesture recognition and scoring system for volleyball matches. | Python · Next.js · MongoDB |
-| [**Medical Certificate Issuance System** (2025)](https://github.com/m1ggyccs/Medical_Certificate_Issuance_System) | Simulated workflow optimization for clinic certificate processing using database-backed automation. | Python · MySQL |
-| [**M1G Laundry Tracker** (2025)](https://github.com/m1ggyccs/M1G-Laundry-Tracker) | Laundry management system with real-time order tracking and staff scheduling. | Next.js · Prisma · MongoDB |
-| [**UniversityHub** (2024)](https://github.com/m1ggyccs/UniversityHub) | Event management and collaboration platform for academic communities. | Node.js · Express · MongoDB |
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
----
+## Deploy on Vercel
 
-## 🧭 Leadership & Involvement  
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-- 💻 **AWS Cloud Club TIP** – Member (2025–Present)  
-- 🧑‍💻 **Open Source TIP Manila** – Member (2024–Present)  
-- 🏅 **Vice President Lister (VPAA)** & **Dean’s Lister**  
-- 🤝 **Project Manager** in multiple academic and AI-driven research initiatives  
-
-These experiences shaped my **leadership, collaboration, and project coordination** skills in both academic and technical settings.
-
----
-
-## 📈 Vision  
-
-I’m passionate about becoming a **Data Scientist / AI Engineer** who not only builds models but also integrates them into **real-world systems** that make meaningful impact.  
-My goal is to merge **AI innovation** with **human-centered design**, focusing on accessibility, efficiency, and ethical AI use.
-
----
-
-## 🧰 Tech Toolbox  
-
-**Languages & Tools:**  
-`Python` · `SQL` · `JavaScript` · `C++` · `Java`  
-`Next.js` · `Prisma` · `MongoDB` · `AWS` · `Azure Fundamentals`
-
-**Soft Skills:**  
-Leadership · Critical Thinking · Adaptability · Communication
-
----
-
-## 📫 Let’s Connect
-
-- 💼 [LinkedIn – @amigsdavid](https://www.linkedin.com/in/amigsdavid)  
-- 💻 [GitHub – @m1ggyccs](https://github.com/m1ggyccs)  
-- ✉️ Email: [amigsdavid@gmail.com](mailto:amigsdavid@gmail.com)
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
