@@ -13,8 +13,25 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Andrei Miguel A. David | Portfolio",
-  description: "Portfolio of Andrei Miguel A. David, a Technical Consultant Intern and Software Engineer specializing in Business Central, Full-Stack Development, and AI.",
+  title: "Andrei Miguel A. David | Software Engineer",
+  description: "Technical Consultant Intern & Software Engineer specializing in Business Central, Full-Stack Development, and AI.",
+  openGraph: {
+    title: "Andrei Miguel A. David | Portfolio",
+    description: "Building scalable ERP solutions, full-stack web applications, and intelligent systems.",
+    // NOTE: Once you deploy to Vercel, replace this URL with your actual live website link!
+    url: "https://m1ggyccs.vercel.app", 
+    siteName: "AndreiDavid Portfolio",
+    images: [
+      {
+        url: "/CovernoBG.png", // Pulls your cover image from the public folder
+        width: 1200,
+        height: 630,
+        alt: "Andrei Miguel A. David Cover",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -23,7 +40,6 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    // Added scroll-smooth here for the gliding navigation effect
     <html lang="en" className="scroll-smooth">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}

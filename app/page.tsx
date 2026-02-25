@@ -5,8 +5,10 @@ import { TypeAnimation } from 'react-type-animation';
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 import { motion, Variants } from "framer-motion";
-import { Analytics } from "@vercel/analytics/next"
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import Tilt from 'react-parallax-tilt';
+import Image from 'next/image';
 
 export default function Portfolio() {
   const [init, setInit] = useState(false);
@@ -116,9 +118,11 @@ export default function Portfolio() {
         {/* Centered Avatar Image */}
         <motion.div initial="hidden" animate="visible" variants={fadeInUp} className="mb-8 relative flex justify-center">
           <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-slate-800 ring-4 ring-teal-500/20 shadow-2xl shadow-teal-500/10 bg-slate-800">
-            <img 
+            <Image 
               src="/avatar.jpg" 
               alt="Andrei Miguel A. David" 
+              width={160}
+              height={160}
               className="w-full h-full object-cover"
             />
           </div>
@@ -230,9 +234,11 @@ export default function Portfolio() {
                   <div className="flex items-center gap-5">
                     {/* Logo Box */}
                     <div className="w-16 h-16 shrink-0 bg-white rounded-xl p-1.5 border border-slate-700 shadow-md flex items-center justify-center overflow-hidden">
-                      <img 
+                      <Image 
                         src="/mustard-seed.jpg" 
                         alt="Mustard Seed Systems Corporation Logo" 
+                        width={64}
+                        height={64}
                         className="w-full h-full object-contain"
                       />
                     </div>
@@ -298,9 +304,11 @@ export default function Portfolio() {
                 {/* Flex Container for Logo + Text */}
                 <div className="flex items-center gap-5 mb-8 mt-1 pl-2">
                   <div className="w-14 h-14 shrink-0 bg-white rounded-lg p-1 border border-slate-700 shadow-md flex items-center justify-center overflow-hidden">
-                    <img 
+                    <Image 
                       src="/tip-logo.png" 
                       alt="Technological Institute of the Philippines Logo" 
+                      width={56}
+                      height={56}
                       className="w-full h-full object-contain"
                     />
                   </div>
@@ -346,9 +354,11 @@ export default function Portfolio() {
                 {/* Flex Container for Logo + Text */}
                 <div className="flex items-center gap-5 mb-8 mt-1 pl-2">
                   <div className="w-14 h-14 shrink-0 bg-white rounded-lg p-1 border border-slate-700 shadow-md flex items-center justify-center overflow-hidden">
-                    <img 
+                    <Image 
                       src="/iacademy-logo.png" 
                       alt="iACADEMY Logo" 
+                      width={56}
+                      height={56}
                       className="w-full h-full object-contain"
                     />
                   </div>
@@ -445,96 +455,124 @@ export default function Portfolio() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             
             {/* Project Card: Smart Budget Tracking */}
-            <div className="bg-slate-800/40 p-6 rounded-2xl border border-slate-700/50 flex flex-col h-full hover:bg-slate-800/60 hover:-translate-y-1 transition-all duration-300 shadow-lg group">
-              <div className="flex justify-between items-start mb-4">
-                <div className="w-12 h-12 bg-slate-800 rounded-xl border border-slate-700 flex items-center justify-center text-2xl shadow-md group-hover:scale-110 transition-transform">
-                  💰
+            <Tilt tiltMaxAngleX={5} tiltMaxAngleY={5} scale={1.02} transitionSpeed={2000} className="h-full">
+              <div className="bg-slate-800/40 p-6 rounded-2xl border border-slate-700/50 flex flex-col h-full hover:bg-slate-800/60 shadow-lg group transition-colors">
+                <div className="flex justify-between items-start mb-4">
+                  <div className="w-12 h-12 bg-slate-800 rounded-xl border border-slate-700 flex items-center justify-center text-2xl shadow-md group-hover:scale-110 transition-transform">
+                    💰
+                  </div>
+                </div>
+                <h4 className="text-xl font-bold text-slate-100 mb-2 font-mono">Smart Budget Tracker</h4>
+                <p className="text-slate-400 text-sm mb-6 flex-grow leading-relaxed">
+                  AI-powered budget forecasting dashboard with multi-model analysis (Moving Average, Holt-Winters, LSTM).
+                </p>
+                <div className="mt-auto">
+                  <div className="flex flex-wrap gap-2 mb-4 text-xs font-mono text-slate-500">
+                    <span className="bg-slate-900/50 border border-slate-700/50 px-2 py-1 rounded">Python</span>
+                    <span className="bg-slate-900/50 border border-slate-700/50 px-2 py-1 rounded">Analytics</span>
+                    <span className="bg-slate-900/50 border border-slate-700/50 px-2 py-1 rounded">Machine Learning</span>
+                  </div>
+                  <div className="flex items-center gap-5 mt-4">
+                    <a href="https://github.com/m1ggyccs/Smart-Budget-Tracking" target="_blank" rel="noreferrer" className="text-sm font-semibold text-teal-400 hover:text-teal-300 transition-colors flex items-center gap-1.5">
+                      View Code <span className="group-hover:translate-x-1 transition-transform">→</span>
+                    </a>
+                    <a href="#" target="_blank" rel="noreferrer" className="text-sm font-semibold text-blue-400 hover:text-blue-300 transition-colors flex items-center gap-1.5">
+                      Live Demo 🌐
+                    </a>
+                  </div>
                 </div>
               </div>
-              <h4 className="text-xl font-bold text-slate-100 mb-2 font-mono">Smart Budget Tracker</h4>
-              <p className="text-slate-400 text-sm mb-6 flex-grow leading-relaxed">
-                AI-powered budget forecasting dashboard with multi-model analysis (Moving Average, Holt-Winters, LSTM).
-              </p>
-              <div className="mt-auto">
-                <div className="flex flex-wrap gap-2 mb-4 text-xs font-mono text-slate-500">
-                  <span className="bg-slate-900/50 border border-slate-700/50 px-2 py-1 rounded">Python</span>
-                  <span className="bg-slate-900/50 border border-slate-700/50 px-2 py-1 rounded">Analytics</span>
-                  <span className="bg-slate-900/50 border border-slate-700/50 px-2 py-1 rounded">Machine Learning</span>
-                </div>
-                <a href="https://github.com/m1ggyccs/Smart-Budget-Tracking" target="_blank" rel="noreferrer" className="text-sm font-semibold text-teal-400 hover:text-teal-300 transition-colors flex items-center gap-2">
-                  View Repository <span className="group-hover:translate-x-1 transition-transform">→</span>
-                </a>
-              </div>
-            </div>
+            </Tilt>
 
             {/* Project Card: Volleyball System */}
-            <div className="bg-slate-800/40 p-6 rounded-2xl border border-slate-700/50 flex flex-col h-full hover:bg-slate-800/60 hover:-translate-y-1 transition-all duration-300 shadow-lg group">
-              <div className="flex justify-between items-start mb-4">
-                 <div className="w-12 h-12 bg-slate-800 rounded-xl border border-slate-700 flex items-center justify-center text-2xl shadow-md group-hover:scale-110 transition-transform">
-                  🏐
+            <Tilt tiltMaxAngleX={5} tiltMaxAngleY={5} scale={1.02} transitionSpeed={2000} className="h-full">
+              <div className="bg-slate-800/40 p-6 rounded-2xl border border-slate-700/50 flex flex-col h-full hover:bg-slate-800/60 shadow-lg group transition-colors">
+                <div className="flex justify-between items-start mb-4">
+                   <div className="w-12 h-12 bg-slate-800 rounded-xl border border-slate-700 flex items-center justify-center text-2xl shadow-md group-hover:scale-110 transition-transform">
+                    🏐
+                  </div>
+                </div>
+                <h4 className="text-xl font-bold text-slate-100 mb-2 font-mono">Volleyball Gesture System</h4>
+                <p className="text-slate-400 text-sm mb-6 flex-grow leading-relaxed">
+                  AI-powered gesture recognition application for automated volleyball match scoring, improving real-time game tracking accuracy.
+                </p>
+                <div className="mt-auto">
+                  <div className="flex flex-wrap gap-2 mb-4 text-xs font-mono text-slate-500">
+                    <span className="bg-slate-900/50 border border-slate-700/50 px-2 py-1 rounded">Python</span>
+                    <span className="bg-slate-900/50 border border-slate-700/50 px-2 py-1 rounded">Next.js</span>
+                    <span className="bg-slate-900/50 border border-slate-700/50 px-2 py-1 rounded">MongoDB</span>
+                  </div>
+                  <div className="flex items-center gap-5 mt-4">
+                    <a href="https://github.com/m1ggyccs/Volleyball-Gesture-System" target="_blank" rel="noreferrer" className="text-sm font-semibold text-teal-400 hover:text-teal-300 transition-colors flex items-center gap-1.5">
+                      View Code <span className="group-hover:translate-x-1 transition-transform">→</span>
+                    </a>
+                    <a href="#" target="_blank" rel="noreferrer" className="text-sm font-semibold text-blue-400 hover:text-blue-300 transition-colors flex items-center gap-1.5">
+                      Live Demo 🌐
+                    </a>
+                  </div>
                 </div>
               </div>
-              <h4 className="text-xl font-bold text-slate-100 mb-2 font-mono">Volleyball Gesture System</h4>
-              <p className="text-slate-400 text-sm mb-6 flex-grow leading-relaxed">
-                AI-powered gesture recognition application for automated volleyball match scoring, improving real-time game tracking accuracy.
-              </p>
-              <div className="mt-auto">
-                <div className="flex flex-wrap gap-2 mb-4 text-xs font-mono text-slate-500">
-                  <span className="bg-slate-900/50 border border-slate-700/50 px-2 py-1 rounded">Python</span>
-                  <span className="bg-slate-900/50 border border-slate-700/50 px-2 py-1 rounded">Next.js</span>
-                  <span className="bg-slate-900/50 border border-slate-700/50 px-2 py-1 rounded">MongoDB</span>
-                </div>
-                <a href="https://github.com/m1ggyccs/Volleyball-Gesture-System" target="_blank" rel="noreferrer" className="text-sm font-semibold text-teal-400 hover:text-teal-300 transition-colors flex items-center gap-2">
-                  View Repository <span className="group-hover:translate-x-1 transition-transform">→</span>
-                </a>
-              </div>
-            </div>
+            </Tilt>
 
             {/* Project Card: Laundry Tracker */}
-            <div className="bg-slate-800/40 p-6 rounded-2xl border border-slate-700/50 flex flex-col h-full hover:bg-slate-800/60 hover:-translate-y-1 transition-all duration-300 shadow-lg group">
-               <div className="flex justify-between items-start mb-4">
-                 <div className="w-12 h-12 bg-slate-800 rounded-xl border border-slate-700 flex items-center justify-center text-2xl shadow-md group-hover:scale-110 transition-transform">
-                  🧺
+            <Tilt tiltMaxAngleX={5} tiltMaxAngleY={5} scale={1.02} transitionSpeed={2000} className="h-full">
+              <div className="bg-slate-800/40 p-6 rounded-2xl border border-slate-700/50 flex flex-col h-full hover:bg-slate-800/60 shadow-lg group transition-colors">
+                 <div className="flex justify-between items-start mb-4">
+                   <div className="w-12 h-12 bg-slate-800 rounded-xl border border-slate-700 flex items-center justify-center text-2xl shadow-md group-hover:scale-110 transition-transform">
+                    🧺
+                  </div>
+                </div>
+                <h4 className="text-xl font-bold text-slate-100 mb-2 font-mono">M1G Laundry Tracker</h4>
+                <p className="text-slate-400 text-sm mb-6 flex-grow leading-relaxed">
+                  Full-stack application for tracking laundry orders and optimizing staff scheduling, enhancing operational visibility.
+                </p>
+                <div className="mt-auto">
+                  <div className="flex flex-wrap gap-2 mb-4 text-xs font-mono text-slate-500">
+                    <span className="bg-slate-900/50 border border-slate-700/50 px-2 py-1 rounded">Next.js</span>
+                    <span className="bg-slate-900/50 border border-slate-700/50 px-2 py-1 rounded">Prisma</span>
+                    <span className="bg-slate-900/50 border border-slate-700/50 px-2 py-1 rounded">MongoDB</span>
+                  </div>
+                  <div className="flex items-center gap-5 mt-4">
+                    <a href="https://github.com/m1ggyccs/M1G-Laundry-Tracker" target="_blank" rel="noreferrer" className="text-sm font-semibold text-teal-400 hover:text-teal-300 transition-colors flex items-center gap-1.5">
+                      View Code <span className="group-hover:translate-x-1 transition-transform">→</span>
+                    </a>
+                    <a href="#" target="_blank" rel="noreferrer" className="text-sm font-semibold text-blue-400 hover:text-blue-300 transition-colors flex items-center gap-1.5">
+                      Live Demo 🌐
+                    </a>
+                  </div>
                 </div>
               </div>
-              <h4 className="text-xl font-bold text-slate-100 mb-2 font-mono">M1G Laundry Tracker</h4>
-              <p className="text-slate-400 text-sm mb-6 flex-grow leading-relaxed">
-                Full-stack application for tracking laundry orders and optimizing staff scheduling, enhancing operational visibility.
-              </p>
-              <div className="mt-auto">
-                <div className="flex flex-wrap gap-2 mb-4 text-xs font-mono text-slate-500">
-                  <span className="bg-slate-900/50 border border-slate-700/50 px-2 py-1 rounded">Next.js</span>
-                  <span className="bg-slate-900/50 border border-slate-700/50 px-2 py-1 rounded">Prisma</span>
-                  <span className="bg-slate-900/50 border border-slate-700/50 px-2 py-1 rounded">MongoDB</span>
-                </div>
-                <a href="https://github.com/m1ggyccs/M1G-Laundry-Tracker" target="_blank" rel="noreferrer" className="text-sm font-semibold text-teal-400 hover:text-teal-300 transition-colors flex items-center gap-2">
-                  View Repository <span className="group-hover:translate-x-1 transition-transform">→</span>
-                </a>
-              </div>
-            </div>
+            </Tilt>
 
              {/* Project Card: University Hub */}
-             <div className="bg-slate-800/40 p-6 rounded-2xl border border-slate-700/50 flex flex-col h-full hover:bg-slate-800/60 hover:-translate-y-1 transition-all duration-300 shadow-lg group">
-               <div className="flex justify-between items-start mb-4">
-                 <div className="w-12 h-12 bg-slate-800 rounded-xl border border-slate-700 flex items-center justify-center text-2xl shadow-md group-hover:scale-110 transition-transform">
-                  🎓
+             <Tilt tiltMaxAngleX={5} tiltMaxAngleY={5} scale={1.02} transitionSpeed={2000} className="h-full">
+              <div className="bg-slate-800/40 p-6 rounded-2xl border border-slate-700/50 flex flex-col h-full hover:bg-slate-800/60 shadow-lg group transition-colors">
+                 <div className="flex justify-between items-start mb-4">
+                   <div className="w-12 h-12 bg-slate-800 rounded-xl border border-slate-700 flex items-center justify-center text-2xl shadow-md group-hover:scale-110 transition-transform">
+                    🎓
+                  </div>
+                </div>
+                <h4 className="text-xl font-bold text-slate-100 mb-2 font-mono">University Hub</h4>
+                <p className="text-slate-400 text-sm mb-6 flex-grow leading-relaxed">
+                  Event management and collaboration platform successfully built to streamline campus and student event coordination.
+                </p>
+                <div className="mt-auto">
+                  <div className="flex flex-wrap gap-2 mb-4 text-xs font-mono text-slate-500">
+                    <span className="bg-slate-900/50 border border-slate-700/50 px-2 py-1 rounded">Node.js</span>
+                    <span className="bg-slate-900/50 border border-slate-700/50 px-2 py-1 rounded">MongoDB</span>
+                    <span className="bg-slate-900/50 border border-slate-700/50 px-2 py-1 rounded">Express</span>
+                  </div>
+                  <div className="flex items-center gap-5 mt-4">
+                    <a href="https://github.com/m1ggyccs/UniversityHub" target="_blank" rel="noreferrer" className="text-sm font-semibold text-teal-400 hover:text-teal-300 transition-colors flex items-center gap-1.5">
+                      View Code <span className="group-hover:translate-x-1 transition-transform">→</span>
+                    </a>
+                    <a href="#" target="_blank" rel="noreferrer" className="text-sm font-semibold text-blue-400 hover:text-blue-300 transition-colors flex items-center gap-1.5">
+                      Live Demo 🌐
+                    </a>
+                  </div>
                 </div>
               </div>
-              <h4 className="text-xl font-bold text-slate-100 mb-2 font-mono">University Hub</h4>
-              <p className="text-slate-400 text-sm mb-6 flex-grow leading-relaxed">
-                Event management and collaboration platform successfully built to streamline campus and student event coordination.
-              </p>
-              <div className="mt-auto">
-                <div className="flex flex-wrap gap-2 mb-4 text-xs font-mono text-slate-500">
-                  <span className="bg-slate-900/50 border border-slate-700/50 px-2 py-1 rounded">Node.js</span>
-                  <span className="bg-slate-900/50 border border-slate-700/50 px-2 py-1 rounded">MongoDB</span>
-                  <span className="bg-slate-900/50 border border-slate-700/50 px-2 py-1 rounded">Express</span>
-                </div>
-                <a href="https://github.com/m1ggyccs/UniversityHub" target="_blank" rel="noreferrer" className="text-sm font-semibold text-teal-400 hover:text-teal-300 transition-colors flex items-center gap-2">
-                  View Repository <span className="group-hover:translate-x-1 transition-transform">→</span>
-                </a>
-              </div>
-            </div>
+            </Tilt>
 
           </div>
         </div>
@@ -660,7 +698,7 @@ export default function Portfolio() {
           </h3>
           
           <p className="text-lg text-slate-400 mb-10 leading-relaxed max-w-2xl mx-auto">
-
+            {/* Kept this text exactly as you provided it in your code block */}
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center items-center gap-6 mb-12">
@@ -693,6 +731,10 @@ export default function Portfolio() {
         <p>&copy; {new Date().getFullYear()} Andrei Miguel A. David. All rights reserved.</p>
         <p className="mt-2 font-mono text-xs">Built with Next.js, TypeScript, and Tailwind CSS.</p>
       </footer>
+
+      {/* Vercel Web Analytics and Speed Insights Components Added Here! */}
+      <Analytics />
+      <SpeedInsights />
     </div>
   );
 }
