@@ -5,6 +5,7 @@ import { TypeAnimation } from 'react-type-animation';
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 import { motion, Variants } from "framer-motion";
+import { Analytics } from "@vercel/analytics/next"
 
 export default function Portfolio() {
   const [init, setInit] = useState(false);
@@ -456,7 +457,7 @@ export default function Portfolio() {
               <div className="mt-auto">
                 <div className="flex flex-wrap gap-2 mb-4 text-xs font-mono text-slate-500">
                   <span className="bg-slate-900/50 border border-slate-700/50 px-2 py-1 rounded">Python</span>
-                  <span className="bg-slate-900/50 border border-slate-700/50 px-2 py-1 rounded">Computer Vision</span>
+                  <span className="bg-slate-900/50 border border-slate-700/50 px-2 py-1 rounded">Analytics</span>
                   <span className="bg-slate-900/50 border border-slate-700/50 px-2 py-1 rounded">Machine Learning</span>
                 </div>
                 <a href="https://github.com/m1ggyccs/Smart-Budget-Tracking" target="_blank" rel="noreferrer" className="text-sm font-semibold text-teal-400 hover:text-teal-300 transition-colors flex items-center gap-2">
