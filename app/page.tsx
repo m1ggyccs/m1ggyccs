@@ -459,7 +459,7 @@ export default function Portfolio() {
                   <span className="bg-slate-900/50 border border-slate-700/50 px-2 py-1 rounded">Computer Vision</span>
                   <span className="bg-slate-900/50 border border-slate-700/50 px-2 py-1 rounded">Machine Learning</span>
                 </div>
-                <a href="https://github.com/m1ggyccs" target="_blank" rel="noreferrer" className="text-sm font-semibold text-teal-400 hover:text-teal-300 transition-colors flex items-center gap-2">
+                <a href="https://github.com/m1ggyccs/Yolov8n-with-GPM-Filtering" target="_blank" rel="noreferrer" className="text-sm font-semibold text-teal-400 hover:text-teal-300 transition-colors flex items-center gap-2">
                   View Repository <span className="group-hover:translate-x-1 transition-transform">→</span>
                 </a>
               </div>
@@ -482,7 +482,7 @@ export default function Portfolio() {
                   <span className="bg-slate-900/50 border border-slate-700/50 px-2 py-1 rounded">Next.js</span>
                   <span className="bg-slate-900/50 border border-slate-700/50 px-2 py-1 rounded">MongoDB</span>
                 </div>
-                <a href="https://github.com/m1ggyccs" target="_blank" rel="noreferrer" className="text-sm font-semibold text-teal-400 hover:text-teal-300 transition-colors flex items-center gap-2">
+                <a href="https://github.com/m1ggyccs/Volleyball-Gesture-System" target="_blank" rel="noreferrer" className="text-sm font-semibold text-teal-400 hover:text-teal-300 transition-colors flex items-center gap-2">
                   View Repository <span className="group-hover:translate-x-1 transition-transform">→</span>
                 </a>
               </div>
@@ -505,7 +505,7 @@ export default function Portfolio() {
                   <span className="bg-slate-900/50 border border-slate-700/50 px-2 py-1 rounded">Prisma</span>
                   <span className="bg-slate-900/50 border border-slate-700/50 px-2 py-1 rounded">MongoDB</span>
                 </div>
-                <a href="https://github.com/m1ggyccs" target="_blank" rel="noreferrer" className="text-sm font-semibold text-teal-400 hover:text-teal-300 transition-colors flex items-center gap-2">
+                <a href="https://github.com/m1ggyccs/M1G-Laundry-Tracker" target="_blank" rel="noreferrer" className="text-sm font-semibold text-teal-400 hover:text-teal-300 transition-colors flex items-center gap-2">
                   View Repository <span className="group-hover:translate-x-1 transition-transform">→</span>
                 </a>
               </div>
@@ -528,7 +528,7 @@ export default function Portfolio() {
                   <span className="bg-slate-900/50 border border-slate-700/50 px-2 py-1 rounded">MongoDB</span>
                   <span className="bg-slate-900/50 border border-slate-700/50 px-2 py-1 rounded">Express</span>
                 </div>
-                <a href="https://github.com/m1ggyccs" target="_blank" rel="noreferrer" className="text-sm font-semibold text-teal-400 hover:text-teal-300 transition-colors flex items-center gap-2">
+                <a href="https://github.com/m1ggyccs/UniversityHub" target="_blank" rel="noreferrer" className="text-sm font-semibold text-teal-400 hover:text-teal-300 transition-colors flex items-center gap-2">
                   View Repository <span className="group-hover:translate-x-1 transition-transform">→</span>
                 </a>
               </div>
