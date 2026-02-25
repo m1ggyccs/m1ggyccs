@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./CovernoBG.png" alt="Andrei Miguel A. David | Software Engineering & Tech Consulting" width="100%">
+  <img src="./public/CovernoBG.png" alt="Andrei Miguel A. David | Software Engineering & Tech Consulting" width="100%">
 </p>
 
 <h1 align="center">👋 Hi! I'm Andrei Miguel A. David</h1>
