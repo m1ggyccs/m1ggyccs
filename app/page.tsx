@@ -184,7 +184,7 @@ export default function Portfolio() {
                 I am a Software Engineer and Computer Science student graduating in June 2026 from the Technological Institute of the Philippines. I possess a solid foundation in software engineering principles, full-stack development, and machine learning, strengthened through prior academic training at iACADEMY and hands-on experience in technical consulting environments.
               </p>
               <p>
-                Currently, I am a Technical Consultant Intern at Mustard Seeds Systems Corporation focusing on Microsoft 365 Business Central.
+                Currently a Technical Consultant Intern at Mustard Seeds Systems Corporation focusing on Microsoft 365 Business Central.
               </p>
             </div>
             
@@ -269,7 +269,7 @@ export default function Portfolio() {
                   </li>
                   <li className="flex gap-3">
                     <span className="text-blue-500 mt-1 text-lg">▹</span>
-                    <span>Provide basic support and technical assistance using SAP Business One and Microsoft SQL Server (MSSQL) for data queries, report validation, and database-level checks.</span>
+                    <span>Provide basic support and technical assistance using SAP Business One and Microsoft SQL Server (MSSQL)</span>
                   </li>
                 </ul>
               </div>
