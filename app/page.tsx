@@ -442,16 +442,16 @@ export default function Portfolio() {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             
-            {/* Project Card: RC Car */}
+            {/* Project Card: Smart Budget Tracking */}
             <div className="bg-slate-800/40 p-6 rounded-2xl border border-slate-700/50 flex flex-col h-full hover:bg-slate-800/60 hover:-translate-y-1 transition-all duration-300 shadow-lg group">
               <div className="flex justify-between items-start mb-4">
                 <div className="w-12 h-12 bg-slate-800 rounded-xl border border-slate-700 flex items-center justify-center text-2xl shadow-md group-hover:scale-110 transition-transform">
-                  🏎️
+                  💰
                 </div>
               </div>
-              <h4 className="text-xl font-bold text-slate-100 mb-2 font-mono">RC Car Object Detection</h4>
+              <h4 className="text-xl font-bold text-slate-100 mb-2 font-mono">Smart Budget Tracker</h4>
               <p className="text-slate-400 text-sm mb-6 flex-grow leading-relaxed">
-                Computer vision system built to calculate stop, go, overtake, and slow down commands for an autonomous RC car.
+                AI-powered budget forecasting dashboard with multi-model analysis (Moving Average, Holt-Winters, LSTM).
               </p>
               <div className="mt-auto">
                 <div className="flex flex-wrap gap-2 mb-4 text-xs font-mono text-slate-500">
@@ -459,7 +459,7 @@ export default function Portfolio() {
                   <span className="bg-slate-900/50 border border-slate-700/50 px-2 py-1 rounded">Computer Vision</span>
                   <span className="bg-slate-900/50 border border-slate-700/50 px-2 py-1 rounded">Machine Learning</span>
                 </div>
-                <a href="https://github.com/m1ggyccs/Yolov8n-with-GPM-Filtering" target="_blank" rel="noreferrer" className="text-sm font-semibold text-teal-400 hover:text-teal-300 transition-colors flex items-center gap-2">
+                <a href="https://github.com/m1ggyccs/Smart-Budget-Tracking" target="_blank" rel="noreferrer" className="text-sm font-semibold text-teal-400 hover:text-teal-300 transition-colors flex items-center gap-2">
                   View Repository <span className="group-hover:translate-x-1 transition-transform">→</span>
                 </a>
               </div>
