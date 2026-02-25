@@ -86,10 +86,6 @@ These experiences shaped my **leadership, collaboration, and project coordinatio
 
 ---
 
-## 📈 Vision  
-
-I’m passionate about becoming a **Software Engineer** who not only builds systems but also integrates them into **real-world systems** that make meaningful impact.  
-
 ## 📫 Let’s Connect
 
 - 💼 [LinkedIn – @amigsdavid](https://www.linkedin.com/in/amigsdavid)  
