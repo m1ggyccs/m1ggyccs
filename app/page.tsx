@@ -4,9 +4,11 @@ import React, { useEffect, useState } from 'react';
 import { TypeAnimation } from 'react-type-animation';
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
+import { motion } from "framer-motion";
 
 export default function Portfolio() {
   const [init, setInit] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   // Initialize the particle engine once when the component mounts
   useEffect(() => {
@@ -17,13 +19,19 @@ export default function Portfolio() {
     });
   }, []);
 
+  // Reusable animation configuration for scroll reveals
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 40 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+  };
+
   return (
     // Changed to a dark slate background to match the reference's navy hue
     <div className="min-h-screen bg-slate-900 text-slate-300 font-sans selection:bg-teal-500/30 relative">
       
       {/* Background Particles Network - Only renders after initialization */}
       {init && (
-        <div className="absolute inset-0 z-0 opacity-40 pointer-events-none">
+        <div className="absolute inset-0 z-0 opacity-40 pointer-events-none fixed">
           <Particles
             id="tsparticles"
             options={{
@@ -55,26 +63,56 @@ export default function Portfolio() {
         </div>
       )}
 
-      {/* Navigation */}
-      <nav className="relative z-10 flex justify-between items-center p-6 max-w-6xl mx-auto border-b border-slate-800/50">
-        <div className="text-xl font-bold tracking-tighter text-slate-100 font-mono">
-          &lt;m1ggyccs/&gt;
+      {/* 1. STICKY MOBILE-RESPONSIVE NAVIGATION */}
+      <nav className="sticky top-0 z-50 w-full bg-slate-900/80 backdrop-blur-md border-b border-slate-800/50 transition-all">
+        <div className="flex justify-between items-center p-5 max-w-6xl mx-auto">
+          <div className="text-xl font-bold tracking-tighter text-slate-100 font-mono">
+            &lt;m1ggyccs/&gt;
+          </div>
+          
+          {/* Desktop Menu */}
+          <div className="hidden md:flex space-x-8 text-sm font-medium">
+            <a href="#about" className="hover:text-teal-400 transition-colors">About</a>
+            <a href="#experience" className="hover:text-teal-400 transition-colors">Experience</a>
+            <a href="#projects" className="hover:text-teal-400 transition-colors">Projects</a>
+            <a href="#skills" className="hover:text-teal-400 transition-colors">Skills</a>
+            <a href="https://github.com/m1ggyccs" target="_blank" rel="noreferrer" className="hover:text-teal-400 transition-colors">
+              GitHub
+            </a>
+          </div>
+
+          {/* Mobile Hamburger Button */}
+          <button 
+            className="md:hidden text-slate-300 hover:text-teal-400 focus:outline-none"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              {isMobileMenuOpen ? (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+              ) : (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7" />
+              )}
+            </svg>
+          </button>
         </div>
-        <div className="space-x-8 text-sm font-medium">
-          <a href="#about" className="hover:text-teal-400 transition-colors">About</a>
-          <a href="#projects" className="hover:text-teal-400 transition-colors">Projects</a>
-          <a href="#skills" className="hover:text-teal-400 transition-colors">Skills</a>
-          <a href="https://github.com/m1ggyccs" target="_blank" rel="noreferrer" className="hover:text-teal-400 transition-colors">
-            GitHub
-          </a>
-        </div>
+
+        {/* Mobile Dropdown Menu */}
+        {isMobileMenuOpen && (
+          <div className="md:hidden absolute top-full left-0 w-full bg-slate-900 border-b border-slate-800 shadow-xl py-4 flex flex-col items-center space-y-4">
+            <a href="#about" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-300 hover:text-teal-400 font-medium">About</a>
+            <a href="#experience" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-300 hover:text-teal-400 font-medium">Experience</a>
+            <a href="#projects" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-300 hover:text-teal-400 font-medium">Projects</a>
+            <a href="#skills" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-300 hover:text-teal-400 font-medium">Skills</a>
+            <a href="https://github.com/m1ggyccs" target="_blank" rel="noreferrer" className="text-slate-300 hover:text-teal-400 font-medium">GitHub</a>
+          </div>
+        )}
       </nav>
 
       {/* Hero Section */}
       <section className="relative z-10 max-w-6xl mx-auto px-6 py-24 flex flex-col items-center justify-center min-h-[75vh] text-center">
         
         {/* Centered Avatar Image */}
-        <div className="mb-8 relative flex justify-center">
+        <motion.div initial="hidden" animate="visible" variants={fadeInUp} className="mb-8 relative flex justify-center">
           <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-slate-800 ring-4 ring-teal-500/20 shadow-2xl shadow-teal-500/10 bg-slate-800">
             <img 
               src="/avatar.jpg" 
@@ -84,9 +122,9 @@ export default function Portfolio() {
           </div>
           {/* Online status indicator */}
           <div className="absolute bottom-2 right-2 w-6 h-6 bg-teal-400 rounded-full border-4 border-slate-900"></div>
-        </div>
+        </motion.div>
 
-        <div className="max-w-4xl space-y-6 flex flex-col items-center">
+        <motion.div initial="hidden" animate="visible" variants={fadeInUp} transition={{ delay: 0.2 }} className="max-w-4xl space-y-6 flex flex-col items-center">
           {/* Monospace, perfectly centered header */}
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-slate-100 font-mono leading-tight">
             Hi! I'm <span className="text-teal-400">Andrei Miguel<br />A. David.</span>
@@ -115,19 +153,24 @@ export default function Portfolio() {
             "Building scalable ERP solutions, full-stack web applications, and intelligent systems."
           </p>
           
+          {/* 2. ADDED DOWNLOAD RESUME BUTTON */}
           <div className="flex flex-wrap justify-center gap-4 pt-8">
             <a href="#projects" className="bg-teal-600 hover:bg-teal-500 text-white px-7 py-3 rounded-md font-semibold transition-all shadow-lg shadow-teal-500/20">
               View My Work
+            </a>
+            <a href="/resume.pdf" download="Andrei_David_Resume.pdf" className="bg-slate-800 hover:bg-slate-700 text-slate-100 px-7 py-3 rounded-md font-semibold transition-all border border-slate-600 hover:border-teal-500/50 flex items-center gap-2">
+              <span>📄</span> Download Resume
             </a>
             <a href="https://github.com/m1ggyccs" target="_blank" rel="noreferrer" className="bg-slate-900 hover:bg-slate-800 text-slate-100 px-7 py-3 rounded-md font-semibold transition-all border border-slate-700 hover:border-teal-500/50">
               Explore GitHub
             </a>
           </div>
-        </div>
+        </motion.div>
       </section>
 
+      {/* 3. SCROLL REVEAL ANIMATIONS APPLIED TO ALL SECTIONS */}
       {/* About Section */}
-      <section id="about" className="bg-zinc-900/50 py-24 border-y border-zinc-800">
+      <motion.section id="about" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} variants={fadeInUp} className="bg-zinc-900/50 py-24 border-y border-zinc-800 relative z-10">
         <div className="max-w-6xl mx-auto px-6">
           <h3 className="text-3xl font-bold mb-12 flex items-center gap-3 text-zinc-100">
             <span className="text-blue-500">#</span> About Me
@@ -162,10 +205,10 @@ export default function Portfolio() {
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
-{/* Professional Experience Section */}
-      <section id="experience" className="py-24 border-b border-slate-800/50 relative z-10">
+      {/* Professional Experience Section */}
+      <motion.section id="experience" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} variants={fadeInUp} className="py-24 border-b border-slate-800/50 relative z-10">
         <div className="max-w-6xl mx-auto px-6">
           <h3 className="text-3xl font-bold mb-12 flex items-center gap-3 text-slate-100 font-mono">
             <span className="text-blue-500">#</span> Professional Experience
@@ -232,10 +275,10 @@ export default function Portfolio() {
 
           </div>
         </div>
-      </section>
+      </motion.section>
 
-{/* Education & Certifications Section */}
-      <section id="education" className="py-24 border-b border-slate-800/50 relative z-10 bg-slate-900/20">
+      {/* Education & Certifications Section */}
+      <motion.section id="education" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} variants={fadeInUp} className="py-24 border-b border-slate-800/50 relative z-10 bg-slate-900/20">
         <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-16">
           
           {/* Education Column */}
@@ -382,10 +425,10 @@ export default function Portfolio() {
           </div>
 
         </div>
-      </section>
+      </motion.section>
 
       {/* Projects Section */}
-      <section id="projects" className="bg-slate-900/50 py-24 border-b border-slate-800 relative z-10">
+      <motion.section id="projects" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} variants={fadeInUp} className="bg-slate-900/50 py-24 border-b border-slate-800 relative z-10">
         <div className="max-w-6xl mx-auto px-6">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
             <h3 className="text-3xl font-bold flex items-center gap-3 text-slate-100 font-mono">
@@ -493,10 +536,10 @@ export default function Portfolio() {
 
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Skills Section */}
-      <section id="skills" className="py-24 relative z-10 border-b border-slate-800/50">
+      <motion.section id="skills" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} variants={fadeInUp} className="py-24 relative z-10 border-b border-slate-800/50">
         <div className="max-w-7xl mx-auto px-6">
           
           <h3 className="text-3xl md:text-4xl font-bold mb-16 text-center text-slate-100 font-mono">
@@ -605,17 +648,18 @@ export default function Portfolio() {
           </div>
 
         </div>
-      </section>
+      </motion.section>
 
-{/* Let's Connect / Contact Section */}
-      <section id="contact" className="py-24 relative z-10 border-t border-slate-800/50 bg-slate-900/50">
+      {/* Let's Connect / Contact Section */}
+      <motion.section id="contact" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} variants={fadeInUp} className="py-24 relative z-10 border-t border-slate-800/50 bg-slate-900/50">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h3 className="text-4xl md:text-5xl font-extrabold text-slate-100 mb-6 font-mono">
             <span className="text-teal-500">Let's</span> Connect
           </h3>
           
           <p className="text-lg text-slate-400 mb-10 leading-relaxed max-w-2xl mx-auto">
-           
+            {/* Added a strong call to action text here */}
+            I am actively seeking an <strong className="text-teal-400 font-semibold">IT/CS Intern role</strong> to complete my 500-hour internship requirement. Whether you are looking for an eager developer, want to discuss Business Central AL, or chat about AI projects, my inbox is open!
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center items-center gap-6 mb-12">
@@ -641,7 +685,7 @@ export default function Portfolio() {
             </a>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Footer */}
       <footer className="py-8 text-center text-slate-600 text-sm border-t border-slate-800/50 bg-slate-950 relative z-10">
