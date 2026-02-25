@@ -86,12 +86,6 @@ These experiences shaped my **leadership, collaboration, and project coordinatio
 
 ---
 
-## 📈 Vision  
-
-I’m passionate about becoming a **Data Scientist / AI Engineer** who not only builds models but also integrates them into **real-world systems** that make meaningful impact.  
-My goal is to merge **AI innovation** with **human-centered design**, focusing on accessibility, efficiency, and ethical AI use.
-
-
 ## 📫 Let’s Connect
 
 - 💼 [LinkedIn – @amigsdavid](https://www.linkedin.com/in/amigsdavid)  
