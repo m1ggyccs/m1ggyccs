@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { TypeAnimation } from 'react-type-animation';
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
 export default function Portfolio() {
   const [init, setInit] = useState(false);
@@ -20,7 +20,7 @@ export default function Portfolio() {
   }, []);
 
   // Reusable animation configuration for scroll reveals
-  const fadeInUp = {
+  const fadeInUp: Variants = {
     hidden: { opacity: 0, y: 40 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
   };
@@ -658,8 +658,7 @@ export default function Portfolio() {
           </h3>
           
           <p className="text-lg text-slate-400 mb-10 leading-relaxed max-w-2xl mx-auto">
-            {/* Added a strong call to action text here */}
-            I am actively seeking an <strong className="text-teal-400 font-semibold">IT/CS Intern role</strong> to complete my 500-hour internship requirement. Whether you are looking for an eager developer, want to discuss Business Central AL, or chat about AI projects, my inbox is open!
+
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center items-center gap-6 mb-12">
