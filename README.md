@@ -6,59 +6,7 @@
 <p align="center">
   <strong>Technical Consultant Intern | Software Engineer | Business Central Developer</strong><br>
   <i>"Building scalable ERP solutions, full-stack web applications, and intelligent systems."</i><br><br>
-  🎓 Computer Science Undergrad @ <a href="https://www.tip.edu.ph" target="_blank">Technological Institute of the Philippines – Manila</a><br>
-  📍 Quezon City, Metro Manila, Philippines<br>
-  🌐 <a href="https://www.linkedin.com/in/amigsdavid" target="_blank">LinkedIn</a> · <a href="https://github.com/m1ggyccs" target="_blank">GitHub</a>
-</p>
-
----
-
-## 🚀 About Me
-
-I am a Software Engineer and Computer Science student graduating in June 2026. I possess a solid foundation in software engineering principles, full-stack development, and machine learning, strengthened through prior academic training at iACADEMY and hands-on experience in technical consulting.
-
-Currently, I am a **Technical Consultant Intern at Mustard Seed Systems Corporation**, where I focus on developing and customizing Microsoft Dynamics 365 Business Central solutions. I am passionate about applying my technical foundation to real-world challenges and bridging the gap between business needs and robust software architecture.
-
-### **Core Engineering Focus:**
-- 🏢 **ERP Customization:** Customizing Microsoft Dynamics 365 Business Central using AL language.
-- 💻 **Full-Stack Systems:** Building robust applications using React, Node.js / Express, Next.js, and MongoDB.
-- 🧠 **AI & Machine Learning:** Implementing object detection models and gesture recognition systems using Python.
-
----
-
-## 💼 Professional Experience
-
-**Technical Consultant Intern | Mustard Seed Systems Corporation**
-*(January 2026 – Present)*
-- Customize and enhance Microsoft Dynamics 365 Business Central solutions using AL language (page/table extensions, RDLC reports).
-- Diagnose and resolve functional/technical issues within purchasing, finance, and reporting modules.
-- Assist in requirements gathering, business process analysis, and solution design.
-- Provide basic support using SAP Business One and Microsoft SQL Server (MSSQL).
-
----
-
-Refining the Intent
-
-I've identified the user's need: to remove active job-seeking details from their portfolio and README.
-Gemini said
-
-Got it. If you're currently happily rendering your hours at Mustard Seed Systems Corporation and aren't actively hunting for new roles, we should pivot the tone of your portfolio and README from "hire me" to "here is what I do."
-
-This is actually a great position to be in—it lets your portfolio act as a professional showcase and networking tool without sounding like a cover letter.
-
-Here is the updated README.md with the job-seeking language removed:
-Markdown
-
-<p align="center">
-  <img src="./CovernoBG.png" alt="Andrei Miguel A. David | Software Engineering & Tech Consulting" width="100%">
-</p>
-
-<h1 align="center">👋 Hi! I'm Andrei Miguel A. David</h1>
-<p align="center">
-  <strong>Technical Consultant Intern | Software Engineer | Business Central Developer</strong><br>
-  <i>"Building scalable ERP solutions, full-stack web applications, and intelligent systems."</i><br><br>
-  🎓 Computer Science Undergrad @ <a href="https://www.tip.edu.ph" target="_blank">Technological Institute of the Philippines – Manila</a><br>
-  📍 Quezon City, Metro Manila, Philippines<br>
+  🎓 Computer Science Undergrad @ <a href="https://www.tip.edu.ph" target="_blank">Technological Institute of the Philippines – Manila</a>
   🌐 <a href="https://www.linkedin.com/in/amigsdavid" target="_blank">LinkedIn</a> · <a href="https://github.com/m1ggyccs" target="_blank">GitHub</a>
 </p>
 
