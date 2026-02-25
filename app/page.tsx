@@ -506,7 +506,7 @@ export default function Portfolio() {
                     <a href="https://github.com/m1ggyccs/Volleyball-Gesture-System" target="_blank" rel="noreferrer" className="text-sm font-semibold text-teal-400 hover:text-teal-300 transition-colors flex items-center gap-1.5">
                       View Code <span className="group-hover:translate-x-1 transition-transform">→</span>
                     </a>
-                    <a href="#" target="_blank" rel="noreferrer" className="text-sm font-semibold text-blue-400 hover:text-blue-300 transition-colors flex items-center gap-1.5">
+                    <a href="https://volleyball-gesture-system.vercel.app" target="_blank" rel="noreferrer" className="text-sm font-semibold text-blue-400 hover:text-blue-300 transition-colors flex items-center gap-1.5">
                       Live Demo 🌐
                     </a>
                   </div>
@@ -536,7 +536,7 @@ export default function Portfolio() {
                     <a href="https://github.com/m1ggyccs/M1G-Laundry-Tracker" target="_blank" rel="noreferrer" className="text-sm font-semibold text-teal-400 hover:text-teal-300 transition-colors flex items-center gap-1.5">
                       View Code <span className="group-hover:translate-x-1 transition-transform">→</span>
                     </a>
-                    <a href="#" target="_blank" rel="noreferrer" className="text-sm font-semibold text-blue-400 hover:text-blue-300 transition-colors flex items-center gap-1.5">
+                    <a href="https://m1g-laundry-tracker.vercel.app/" target="_blank" rel="noreferrer" className="text-sm font-semibold text-blue-400 hover:text-blue-300 transition-colors flex items-center gap-1.5">
                       Live Demo 🌐
                     </a>
                   </div>
@@ -566,7 +566,7 @@ export default function Portfolio() {
                     <a href="https://github.com/m1ggyccs/UniversityHub" target="_blank" rel="noreferrer" className="text-sm font-semibold text-teal-400 hover:text-teal-300 transition-colors flex items-center gap-1.5">
                       View Code <span className="group-hover:translate-x-1 transition-transform">→</span>
                     </a>
-                    <a href="#" target="_blank" rel="noreferrer" className="text-sm font-semibold text-blue-400 hover:text-blue-300 transition-colors flex items-center gap-1.5">
+                    <a href="https://university-hub-ten.vercel.app/" target="_blank" rel="noreferrer" className="text-sm font-semibold text-blue-400 hover:text-blue-300 transition-colors flex items-center gap-1.5">
                       Live Demo 🌐
                     </a>
                   </div>
