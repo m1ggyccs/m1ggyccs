@@ -8,7 +8,7 @@ export default function MagneticButton({ children }: { children: React.ReactNode
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
 const handleMouse = (e: React.MouseEvent<HTMLDivElement>) => {
-    // MOBILE POLISH: Disable magnetic pull if the user doesn't have a mouse
+    // Disable magnetic pull if the user doesn't have a mouse
     if (!window.matchMedia("(hover: hover)").matches) return;
 
     const { clientX, clientY } = e;

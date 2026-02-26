@@ -4,10 +4,9 @@ import React from 'react';
 import { motion, Variants } from "framer-motion"; 
 import Tilt from 'react-parallax-tilt';
 import dynamic from 'next/dynamic';
-import SpotlightCard from './SpotlightCard'; // This will work now that the file exists!
+import SpotlightCard from './SpotlightCard'; 
 import {GitHubCalendar} from 'react-github-calendar'; 
 
-// FIXED: Added "as const" right after "easeOut"
 const fadeInUp: Variants = {
   hidden: { opacity: 0, y: 40 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" as const } }

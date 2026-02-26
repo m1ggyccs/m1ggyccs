@@ -25,7 +25,6 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Added "Contact" to the mapped links!
   const navLinks = [
     { name: "About", href: "#about", id: "about" },
     { name: "Experience", href: "#experience", id: "experience" },

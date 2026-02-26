@@ -22,7 +22,7 @@ export default function SpotlightCard({ children, className = "" }: { children: 
       className={`relative overflow-hidden bg-slate-800/40 border border-slate-700/50 shadow-lg transition-colors duration-300 hover:border-teal-500/30 rounded-2xl ${className}`}
     >
       <div
-        // MOBILE POLISH: Added "hidden md:block" so the spotlight only renders on desktop!
+        // Added "hidden md:block" so the spotlight only renders on desktop!
         className="pointer-events-none absolute -inset-px transition duration-300 z-0 hidden md:block"
         style={{
           opacity,
