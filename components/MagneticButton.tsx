@@ -7,13 +7,15 @@ export default function MagneticButton({ children }: { children: React.ReactNode
   const ref = useRef<HTMLDivElement>(null);
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
-  const handleMouse = (e: React.MouseEvent<HTMLDivElement>) => {
+const handleMouse = (e: React.MouseEvent<HTMLDivElement>) => {
+    // MOBILE POLISH: Disable magnetic pull if the user doesn't have a mouse
+    if (!window.matchMedia("(hover: hover)").matches) return;
+
     const { clientX, clientY } = e;
     const { height, width, left, top } = ref.current!.getBoundingClientRect();
     const middleX = clientX - (left + width / 2);
     const middleY = clientY - (top + height / 2);
     
-    // The 0.2 acts as the "pull strength". Increase it for more pull!
     setPosition({ x: middleX * 0.2, y: middleY * 0.2 }); 
   };
 
