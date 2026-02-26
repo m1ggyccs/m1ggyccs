@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { TypeAnimation } from 'react-type-animation';
 import { motion, Variants } from "framer-motion";
 import MagneticButton from './MagneticButton';
+import { track } from '@vercel/analytics'; //
 
 const fadeInUp: Variants = {
   hidden: { opacity: 0, y: 40 },
@@ -42,7 +43,7 @@ export default function Hero() {
             <a href="#projects" className="block bg-teal-600 hover:bg-teal-500 text-white px-7 py-3 rounded-md font-semibold transition-all shadow-lg shadow-teal-500/20">View My Work</a>
           </MagneticButton>
           <MagneticButton>
-            <a href="/resume.pdf" download="Andrei_David_Resume.pdf" className="block bg-slate-800 hover:bg-slate-700 text-slate-100 px-7 py-3 rounded-md font-semibold transition-all border border-slate-600 hover:border-teal-500/50 flex items-center gap-2"><span>📄</span> Download Resume</a>
+            <a href="/resume.pdf" download="Andrei_David_Resume.pdf" onClick={() => track('Downloaded_Resume')} className="block bg-slate-800 hover:bg-slate-700 text-slate-100 px-7 py-3 rounded-md font-semibold transition-all border border-slate-600 hover:border-teal-500/50 flex items-center gap-2"> <span>📄</span> Download Resume </a>
           </MagneticButton>
           <MagneticButton>
             <a href="https://github.com/m1ggyccs" target="_blank" rel="noreferrer" className="block bg-slate-900 hover:bg-slate-800 text-slate-100 px-7 py-3 rounded-md font-semibold transition-all border border-slate-700 hover:border-teal-500/50">Explore GitHub</a>
