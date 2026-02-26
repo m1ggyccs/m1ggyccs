@@ -50,7 +50,6 @@ export default function Contact() {
               <span className="text-teal-500">Let&apos;s</span> Connect
             </h3>
             <p className="text-lg text-slate-400 mb-10 leading-relaxed">
-              Whether you want to discuss Business Central AL, chat about AI projects, or just talk about software engineering, my inbox is always open!
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 mb-10">
@@ -62,13 +61,22 @@ export default function Contact() {
               </a>
             </div>
 
-            <div className="space-y-3 text-slate-500 font-mono text-sm">
-              <p className="flex items-center gap-3"><span>📱</span> +6396-9643-8031</p>
-              <p className="flex items-center gap-3"><span>📍</span> Makati, Metro Manila</p>
-              <a href="https://github.com/m1ggyccs" target="_blank" rel="noreferrer" className="flex items-center gap-3 hover:text-teal-400 transition-colors">
-                <span>🐙</span> github.com/m1ggyccs
-              </a>
-            </div>
+<div className="space-y-4 text-slate-400 font-mono text-sm">
+  <div className="flex items-center gap-4">
+    <span className="text-xl w-6 text-center">📱</span>
+    <a href="tel:+639696438031" className="hover:text-teal-400 transition-colors">+6396-9643-8031</a>
+  </div>
+  <div className="flex items-center gap-4">
+    <span className="text-xl w-6 text-center">📍</span>
+    <span>Makati, Metro Manila</span>
+  </div>
+  <div className="flex items-center gap-4">
+    <span className="text-xl w-6 text-center">🐙</span>
+    <a href="https://github.com/m1ggyccs" target="_blank" rel="noreferrer" className="hover:text-teal-400 transition-colors">
+      github.com/m1ggyccs
+    </a>
+  </div>
+</div>
           </div>
 
           {/* Right Column: The Form */}

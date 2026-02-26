@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useRef, useState } from 'react';
 
 export default function SpotlightCard({ children, className = "" }: { children: React.ReactNode, className?: string }) {
@@ -22,16 +21,13 @@ export default function SpotlightCard({ children, className = "" }: { children: 
       className={`relative overflow-hidden bg-slate-800/40 border border-slate-700/50 shadow-lg transition-colors duration-300 hover:border-teal-500/30 rounded-2xl ${className}`}
     >
       <div
-        // Added "hidden md:block" so the spotlight only renders on desktop!
         className="pointer-events-none absolute -inset-px transition duration-300 z-0 hidden md:block"
         style={{
           opacity,
           background: `radial-gradient(400px circle at ${position.x}px ${position.y}px, rgba(45, 212, 191, 0.15), transparent 40%)`,
         }}
       />
-      <div className="relative z-10 h-full flex flex-col">
-        {children}
-      </div>
+      <div className="relative z-10 h-full flex flex-col">{children}</div>
     </div>
   );
 }
