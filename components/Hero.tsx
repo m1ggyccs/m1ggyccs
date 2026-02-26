@@ -4,6 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import { TypeAnimation } from 'react-type-animation';
 import { motion, Variants } from "framer-motion";
+import MagneticButton from './MagneticButton'; // Added Import!
 
 const fadeInUp: Variants = {
   hidden: { opacity: 0, y: 40 },
@@ -34,10 +35,18 @@ export default function Hero() {
         <p className="text-lg md:text-xl text-slate-400 italic mt-8 max-w-2xl font-serif opacity-80">
           &quot;Building scalable ERP solutions, full-stack web applications, and intelligent systems.&quot;
         </p>
+        
+        {/* Applied Magnetic Buttons Here! */}
         <div className="flex flex-wrap justify-center gap-4 pt-8">
-          <a href="#projects" className="bg-teal-600 hover:bg-teal-500 text-white px-7 py-3 rounded-md font-semibold transition-all shadow-lg shadow-teal-500/20">View My Work</a>
-          <a href="/resume.pdf" download="Andrei_David_Resume.pdf" className="bg-slate-800 hover:bg-slate-700 text-slate-100 px-7 py-3 rounded-md font-semibold transition-all border border-slate-600 hover:border-teal-500/50 flex items-center gap-2"><span>📄</span> Download Resume</a>
-          <a href="https://github.com/m1ggyccs" target="_blank" rel="noreferrer" className="bg-slate-900 hover:bg-slate-800 text-slate-100 px-7 py-3 rounded-md font-semibold transition-all border border-slate-700 hover:border-teal-500/50">Explore GitHub</a>
+          <MagneticButton>
+            <a href="#projects" className="block bg-teal-600 hover:bg-teal-500 text-white px-7 py-3 rounded-md font-semibold transition-all shadow-lg shadow-teal-500/20">View My Work</a>
+          </MagneticButton>
+          <MagneticButton>
+            <a href="/resume.pdf" download="Andrei_David_Resume.pdf" className="block bg-slate-800 hover:bg-slate-700 text-slate-100 px-7 py-3 rounded-md font-semibold transition-all border border-slate-600 hover:border-teal-500/50 flex items-center gap-2"><span>📄</span> Download Resume</a>
+          </MagneticButton>
+          <MagneticButton>
+            <a href="https://github.com/m1ggyccs" target="_blank" rel="noreferrer" className="block bg-slate-900 hover:bg-slate-800 text-slate-100 px-7 py-3 rounded-md font-semibold transition-all border border-slate-700 hover:border-teal-500/50">Explore GitHub</a>
+          </MagneticButton>
         </div>
       </motion.div>
     </section>
