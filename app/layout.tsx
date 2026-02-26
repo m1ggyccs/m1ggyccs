@@ -13,18 +13,17 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-title: "Andrei David | Technical Consultant & Software Engineer",
+title: "Andrei Miguel David | Work Portfolio",
   description: "Portfolio of Andrei Miguel A. David - Software Engineer and Technical Consultant Intern specializing in Business Central and Full-stack development.",
   keywords: ["Software Engineer", "Business Central", "AL Development", "Andrei David"],
   openGraph: {
     title: "Andrei Miguel David | Work Portfolio",
     description: "Building scalable ERP solutions, full-stack web applications, and intelligent systems.",
-    // NOTE: Once you deploy to Vercel, replace this URL with your actual live website link!
     url: "https://m1ggyccs.vercel.app", 
     siteName: "AndreiDavid Portfolio",
     images: [
       {
-        url: "/CovernoBG.png", // Pulls your cover image from the public folder
+        url: "/CovernoBG.png",
         width: 1200,
         height: 630,
         alt: "Andrei Miguel A. David Cover",
