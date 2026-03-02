@@ -90,17 +90,17 @@ export default function Contact() {
               <div className="grid grid-cols-2 gap-5">
                 <div className="space-y-2">
                   <label htmlFor="name" className="text-sm font-medium text-slate-400">Your Name</label>
-                  <input type="text" name="name" id="name" required className="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-3 text-slate-200 focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 transition-all" placeholder="John Doe" />
+                  <input type="text" name="name" id="name" required className="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-3 text-slate-200 focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 transition-all" placeholder="Lewis Hamilton" />
                 </div>
                 <div className="space-y-2">
                   <label htmlFor="email" className="text-sm font-medium text-slate-400">Your Email</label>
-                  <input type="email" name="email" id="email" required className="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-3 text-slate-200 focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 transition-all" placeholder="john@company.com" />
+                  <input type="email" name="email" id="email" required className="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-3 text-slate-200 focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 transition-all" placeholder="LewisH@Ferrari.com" />
                 </div>
               </div>
               
               <div className="space-y-2">
                 <label htmlFor="message" className="text-sm font-medium text-slate-400">Message</label>
-                <textarea name="message" id="message" required rows={4} className="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-3 text-slate-200 focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 transition-all resize-none" placeholder="Hi Andrei, I'd like to chat about..."></textarea>
+                <textarea name="message" id="message" required rows={4} className="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-3 text-slate-200 focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 transition-all resize-none" placeholder="Hi Miggy, I'd like to chat about..."></textarea>
               </div>
 
               <button 
