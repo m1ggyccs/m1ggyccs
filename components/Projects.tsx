@@ -37,7 +37,7 @@ export default function Projects() {
             <SpotlightCard className="p-6 h-full flex flex-col group">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center text-xl border border-slate-700">💰</div>
-                <h4 className="text-xl font-bold text-slate-100 font-mono">Budget Tracker</h4>
+                <h4 className="text-xl font-bold text-slate-100 font-mono">Smart Budget Tracker</h4>
               </div>
               <div className="space-y-3 text-xs text-slate-400 leading-relaxed flex-grow">
                 <p><strong className="text-teal-400/80">S:</strong> Needed to analyze cross-cultural spending behaviors using limited datasets where transactions were vaguely categorized as &quot;Others&quot;.</p>
@@ -60,7 +60,7 @@ export default function Projects() {
             <SpotlightCard className="p-6 h-full flex flex-col group">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center text-xl border border-slate-700">🏐</div>
-                <h4 className="text-xl font-bold text-slate-100 font-mono">Gesture Scoring</h4>
+                <h4 className="text-xl font-bold text-slate-100 font-mono">VolleyVision</h4>
               </div>
               <div className="space-y-3 text-xs text-slate-400 leading-relaxed flex-grow">
                 <p><strong className="text-teal-400/80">S:</strong> Casual volleyball viewers struggle to keep up with complex referee hand signals during fast-paced matches.</p>
@@ -83,7 +83,7 @@ export default function Projects() {
             <SpotlightCard className="p-6 h-full flex flex-col group">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center text-xl border border-slate-700">🧺</div>
-                <h4 className="text-xl font-bold text-slate-100 font-mono">Laundry Tracker</h4>
+                <h4 className="text-xl font-bold text-slate-100 font-mono">M1G Laundry Tracker</h4>
               </div>
               <div className="space-y-3 text-xs text-slate-400 leading-relaxed flex-grow">
                 <p><strong className="text-teal-400/80">S:</strong> A real laundry business was upgrading machinery but still relying on manual tracking for orders, backjobs, and revenue.</p>
