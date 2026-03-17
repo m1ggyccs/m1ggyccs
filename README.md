@@ -4,7 +4,7 @@
 
 <h1 align="center">👋 Hi! I'm Andrei Miguel A. David</h1>
 <p align="center">
-  <strong>Technical Consultant Intern | Software Engineer | Business Central Developer</strong><br>
+  <strong>Technical Consultant Intern | Software Engineer | ERP Developer</strong><br>
   🎓 Computer Science Undergrad @ <a href="https://www.tip.edu.ph" target="_blank">Technological Institute of the Philippines – Manila</a>
   🌐 <a href="https://www.linkedin.com/in/amigsdavid" target="_blank">LinkedIn</a> · <a href="https://github.com/m1ggyccs" target="_blank">GitHub</a>
 </p>
