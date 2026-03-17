@@ -31,10 +31,10 @@ export default function Experience() {
                 <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-slate-800/80 text-slate-400 text-sm border border-slate-700 whitespace-nowrap font-mono mt-2 md:mt-0">January 2026 - Present</div>
               </div>
               <ul className="space-y-4 text-slate-400 leading-relaxed pl-2 md:pl-20">
-                <li className="flex gap-3"><span className="text-teal-500 mt-1 text-lg">▹</span><span>Customize and enhance Microsoft Dynamics 365 Business Central solutions using AL language, including page extensions, table extensions, and RDLC reports.</span></li>
-                <li className="flex gap-3"><span className="text-teal-500 mt-1 text-lg">▹</span><span>Diagnose and resolve functional and technical issues within purchasing, finance, and reporting modules to maintain system performance and reliability.</span></li>
-                <li className="flex gap-3"><span className="text-teal-500 mt-1 text-lg">▹</span><span>Assist in requirements gathering, business process analysis, and solution design.</span></li>
-                <li className="flex gap-3"><span className="text-teal-500 mt-1 text-lg">▹</span><span>Provide basic support and technical assistance using SAP Business One and Microsoft SQL Server (MSSQL).</span></li>
+                <li className="flex gap-3"><span className="text-teal-500 mt-1 text-lg">▹</span><span> Customize and enhance Microsoft Dynamics 365 Business Central solutions using AL language, including page extensions, table extensions, RDLC reports, and Business Central report logic.</span></li>
+                <li className="flex gap-3"><span className="text-teal-500 mt-1 text-lg">▹</span><span>Apply hands-on experience in Business Central customization, troubleshooting, and support across purchasing, finance, and reporting-related processes.</span></li>
+                <li className="flex gap-3"><span className="text-teal-500 mt-1 text-lg">▹</span><span>Customize NetSuite forms and create custom buttons/actions to support client-specific workflow and usability requirements.</span></li>
+                <li className="flex gap-3"><span className="text-teal-500 mt-1 text-lg">▹</span><span>Diagnose and resolve SAP Business One functional and technical issues, including troubleshooting system behavior and supporting user concerns.</span></li>
               </ul>
             </div>
           </div>
