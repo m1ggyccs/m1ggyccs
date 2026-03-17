@@ -40,13 +40,13 @@ Currently, I am a **Technical Consultant Intern at Mustard Seed Systems Corporat
 ## 🧰 Technical Stack
 
 ### **Languages**
-`TypeScript` · `JavaScript` · `Java` · `Python` · `SQL` · `AL`
+`AL`, `SQL`, `TypeScript`, `JavaScript`, `Python`, `Java`, `C++`
 
 ### **Frameworks & Web**
-`React` · `Next.js` · `Node.js` · `Express` · `REST APIs` · `.NET (Basic)`
+`React`, `Next.js`, `Node.js`, `Express.js`, `REST APIs`, `.NET (Basic)`
 
 ### **Platforms & Tools**
-`Dynamics 365 Business Central` · `SAP Business One` · `MSSQL` · `MongoDB` · `Azure` · `Git/GitHub`
+`Microsoft Dynamics 365 Business Central`, `NetSuite`, `SAP Business One`, `Microsoft SQL Server (MSSQL)`, `MongoDB`, `Azure`, `Git/GitHub`
 
 ---
 
