@@ -8,7 +8,8 @@ export default function Navbar() {
 
   // ScrollSpy Logic (IntersectionObserver)
   useEffect(() => {
-    const sectionIds = ["about", "experience", "projects", "skills", "contact"] as const;
+    // Include `education` for correct scroll-spy behavior even though there is no nav tab for it.
+    const sectionIds = ["about", "experience", "education", "projects", "skills", "contact"] as const;
     const navOffset = 140; // Approx. sticky header height (tuned for this layout)
 
     // Initial active section avoids an empty highlight on refresh/jump navigation.
@@ -17,35 +18,35 @@ export default function Navbar() {
       if (!el) return current;
       return window.scrollY + navOffset >= el.offsetTop ? id : current;
     }, "" as (typeof sectionIds)[number] | "");
-    setActiveSection(initial);
-
-    const ratioById = new Map<string, number>();
+    setActiveSection(initial === "education" ? "experience" : initial);
 
     const observer = new IntersectionObserver(
-      (entries) => {
-        for (const entry of entries) {
-          const target = entry.target as HTMLElement;
-          if (!target?.id) continue;
-          ratioById.set(target.id, entry.intersectionRatio);
-        }
-
+      () => {
+        // Determine which section is "active" by looking at which section crosses the navOffset line.
+        // This is more stable than using intersection ratio when sections have uneven heights.
         let bestId = "";
-        let bestRatio = 0;
+        let bestTop = -Infinity;
+
         for (const id of sectionIds) {
-          const ratio = ratioById.get(id) ?? 0;
-          if (ratio > bestRatio) {
-            bestRatio = ratio;
-            bestId = id;
+          const el = document.getElementById(id);
+          if (!el) continue;
+          const rect = el.getBoundingClientRect();
+
+          // Consider sections that are currently around the nav's top boundary.
+          if (rect.top <= navOffset && rect.bottom > navOffset) {
+            if (rect.top > bestTop) {
+              bestTop = rect.top;
+              bestId = id;
+            }
           }
         }
 
-        // Only update once we have a meaningful intersection.
-        if (bestId && bestRatio > 0) setActiveSection(bestId);
+        if (bestId) {
+          setActiveSection(bestId === "education" ? "experience" : bestId);
+        }
       },
       {
-        threshold: [0.1, 0.25, 0.5, 0.75],
-        // Focus the "active zone" near the top of the viewport, accounting for sticky nav.
-        rootMargin: "-120px 0px -60% 0px",
+        threshold: [0.01],
       }
     );
 
