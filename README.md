@@ -31,8 +31,8 @@ Currently a **Technical Consultant Intern** at **Mustard Seed Systems Corporatio
 **Technical Consultant Intern | Mustard Seed Systems Corporation**
 *(January 2026 – Present)*
 - Customize and enhance **Microsoft Dynamics 365 Business Central** solutions using AL language, including page extensions, table extensions, RDLC reports, and Business Central report logic.
-- Apply hands-on experience in **Business Central customization, troubleshooting, and support** across purchasing, finance, and reporting-related processes.
-- Customize **NetSuite forms** and create **custom buttons/actions** to support client-specific workflow and usability requirements.
+- Work on Business Central customization, troubleshooting, and support across purchasing, finance, and reporting processes.
+- Customize **NetSuite** forms and develop scripts and custom actions based on client requirements, supporting workflow automation and system behavior.
 - Diagnose and resolve **SAP Business One** functional and technical issues, including troubleshooting system behavior and supporting user concerns.
 - Assist in requirements gathering, business process analysis, and solution design for ERP-related client requests.
 - Provide technical support and basic backend/data assistance using **Microsoft SQL Server (MSSQL)**.
