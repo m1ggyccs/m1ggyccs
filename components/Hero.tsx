@@ -14,7 +14,7 @@ const fadeInUp: Variants = {
 
 export default function Hero() {
   return (
-    <section className="relative z-10 max-w-6xl mx-auto px-6 py-24 flex flex-col items-center justify-center min-h-[75vh] text-center">
+    <section id="top" className="relative z-10 max-w-6xl mx-auto px-6 py-24 flex flex-col items-center justify-center min-h-[75vh] text-center">
       <motion.div initial="hidden" animate="visible" variants={fadeInUp} className="mb-8 relative flex justify-center">
         <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-slate-800 ring-4 ring-teal-500/20 shadow-2xl shadow-teal-500/10 bg-slate-800">
           <Image src="/avatar.jpg" alt="Miggy" width={160} height={160} priority className="w-full h-full object-cover" />

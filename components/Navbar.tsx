@@ -126,12 +126,35 @@ export default function Navbar() {
     { name: "Contact", href: "#contact", id: "contact" }, 
   ];
 
+  const scrollToId = (id: string) => {
+    const prefersReducedMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
+    document.getElementById(id)?.scrollIntoView({ behavior: prefersReducedMotion ? "auto" : "smooth" });
+    // Remove the hash from the URL after navigation.
+    if (window.location.hash) {
+      history.replaceState(null, "", window.location.pathname + window.location.search);
+    }
+  };
+
+  const onNavClick = (id: string) => (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    setIsMobileMenuOpen(false);
+    scrollToId(id);
+  };
+
   return (
     <nav className="sticky top-0 z-50 w-full bg-slate-900/80 backdrop-blur-md border-b border-slate-800/50 transition-all">
       <div className="flex justify-between items-center p-5 max-w-6xl mx-auto">
-        <div className="text-xl font-bold tracking-tighter text-slate-100 font-mono">
+        <button
+          type="button"
+          className="text-xl font-bold tracking-tighter text-slate-100 font-mono hover:text-teal-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400/60 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 rounded-sm"
+          onClick={() => {
+            setIsMobileMenuOpen(false);
+            const prefersReducedMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
+            window.scrollTo({ top: 0, behavior: prefersReducedMotion ? "auto" : "smooth" });
+          }}
+        >
           &lt;m1ggyccs/&gt;
-        </div>
+        </button>
         
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-8 text-sm font-medium">
@@ -139,6 +162,7 @@ export default function Navbar() {
             <a
               key={link.name}
               href={link.href}
+              onClick={onNavClick(link.id)}
               className={`transition-colors ${
                 activeSection === link.id
                   ? "text-teal-400 font-bold"
@@ -181,7 +205,7 @@ export default function Navbar() {
              <a 
                key={link.name} 
                href={link.href} 
-               onClick={() => setIsMobileMenuOpen(false)} 
+               onClick={onNavClick(link.id)}
                className={`font-medium ${
                  activeSection === link.id ? "text-teal-400" : "text-slate-300"
                } focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400/60 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 rounded-sm px-2 py-1`}
