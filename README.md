@@ -5,13 +5,13 @@
 <h1 align="center">👋 Hi! I'm Andrei Miguel A. David</h1>
 <p align="center">
   <strong>Technical Consultant Intern | Software Engineer | ERP & Systems-Focused Engineer</strong><br>
-  🎓 Computer Science Undergrad @ <a href="https://www.tip.edu.ph" target="_blank">Technological Institute of the Philippines – Manila</a>
-  🌐 <a href="https://www.linkedin.com/in/amigsdavid" target="_blank">LinkedIn</a> · <a href="https://github.com/m1ggyccs" target="_blank">GitHub</a>
+  Computer Science Undergrad @ <a href="https://www.tip.edu.ph" target="_blank">Technological Institute of the Philippines – Manila</a>
+  <a href="https://www.linkedin.com/in/amigsdavid" target="_blank">LinkedIn</a> · <a href="https://github.com/m1ggyccs" target="_blank">GitHub</a>
 </p>
 
 ---
 
-## 🚀 About Me
+## About Me
 
 I’m a Software Engineer and Computer Science student graduating in June 2026 from the Technological Institute of the Philippines.
 
@@ -20,13 +20,13 @@ I enjoy building scalable full-stack applications and working on AI-driven syste
 Currently a **Technical Consultant Intern** at **Mustard Seed Systems Corporation** focusing on ERP Systems & Customization.
 
 ### **Core Engineering Focus:**
-- 🏢 **ERP & Business Systems** I work on customizing Microsoft Dynamics 365 Business Central using AL, and also handle NetSuite customization through scripting and form changes. I've also worked on troubleshooting issues in SAP Business One, mainly on system behavior and data-related concerns.
-- 💻 **Full-Stack Engineering:** I build web applications using React, Node.js / Express, Next.js, and MongoDB, with attention to structure and performance.
-- 🧠 **AI & Machine Learning:** I develop projects involving object detection and gesture recognition using Python, applying machine learning in practical use cases.
+- **ERP & Business Systems** I work on customizing Microsoft Dynamics 365 Business Central using AL, and also handle NetSuite customization through scripting and form changes. I've also worked on troubleshooting issues in SAP Business One, mainly on system behavior and data-related concerns.
+- **Full-Stack Engineering:** I build web applications using React, Node.js / Express, Next.js, and MongoDB, with attention to structure and performance.
+- **AI & Machine Learning:** I develop projects involving object detection and gesture recognition using Python, applying machine learning in practical use cases.
 
 ---
 
-## 💼 Professional Experience
+## Professional Experience
 
 **Technical Consultant Intern | Mustard Seed Systems Corporation**
 *(January 2026 – Present)*
@@ -39,7 +39,7 @@ Currently a **Technical Consultant Intern** at **Mustard Seed Systems Corporatio
 
 ---
 
-## 🧰 Technical Stack
+## Technical Stack
 
 ### **Languages**
 `AL`, `SQL`, `TypeScript`, `JavaScript`, `Python`, `Java`, `C++`
@@ -52,22 +52,22 @@ Currently a **Technical Consultant Intern** at **Mustard Seed Systems Corporatio
 
 ---
 
-## 🎓 Education & Certifications
+## Education & Certifications
 
-**Bachelor of Science in Computer Science** *Technological Institute of the Philippines, Manila (Graduating June 2026)* 🏆 Vice President Lister (VPAA) & Consistent Dean’s Lister
+**Bachelor of Science in Computer Science** *Technological Institute of the Philippines, Manila (Graduating June 2026)* Vice President Lister (VPAA) & Consistent Dean’s Lister
 
-**Senior High School - Software Development** *iACADEMY (2019 - 2021)* 🥈 1st Runner-up, iACADEMY Expo (Avalon Dawnbreak 2D Platformer)
+**Senior High School - Software Development** *iACADEMY (2019 - 2021)* 1st Runner-up, iACADEMY Expo (Avalon Dawnbreak 2D Platformer)
 
 ### **Recent Certifications:**
-- 🌐 Responsive Web Design (freeCodeCamp) - Feb 2026
-- 🐍 Python Data Associate (DataCamp) - Sep 2025
-- ☁️ Microsoft Azure AI Fundamentals (TESDA) - Jun 2025
-- 💻 Web Development Fundamentals (IBM) - Jun 2025
-- 📊 Business Analysis & Process Management (Coursera) - Jun 2025
+- Responsive Web Design (freeCodeCamp) - Feb 2026
+- Python Data Associate (DataCamp) - Sep 2025
+- Microsoft Azure AI Fundamentals (TESDA) - Jun 2025
+- Web Development Fundamentals (IBM) - Jun 2025
+- Business Analysis & Process Management (Coursera) - Jun 2025
 
 ---
 
-## 💻 Featured Projects  
+## Featured Projects  
 
 | Project | Description | Stack |
 |----------|--------------|--------|
@@ -79,19 +79,19 @@ Currently a **Technical Consultant Intern** at **Mustard Seed Systems Corporatio
 
 ---
 
-## 🧭 Leadership & Involvement  
+## Leadership & Involvement  
 
-- 💻 **AWS Cloud Club TIP** – Member (2025–Present)  
-- 🧑‍💻 **Open Source TIP Manila** – Member (2024–Present)  
-- 🏅 **Vice President Lister (VPAA)** & **Dean’s Lister**  
-- 🤝 **Project Manager** in multiple academic and AI-driven research initiatives  
+- **AWS Cloud Club TIP** – Member (2025–Present)  
+- **Open Source TIP Manila** – Member (2024–Present)  
+- **Vice President Lister (VPAA)** & **Dean’s Lister**  
+- **Project Manager** in multiple academic and AI-driven research initiatives  
 
 These experiences shaped my **leadership, collaboration, and project coordination** skills in both academic and technical settings.
 
 ---
 
-## 📫 Let’s Connect
+## Let’s Connect
 
-- 💼 [LinkedIn – @amigsdavid](https://www.linkedin.com/in/amigsdavid)  
-- 💻 [GitHub – @m1ggyccs](https://github.com/m1ggyccs)  
-- ✉️ Email: [amigsdavid@gmail.com](mailto:amigsdavid@gmail.com)
+- [LinkedIn – @amigsdavid](https://www.linkedin.com/in/amigsdavid)  
+- [GitHub – @m1ggyccs](https://github.com/m1ggyccs)  
+- Email: [amigsdavid@gmail.com](mailto:amigsdavid@gmail.com)
