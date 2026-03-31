@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const fadeInUp: Variants = {
   hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" as const } }
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" as const } }
 };
 
 export default function Skills() {
@@ -32,7 +32,7 @@ export default function Skills() {
               ].map((skill, idx, arr) => (
                 <div
                   key={skill.name}
-                  className={`bg-slate-800/80 hover:bg-slate-700 transition-all py-5 px-2 rounded-2xl flex flex-col items-center justify-center text-center gap-3 border border-slate-700/50 shadow-md cursor-default ${
+                  className={`bg-slate-800/80 hover:bg-slate-700 transition-all duration-300 hover:-translate-y-0.5 py-5 px-2 rounded-2xl flex flex-col items-center justify-center text-center gap-3 border border-slate-700/50 shadow-md cursor-default ${
                     idx === arr.length - 1 && arr.length % 2 !== 0
                       ? "col-span-2 justify-self-center w-[calc((100%-1rem)/2)]"
                       : ""
@@ -65,7 +65,7 @@ export default function Skills() {
               ].map((skill, idx, arr) => (
                 <div
                   key={skill.name}
-                  className={`bg-slate-800/80 hover:bg-slate-700 transition-all py-5 px-2 rounded-2xl flex flex-col items-center justify-center text-center gap-3 border border-slate-700/50 shadow-md cursor-default ${
+                  className={`bg-slate-800/80 hover:bg-slate-700 transition-all duration-300 hover:-translate-y-0.5 py-5 px-2 rounded-2xl flex flex-col items-center justify-center text-center gap-3 border border-slate-700/50 shadow-md cursor-default ${
                     idx === arr.length - 1 && arr.length % 2 !== 0
                       ? "col-span-2 justify-self-center w-[calc((100%-1rem)/2)]"
                       : ""
@@ -100,7 +100,7 @@ export default function Skills() {
               ].map((skill, idx, arr) => (
                 <div
                   key={skill.name}
-                  className={`bg-slate-800/80 hover:bg-slate-700 transition-all py-5 px-2 rounded-2xl flex flex-col items-center justify-center text-center gap-3 border border-slate-700/50 shadow-md cursor-default ${
+                  className={`bg-slate-800/80 hover:bg-slate-700 transition-all duration-300 hover:-translate-y-0.5 py-5 px-2 rounded-2xl flex flex-col items-center justify-center text-center gap-3 border border-slate-700/50 shadow-md cursor-default ${
                     idx === arr.length - 1 && arr.length % 2 !== 0
                       ? "col-span-2 justify-self-center w-[calc((100%-1rem)/2)]"
                       : ""

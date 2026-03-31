@@ -1,15 +1,20 @@
 "use client";
 
 import React from 'react';
+import dynamic from 'next/dynamic';
 import Image from 'next/image';
-import { TypeAnimation } from 'react-type-animation';
 import { motion, Variants } from "framer-motion";
 import MagneticButton from './MagneticButton';
 import { track } from '@vercel/analytics'; //
 
+const TypeAnimation = dynamic(
+  () => import('react-type-animation').then((mod) => mod.TypeAnimation),
+  { ssr: false, loading: () => <span className="text-teal-400 font-bold">Software Engineer</span> }
+);
+
 const fadeInUp: Variants = {
   hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" as const } }
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" as const } }
 };
 
 export default function Hero() {
@@ -23,7 +28,7 @@ export default function Hero() {
       </motion.div>
 
       <motion.div initial={false} animate="visible" variants={fadeInUp} transition={{ delay: 0.1 }} className="max-w-4xl space-y-6 flex flex-col items-center">
-        <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-slate-100 font-mono leading-tight">
+        <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight text-slate-100 font-mono leading-[1.1]">
           Hi! I&apos;m <span className="text-teal-400">Andrei Miguel<br />A. David.</span>
         </h1>
         <div className="text-xl md:text-2xl text-slate-400 font-medium font-mono h-12 mt-4">

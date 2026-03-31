@@ -6,7 +6,7 @@ import { motion, Variants } from "framer-motion";
 
 const fadeInUp: Variants = {
   hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" as const } }
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" as const } }
 };
 
 export default function Contact() {
@@ -169,7 +169,7 @@ export default function Contact() {
       </div>
 
       {/* Sticky Mobile CTA */}
-      <div className="md:hidden fixed bottom-4 left-1/2 -translate-x-1/2 z-[110]">
+      <div className="md:hidden fixed bottom-4 pb-[env(safe-area-inset-bottom)] left-1/2 -translate-x-1/2 z-[110]">
         <div className="flex items-center gap-2 rounded-2xl border border-slate-700/70 bg-slate-900/90 backdrop-blur-md p-2 shadow-xl">
           <a
             href="mailto:amigsdavid@gmail.com"

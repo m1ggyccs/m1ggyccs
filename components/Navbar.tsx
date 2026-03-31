@@ -7,17 +7,19 @@ export default function Navbar() {
   const [activeSection, setActiveSection] = useState("");
   const mobileButtonRef = useRef<HTMLButtonElement | null>(null);
   const mobileMenuRef = useRef<HTMLDivElement | null>(null);
+  const pendingNavTargetRef = useRef<string | null>(null);
 
   // ScrollSpy Logic (IntersectionObserver)
   useEffect(() => {
     const sectionIds = ["about", "experience", "education", "projects", "skills", "contact"] as const;
     const navOffset = 140; // Approx. sticky header height (tuned for this layout)
+    const sections = sectionIds
+      .map((id) => ({ id, el: document.getElementById(id) }))
+      .filter((item): item is { id: (typeof sectionIds)[number]; el: HTMLElement } => item.el !== null);
 
     // Initial active section avoids an empty highlight on refresh/jump navigation.
-    const initial = sectionIds.reduce((current, id) => {
-      const el = document.getElementById(id);
-      if (!el) return current;
-      return window.scrollY + navOffset >= el.offsetTop ? id : current;
+    const initial = sections.reduce((current, item) => {
+      return window.scrollY + navOffset >= item.el.offsetTop ? item.id : current;
     }, "" as (typeof sectionIds)[number] | "");
     // Avoid synchronous state updates inside the effect body (prevents lint + cascading renders).
     requestAnimationFrame(() => {
@@ -26,21 +28,36 @@ export default function Navbar() {
 
     const observer = new IntersectionObserver(
       () => {
+        // Keep clicked nav tab active while smooth-scrolling to its target.
+        if (pendingNavTargetRef.current) {
+          const pendingEl = document.getElementById(pendingNavTargetRef.current);
+          if (pendingEl) {
+            const pendingTop = pendingEl.getBoundingClientRect().top;
+            // Release lock once target reaches navbar offset line.
+            if (Math.abs(pendingTop - navOffset) <= 8) {
+              pendingNavTargetRef.current = null;
+            } else {
+              setActiveSection(pendingNavTargetRef.current);
+              return;
+            }
+          } else {
+            pendingNavTargetRef.current = null;
+          }
+        }
+
         // Determine which section is "active" by looking at which section crosses the navOffset line.
         // This is more stable than using intersection ratio when sections have uneven heights.
         let bestId = "";
         let bestTop = -Infinity;
 
-        for (const id of sectionIds) {
-          const el = document.getElementById(id);
-          if (!el) continue;
-          const rect = el.getBoundingClientRect();
+        for (const item of sections) {
+          const rect = item.el.getBoundingClientRect();
 
           // Consider sections that are currently around the nav's top boundary.
           if (rect.top <= navOffset && rect.bottom > navOffset) {
             if (rect.top > bestTop) {
               bestTop = rect.top;
-              bestId = id;
+              bestId = item.id;
             }
           }
         }
@@ -49,7 +66,7 @@ export default function Navbar() {
           setActiveSection(bestId);
         } else {
           // When the user is in the hero/top area (before About), clear active tab.
-          const firstSection = document.getElementById(sectionIds[0]);
+          const firstSection = sections[0]?.el;
           const firstTop = firstSection?.getBoundingClientRect().top ?? Number.POSITIVE_INFINITY;
           if (firstTop > navOffset) {
             setActiveSection("");
@@ -61,9 +78,8 @@ export default function Navbar() {
       }
     );
 
-    for (const id of sectionIds) {
-      const el = document.getElementById(id);
-      if (el) observer.observe(el);
+    for (const item of sections) {
+      observer.observe(item.el);
     }
 
     return () => observer.disconnect();
@@ -135,7 +151,12 @@ export default function Navbar() {
 
   const scrollToId = (id: string) => {
     const prefersReducedMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
-    document.getElementById(id)?.scrollIntoView({ behavior: prefersReducedMotion ? "auto" : "smooth" });
+    const navOffset = 140;
+    const target = document.getElementById(id);
+    if (!target) return;
+
+    const top = window.scrollY + target.getBoundingClientRect().top - navOffset;
+    window.scrollTo({ top: Math.max(0, top), behavior: prefersReducedMotion ? "auto" : "smooth" });
     // Remove the hash from the URL after navigation.
     if (window.location.hash) {
       history.replaceState(null, "", window.location.pathname + window.location.search);
@@ -144,6 +165,8 @@ export default function Navbar() {
 
   const onNavClick = (id: string) => (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
+    pendingNavTargetRef.current = id;
+    setActiveSection(id);
     setIsMobileMenuOpen(false);
     scrollToId(id);
   };

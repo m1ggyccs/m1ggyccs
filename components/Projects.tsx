@@ -18,7 +18,7 @@ const GitHubCalendar = dynamic<GitHubCalendarProps>(
 
 const fadeInUp: Variants = {
   hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" as const } }
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" as const } }
 };
 
 export default function Projects() {
@@ -38,7 +38,7 @@ export default function Projects() {
           
           {/* 1. Smart Budget Tracker */}
           <Tilt tiltMaxAngleX={5} tiltMaxAngleY={5} scale={1.02} className="h-full">
-            <SpotlightCard className="p-6 h-full flex flex-col group">
+            <SpotlightCard className="p-6 h-full flex flex-col group transition-transform duration-300 hover:-translate-y-1">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center text-xl border border-slate-700">💰</div>
                 <h4 className="text-xl font-bold text-slate-100 font-mono">Smart Budget Tracker</h4>
@@ -64,7 +64,7 @@ export default function Projects() {
 
           {/* 2. Volleyball Gesture System */}
           <Tilt tiltMaxAngleX={5} tiltMaxAngleY={5} scale={1.02} className="h-full">
-            <SpotlightCard className="p-6 h-full flex flex-col group">
+            <SpotlightCard className="p-6 h-full flex flex-col group transition-transform duration-300 hover:-translate-y-1">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center text-xl border border-slate-700">🏐</div>
                 <h4 className="text-xl font-bold text-slate-100 font-mono">VolleyVision</h4>
@@ -90,7 +90,7 @@ export default function Projects() {
 
           {/* 3. M1G Laundry Tracker */}
           <Tilt tiltMaxAngleX={5} tiltMaxAngleY={5} scale={1.02} className="h-full">
-            <SpotlightCard className="p-6 h-full flex flex-col group">
+            <SpotlightCard className="p-6 h-full flex flex-col group transition-transform duration-300 hover:-translate-y-1">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center text-xl border border-slate-700">🧺</div>
                 <h4 className="text-xl font-bold text-slate-100 font-mono">M1G Laundry Tracker</h4>
