@@ -11,7 +11,7 @@ const fadeInUp: Variants = {
 
 export default function Experience() {
   return (
-    <motion.section id="experience" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} variants={fadeInUp} className="py-24 border-b border-slate-800/50 relative z-10 scroll-mt-24 md:scroll-mt-28">
+    <motion.section id="experience" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} variants={fadeInUp} className="py-24 md:py-28 border-b border-slate-800/50 relative z-10 scroll-mt-24 md:scroll-mt-28">
       <div className="max-w-6xl mx-auto px-6">
         <h3 className="text-3xl font-bold mb-12 flex items-center gap-3 text-slate-100 font-mono"><span className="text-teal-500">#</span> Professional Experience</h3>
         <div className="relative border-l border-slate-800 ml-3 md:ml-4 space-y-12">

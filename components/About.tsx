@@ -10,11 +10,11 @@ const fadeInUp: Variants = {
 
 export default function About() {
   return (
-    <motion.section id="about" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} variants={fadeInUp} className="bg-slate-900/50 py-24 border-y border-slate-800 relative z-10 scroll-mt-24 md:scroll-mt-28">
+    <motion.section id="about" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} variants={fadeInUp} className="bg-slate-900/50 py-24 md:py-28 border-y border-slate-800 relative z-10 scroll-mt-24 md:scroll-mt-28">
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-12 items-start text-slate-300 text-lg leading-relaxed">
           <div className="space-y-6">
-            <h3 className="text-3xl font-bold mb-12 flex items-center gap-3 text-slate-100"><span className="text-teal-500">#</span> About Me</h3>
+            <h3 className="text-3xl font-bold mb-8 flex items-center gap-3 text-slate-100 font-mono"><span className="text-teal-500">#</span> About Me</h3>
             <p>I’m a Software Engineer and Computer Science student graduating in June 2026 from the Technological Institute of the Philippines.</p>
             <p>I enjoy building scalable full-stack applications and working on AI-driven systems that solve real-world problems. My experience comes from both academic training at iACADEMY and hands-on work in technical consulting, where I’ve learned how systems are applied in real business environments.</p>
             <p>Currently a Technical Consultant Intern at Mustard Seed Systems Corporation focusing on Microsoft 365 Business Central.</p>

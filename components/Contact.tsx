@@ -66,7 +66,7 @@ export default function Contact() {
   };
 
   return (
-    <motion.section id="contact" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} variants={fadeInUp} className="py-24 relative z-10 border-t border-slate-800/50 bg-slate-900/50 scroll-mt-24 md:scroll-mt-28">
+    <motion.section id="contact" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} variants={fadeInUp} className="py-24 md:py-28 relative z-10 border-t border-slate-800/50 bg-slate-900/50 scroll-mt-24 md:scroll-mt-28">
       <div className="max-w-6xl mx-auto px-6">
         
         <div className="grid md:grid-cols-2 gap-16 items-center">
@@ -117,7 +117,7 @@ export default function Contact() {
               <div className="grid grid-cols-2 gap-5">
                 <div className="space-y-2">
                   <label htmlFor="name" className="text-sm font-medium text-slate-400">Your Name</label>
-                  <input type="text" name="name" id="name" required className="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-3 text-slate-200 focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 transition-all" placeholder="Lewis Hamilton" autoComplete="name" />
+                  <input type="text" name="name" id="name" required minLength={2} className="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-3 text-slate-200 focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 transition-all" placeholder="Lewis Hamilton" autoComplete="name" />
                   <p className="text-xs text-slate-500">How should I address you?</p>
                 </div>
                 <div className="space-y-2">
@@ -129,8 +129,8 @@ export default function Contact() {
               
               <div className="space-y-2">
                 <label htmlFor="message" className="text-sm font-medium text-slate-400">Message</label>
-                <textarea name="message" id="message" required rows={4} className="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-3 text-slate-200 focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 transition-all resize-none" placeholder="Hi Miggy, I'd like to chat about..."></textarea>
-                <p className="text-xs text-slate-500">Share context, goals, and any timeline.</p>
+                <textarea name="message" id="message" required minLength={20} rows={4} className="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-3 text-slate-200 focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 transition-all resize-none" placeholder="Hi Miggy, I'd like to chat about..."></textarea>
+                <p className="text-xs text-slate-500">Share context, goals, and any timeline (at least 20 characters).</p>
               </div>
 
               <button 
@@ -158,6 +158,9 @@ export default function Contact() {
                   "Send Message 🚀"
                 )}
               </button>
+              <p className="text-center text-xs text-slate-500 -mt-1">
+                Usually replies within 24-48 hours.
+              </p>
 
               {(successMessage || errorMessage) && (
                 <div
@@ -179,11 +182,11 @@ export default function Contact() {
       </div>
 
       {/* Sticky Mobile CTA */}
-      <div className="md:hidden fixed bottom-4 pb-[env(safe-area-inset-bottom)] left-1/2 -translate-x-1/2 z-[110]">
+      <div className="md:hidden fixed bottom-3 pb-[calc(env(safe-area-inset-bottom)+0.5rem)] left-1/2 -translate-x-1/2 z-[110]">
         <div className="flex items-center gap-2 rounded-2xl border border-slate-700/70 bg-slate-900/90 backdrop-blur-md p-2 shadow-xl">
           <a
             href="mailto:amigsdavid@gmail.com"
-            className="inline-flex items-center gap-2 rounded-xl bg-teal-600 hover:bg-teal-500 text-white px-3 py-2 text-xs font-semibold transition-colors"
+            className="inline-flex min-h-10 items-center gap-2 rounded-xl bg-teal-600 hover:bg-teal-500 text-white px-4 py-2 text-xs font-semibold transition-colors"
           >
             <Image src="/logo/gmail.svg" alt="Gmail" width={16} height={16} sizes="16px" className="w-4 h-4" />
             Email
@@ -193,7 +196,7 @@ export default function Contact() {
             target="_blank"
             rel="noreferrer"
             aria-label="LinkedIn (opens in a new tab)"
-            className="inline-flex items-center gap-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-100 px-3 py-2 text-xs font-semibold border border-slate-700 transition-colors"
+            className="inline-flex min-h-10 items-center gap-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-100 px-4 py-2 text-xs font-semibold border border-slate-700 transition-colors"
           >
             <Image src="/logo/linkedin.svg" alt="LinkedIn" width={16} height={16} sizes="16px" className="w-4 h-4" />
             LinkedIn

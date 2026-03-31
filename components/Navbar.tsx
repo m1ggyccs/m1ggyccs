@@ -216,22 +216,22 @@ export default function Navbar() {
         </button>
         
         {/* Desktop Menu */}
-        <div className="hidden md:flex space-x-8 text-sm font-medium">
+        <div className="hidden md:flex items-center gap-2 text-sm font-medium">
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
               onClick={onNavClick(link.id)}
-              className={`transition-colors ${
+              className={`rounded-lg px-3 py-2 transition-all duration-200 hover:scale-[1.02] ${
                 activeSection === link.id
-                  ? "text-teal-400 font-bold"
-                  : "text-slate-300 hover:text-teal-400"
+                  ? "text-teal-300 bg-teal-500/10 border border-teal-500/20"
+                  : "text-slate-300 hover:text-teal-300 hover:bg-slate-800/70 border border-transparent"
               } focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400/60 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 rounded-sm`}
             >
-              <span className="relative inline-block pb-1">
+              <span className="relative inline-block pb-0.5">
                 {link.name}
                 <span
-                  className={`absolute left-1/2 -translate-x-1/2 -bottom-1 h-0.5 rounded-full bg-teal-400 transition-all duration-300 ${
+                  className={`absolute left-1/2 -translate-x-1/2 -bottom-1 h-0.5 rounded-full bg-teal-300 transition-all duration-300 ${
                     activeSection === link.id ? "w-full opacity-100" : "w-0 opacity-0"
                   }`}
                 />
@@ -265,16 +265,18 @@ export default function Navbar() {
         <div
           id="mobile-nav"
           ref={mobileMenuRef}
-          className="md:hidden absolute top-full left-0 w-full bg-slate-900 border-b border-slate-800 shadow-xl py-4 flex flex-col items-center space-y-4"
+          className="md:hidden absolute top-full left-0 w-full bg-slate-900 border-b border-slate-800 shadow-xl py-5 flex flex-col items-center space-y-2"
         >
           {navLinks.map((link) => (
              <a 
                key={link.name} 
                href={link.href} 
                onClick={onNavClick(link.id)}
-               className={`font-medium ${
-                 activeSection === link.id ? "text-teal-400" : "text-slate-300"
-               } focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400/60 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 rounded-sm px-2 py-1`}
+               className={`font-medium min-h-11 w-[90%] max-w-xs inline-flex items-center justify-center rounded-xl px-4 py-2 transition-colors ${
+                 activeSection === link.id
+                   ? "text-teal-300 bg-teal-500/10 border border-teal-500/20"
+                   : "text-slate-300 hover:bg-slate-800/70"
+               } focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400/60 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900`}
              >
                {link.name}
              </a>

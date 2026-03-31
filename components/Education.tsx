@@ -11,7 +11,7 @@ const fadeInUp: Variants = {
 
 export default function Education() {
   return (
-    <motion.section id="education" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} variants={fadeInUp} className="py-24 border-b border-slate-800/50 relative z-10 bg-slate-900/20 scroll-mt-24 md:scroll-mt-28">
+    <motion.section id="education" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} variants={fadeInUp} className="py-24 md:py-28 border-b border-slate-800/50 relative z-10 bg-slate-900/20 scroll-mt-24 md:scroll-mt-28">
       <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-16">
         
         {/* Education Column */}

@@ -1,7 +1,7 @@
 "use client";
 
-import React from 'react';
-import { motion, Variants } from "framer-motion"; 
+import React, { useRef, useState } from 'react';
+import { motion, Variants, useInView } from "framer-motion"; 
 import Tilt from 'react-parallax-tilt';
 import dynamic from 'next/dynamic';
 import type { Props as GitHubCalendarProps } from 'react-github-calendar';
@@ -22,8 +22,16 @@ const fadeInUp: Variants = {
 };
 
 export default function Projects() {
+  const [expandedProjects, setExpandedProjects] = useState<Record<string, boolean>>({});
+  const calendarRef = useRef<HTMLDivElement | null>(null);
+  const isCalendarInView = useInView(calendarRef, { once: true, margin: "200px 0px" });
+
+  const toggleProjectDetails = (projectKey: string) => {
+    setExpandedProjects((prev) => ({ ...prev, [projectKey]: !prev[projectKey] }));
+  };
+
   return (
-    <motion.section id="projects" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} variants={fadeInUp} className="bg-slate-900/50 py-24 border-b border-slate-800 relative z-10 scroll-mt-24 md:scroll-mt-28">
+    <motion.section id="projects" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} variants={fadeInUp} className="bg-slate-900/50 py-24 md:py-28 border-b border-slate-800 relative z-10 scroll-mt-24 md:scroll-mt-28">
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <h3 className="text-3xl font-bold flex items-center gap-3 text-slate-100 font-mono">
@@ -46,12 +54,19 @@ export default function Projects() {
               <div className="md:hidden text-sm text-slate-300 leading-relaxed flex-grow">
                 Budget analytics tool using machine learning models for category mapping and demand forecasting.
               </div>
-              <div className="hidden md:block space-y-3 text-xs text-slate-400 leading-relaxed flex-grow">
+              <div className={`hidden md:block space-y-3 text-xs text-slate-400 leading-relaxed flex-grow overflow-hidden transition-[max-height] duration-300 ${expandedProjects.budget ? "max-h-[28rem]" : "max-h-40"}`}>
                 <p><strong className="text-teal-400/80">S:</strong> Needed to analyze cross-cultural spending behaviors using limited datasets where transactions were vaguely categorized as &quot;Others&quot;.</p>
                 <p><strong className="text-teal-400/80">T:</strong> Clean unstructured data by mapping descriptions to categories, and identify the best forecasting model for small-scale data.</p>
                 <p><strong className="text-teal-400/80">A:</strong> Built a comparative engine evaluating Moving Average, Holt-Winters, and LSTM models side-by-side.</p>
                 <p><strong className="text-teal-400/80">R:</strong> Successfully categorized the data and identified the highest-performing model, proving the viability of cross-cultural predictive budgeting.</p>
               </div>
+              <button
+                type="button"
+                onClick={() => toggleProjectDetails("budget")}
+                className="hidden md:inline-flex mt-2 text-xs text-teal-300 hover:text-teal-200 font-medium"
+              >
+                {expandedProjects.budget ? "Show less details" : "Show more details"}
+              </button>
               <div className="mt-6 pt-4 border-t border-slate-700/50 flex justify-between items-center">
                 <div className="flex gap-2">
                   <span className="text-[10px] bg-slate-900/50 border border-slate-700 px-2 py-1 rounded font-mono">Python</span>
@@ -72,12 +87,19 @@ export default function Projects() {
               <div className="md:hidden text-sm text-slate-300 leading-relaxed flex-grow">
                 Computer-vision web app that identifies volleyball referee gestures in real time.
               </div>
-              <div className="hidden md:block space-y-3 text-xs text-slate-400 leading-relaxed flex-grow">
+              <div className={`hidden md:block space-y-3 text-xs text-slate-400 leading-relaxed flex-grow overflow-hidden transition-[max-height] duration-300 ${expandedProjects.volley ? "max-h-[28rem]" : "max-h-40"}`}>
                 <p><strong className="text-teal-400/80">S:</strong> Casual volleyball viewers struggle to keep up with complex referee hand signals during fast-paced matches.</p>
                 <p><strong className="text-teal-400/80">T:</strong> Develop a web-based computer vision tool to automatically interpret and track gestures in real-time.</p>
                 <p><strong className="text-teal-400/80">A:</strong> Trained a custom model using a proprietary dataset and integrated it with a Next.js web app for API communication and SEO.</p>
                 <p><strong className="text-teal-400/80">R:</strong> Achieved high accuracy in capturing signals despite a strict timeframe, successfully delivering a functional web prototype.</p>
               </div>
+              <button
+                type="button"
+                onClick={() => toggleProjectDetails("volley")}
+                className="hidden md:inline-flex mt-2 text-xs text-teal-300 hover:text-teal-200 font-medium"
+              >
+                {expandedProjects.volley ? "Show less details" : "Show more details"}
+              </button>
               <div className="mt-6 pt-4 border-t border-slate-700/50 flex justify-between items-center">
                 <div className="flex gap-2">
                   <span className="text-[10px] bg-slate-900/50 border border-slate-700 px-2 py-1 rounded font-mono">OpenCV</span>
@@ -98,12 +120,19 @@ export default function Projects() {
               <div className="md:hidden text-sm text-slate-300 leading-relaxed flex-grow">
                 Laundry operations tracker with order lifecycle monitoring and profitability visibility.
               </div>
-              <div className="hidden md:block space-y-3 text-xs text-slate-400 leading-relaxed flex-grow">
+              <div className={`hidden md:block space-y-3 text-xs text-slate-400 leading-relaxed flex-grow overflow-hidden transition-[max-height] duration-300 ${expandedProjects.laundry ? "max-h-[28rem]" : "max-h-40"}`}>
                 <p><strong className="text-teal-400/80">S:</strong> A real laundry business was upgrading machinery but still relying on manual tracking for orders, backjobs, and revenue.</p>
                 <p><strong className="text-teal-400/80">T:</strong> Architect a modernized, full-stack tracking application to handle complex order lifecycles and business analytics.</p>
                 <p><strong className="text-teal-400/80">A:</strong> Designed a robust relational database schema using Postgres and Prisma to efficiently manage customer queues and financial data.</p>
                 <p><strong className="text-teal-400/80">R:</strong> Delivered a system that simplified order tracking, resolved backjob confusion, and provided clear visibility into profitability.</p>
               </div>
+              <button
+                type="button"
+                onClick={() => toggleProjectDetails("laundry")}
+                className="hidden md:inline-flex mt-2 text-xs text-teal-300 hover:text-teal-200 font-medium"
+              >
+                {expandedProjects.laundry ? "Show less details" : "Show more details"}
+              </button>
               <div className="mt-6 pt-4 border-t border-slate-700/50 flex justify-between items-center">
                 <div className="flex gap-2">
                   <span className="text-[10px] bg-slate-900/50 border border-slate-700 px-2 py-1 rounded font-mono">Next.js</span>
@@ -117,18 +146,22 @@ export default function Projects() {
         </div>
         
         {/* GitHub Calendar */}
-        <div className="mt-20 flex flex-col items-center justify-center bg-slate-900/40 p-8 rounded-3xl border border-slate-700/50 shadow-xl overflow-x-auto w-full max-w-full">
+        <div ref={calendarRef} className="mt-20 flex flex-col items-center justify-center bg-slate-900/40 p-8 rounded-3xl border border-slate-700/50 shadow-xl overflow-x-auto w-full max-w-full">
           <h4 className="text-2xl font-bold text-slate-100 mb-8 font-mono">
             <span className="text-teal-500">GitHub</span> Contributions
           </h4>
-          <GitHubCalendar 
-            username="m1ggyccs" 
-            colorScheme="dark"
-            theme={{
-              light: ['#1e293b', '#115e59', '#0d9488', '#0f766e', '#2dd4bf'],
-              dark: ['#1e293b', '#115e59', '#0d9488', '#0f766e', '#2dd4bf']
-            }}
-          />
+          {isCalendarInView ? (
+            <GitHubCalendar 
+              username="m1ggyccs" 
+              colorScheme="dark"
+              theme={{
+                light: ['#1e293b', '#115e59', '#0d9488', '#0f766e', '#2dd4bf'],
+                dark: ['#1e293b', '#115e59', '#0d9488', '#0f766e', '#2dd4bf']
+              }}
+            />
+          ) : (
+            <div className="h-28 w-full max-w-3xl rounded-2xl bg-slate-800/40 animate-pulse" />
+          )}
         </div>
       </div>
     </motion.section>

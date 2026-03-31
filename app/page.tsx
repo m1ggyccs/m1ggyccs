@@ -1,13 +1,13 @@
 "use client";
 
 import React from 'react';
+import dynamic from 'next/dynamic';
 import { MotionConfig, motion, useReducedMotion, useScroll, useSpring } from "framer-motion";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 // Imported Modular Components
 import Navbar from '@/components/Navbar';
-import ParticleBackground from '@/components/ParticleBackground';
 import Hero from '@/components/Hero';
 import About from '@/components/About';
 import Education from '@/components/Education';
@@ -17,6 +17,11 @@ import Skills from '@/components/Skills';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import BackToTop from '@/components/BackToTop';
+
+const ParticleBackground = dynamic(() => import('@/components/ParticleBackground'), {
+  ssr: false,
+  loading: () => null,
+});
 
 export default function Portfolio() {
   // Reading Progress Bar tracking logic
