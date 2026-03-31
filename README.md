@@ -54,9 +54,9 @@ Currently a **Technical Consultant Intern** at **Mustard Seed Systems Corporatio
 
 ## Education & Certifications
 
-**Bachelor of Science in Computer Science** *Technological Institute of the Philippines, Manila (Graduating June 2026)* 🏆 Vice President Lister (VPAA) & Consistent Dean’s Lister
+**Bachelor of Science in Computer Science** *Technological Institute of the Philippines, Manila (Graduating June 2026)* Vice President Lister (VPAA) & Consistent Dean’s Lister
 
-**Senior High School - Software Development** *iACADEMY (2019 - 2021)* 🥈 1st Runner-up, iACADEMY Expo (Avalon Dawnbreak 2D Platformer)
+**Senior High School - Software Development** *iACADEMY (2019 - 2021)* 1st Runner-up, iACADEMY Expo (Avalon Dawnbreak 2D Platformer)
 
 ### **Recent Certifications:**
 - Responsive Web Design (freeCodeCamp) - Feb 2026
