@@ -34,7 +34,7 @@ export default function Hero() {
           />
         </div>
         <p className="text-lg md:text-xl text-slate-400 italic mt-8 max-w-2xl font-serif opacity-80">
-          &quot;Building scalable ERP solutions, full-stack web applications, and intelligent systems.&quot;
+          &quot;Per aspera ad astra.&quot;
         </p>
         
         {/* Applied Magnetic Buttons Here! */}

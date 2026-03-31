@@ -28,13 +28,13 @@ export default function Experience() {
                     <p className="text-lg text-teal-400 font-medium mt-1"><a href="https://www.mseedsystems.com/" target="_blank" rel="noreferrer" className="hover:text-teal-300 hover:underline">Mustard Seed Systems Corporation</a></p>
                   </div>
                 </div>
-                <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-slate-800/80 text-slate-400 text-sm border border-slate-700 whitespace-nowrap font-mono mt-2 md:mt-0">January 2026 - Present</div>
+                <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-slate-800/80 text-slate-400 text-sm border border-slate-700 whitespace-nowrap font-mono mt-2 md:mt-0">January 2026 – Present</div>
               </div>
               <ul className="space-y-4 text-slate-400 leading-relaxed pl-2 md:pl-20">
-                <li className="flex gap-3"><span className="text-teal-500 mt-1 text-lg">▹</span><span> Customize and enhance Microsoft Dynamics 365 Business Central solutions using AL language, including page extensions, table extensions, RDLC reports, and Business Central report logic.</span></li>
-                <li className="flex gap-3"><span className="text-teal-500 mt-1 text-lg">▹</span><span>Apply hands-on experience in Business Central customization, troubleshooting, and support across purchasing, finance, and reporting-related processes.</span></li>
-                <li className="flex gap-3"><span className="text-teal-500 mt-1 text-lg">▹</span><span>Customize NetSuite forms and create custom buttons/actions to support client-specific workflow and usability requirements.</span></li>
-                <li className="flex gap-3"><span className="text-teal-500 mt-1 text-lg">▹</span><span>Diagnose and resolve SAP Business One functional and technical issues, including troubleshooting system behavior and supporting user concerns.</span></li>
+                <li className="flex gap-3"><span className="text-teal-500 mt-1 text-lg">▹</span><span>Customize and enhance Microsoft Dynamics 365 Business Central solutions using AL, including page and table extensions and RDLC reports.</span></li>
+                <li className="flex gap-3"><span className="text-teal-500 mt-1 text-lg">▹</span><span>Work on Business Central customization, troubleshooting, and support across purchasing, finance, and reporting processes.</span></li>
+                <li className="flex gap-3"><span className="text-teal-500 mt-1 text-lg">▹</span><span>Customize NetSuite forms and develop scripts and custom actions based on client requirements, supporting workflow automation and system behavior.</span></li>
+                <li className="flex gap-3"><span className="text-teal-500 mt-1 text-lg">▹</span><span>Troubleshoot and resolve SAP Business One issues, focusing on system behavior, data concerns, and user-related problems.</span></li>
               </ul>
             </div>
           </div>
