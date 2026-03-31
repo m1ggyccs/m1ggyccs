@@ -18,7 +18,10 @@ export default function Navbar() {
       if (!el) return current;
       return window.scrollY + navOffset >= el.offsetTop ? id : current;
     }, "" as (typeof sectionIds)[number] | "");
-    setActiveSection(initial === "education" ? "experience" : initial);
+    // Avoid synchronous state updates inside the effect body (prevents lint + cascading renders).
+    requestAnimationFrame(() => {
+      setActiveSection(initial === "education" ? "experience" : initial);
+    });
 
     const observer = new IntersectionObserver(
       () => {
