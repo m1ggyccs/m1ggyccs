@@ -29,7 +29,7 @@ export default function Hero() {
         <div className="text-xl md:text-2xl text-slate-400 font-medium font-mono h-12 mt-4">
           A{' '}
           <TypeAnimation
-            sequence={['Technical Consultant Intern', 2000, 'Software Engineer', 2000, 'Business Central Developer', 2000]}
+            sequence={['Technical Consultant', 2000, 'Software Engineer', 2000, 'ERP & Systems-Focused Engineer', 2000]}
             wrapper="span" speed={50} className="text-teal-400 font-bold" repeat={Infinity}
           />
         </div>

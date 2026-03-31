@@ -18,7 +18,7 @@ title: "Andrei Miguel David | Work Portfolio",
   keywords: ["Software Engineer", "Business Central", "AL Development", "Andrei David"],
   openGraph: {
     title: "Andrei Miguel David | Work Portfolio",
-    description: "Building scalable ERP solutions, full-stack web applications, and intelligent systems.",
+    description: "Per aspera ad astra.",
     url: "https://m1ggyccs.vercel.app", 
     siteName: "AndreiDavid Portfolio",
     images: [
