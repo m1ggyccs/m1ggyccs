@@ -11,7 +11,7 @@ const fadeInUp: Variants = {
 
 export default function Skills() {
   return (
-    <motion.section id="skills" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} variants={fadeInUp} className="py-24 relative z-10 border-b border-slate-800/50">
+    <motion.section id="skills" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} variants={fadeInUp} className="py-24 relative z-10 border-b border-slate-800/50 scroll-mt-24 md:scroll-mt-28">
       <div className="max-w-7xl mx-auto px-6">
         <h3 className="text-3xl md:text-4xl font-bold mb-16 text-center text-slate-100 font-mono">Technical Stack</h3>
         <div className="grid md:grid-cols-3 gap-0 divide-y md:divide-y-0 md:divide-x divide-slate-700/50 bg-slate-900/40 rounded-3xl border border-slate-700/50 shadow-2xl overflow-hidden backdrop-blur-sm mb-12">

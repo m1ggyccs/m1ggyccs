@@ -58,7 +58,7 @@ export default function Contact() {
   };
 
   return (
-    <motion.section id="contact" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} variants={fadeInUp} className="py-24 relative z-10 border-t border-slate-800/50 bg-slate-900/50">
+    <motion.section id="contact" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} variants={fadeInUp} className="py-24 relative z-10 border-t border-slate-800/50 bg-slate-900/50 scroll-mt-24 md:scroll-mt-28">
       <div className="max-w-6xl mx-auto px-6">
         
         <div className="grid md:grid-cols-2 gap-16 items-center">
@@ -165,6 +165,29 @@ export default function Contact() {
             </form>
           </div>
           
+        </div>
+      </div>
+
+      {/* Sticky Mobile CTA */}
+      <div className="md:hidden fixed bottom-4 left-1/2 -translate-x-1/2 z-[110]">
+        <div className="flex items-center gap-2 rounded-2xl border border-slate-700/70 bg-slate-900/90 backdrop-blur-md p-2 shadow-xl">
+          <a
+            href="mailto:amigsdavid@gmail.com"
+            className="inline-flex items-center gap-2 rounded-xl bg-teal-600 hover:bg-teal-500 text-white px-3 py-2 text-xs font-semibold transition-colors"
+          >
+            <Image src="/logo/gmail.svg" alt="Gmail" width={16} height={16} className="w-4 h-4" />
+            Email
+          </a>
+          <a
+            href="https://linkedin.com/in/amigsdavid/"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="LinkedIn (opens in a new tab)"
+            className="inline-flex items-center gap-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-100 px-3 py-2 text-xs font-semibold border border-slate-700 transition-colors"
+          >
+            <Image src="/logo/linkedin.svg" alt="LinkedIn" width={16} height={16} className="w-4 h-4" />
+            LinkedIn
+          </a>
         </div>
       </div>
     </motion.section>

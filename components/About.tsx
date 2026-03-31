@@ -10,7 +10,7 @@ const fadeInUp: Variants = {
 
 export default function About() {
   return (
-    <motion.section id="about" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} variants={fadeInUp} className="bg-zinc-900/50 py-24 border-y border-zinc-800 relative z-10">
+    <motion.section id="about" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} variants={fadeInUp} className="bg-zinc-900/50 py-24 border-y border-zinc-800 relative z-10 scroll-mt-24 md:scroll-mt-28">
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-12 items-start text-zinc-300 text-lg leading-relaxed">
           <div className="space-y-6">

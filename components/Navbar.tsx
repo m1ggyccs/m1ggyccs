@@ -47,6 +47,13 @@ export default function Navbar() {
 
         if (bestId) {
           setActiveSection(bestId);
+        } else {
+          // When the user is in the hero/top area (before About), clear active tab.
+          const firstSection = document.getElementById(sectionIds[0]);
+          const firstTop = firstSection?.getBoundingClientRect().top ?? Number.POSITIVE_INFINITY;
+          if (firstTop > navOffset) {
+            setActiveSection("");
+          }
         }
       },
       {
@@ -169,7 +176,14 @@ export default function Navbar() {
                   : "text-slate-300 hover:text-teal-400"
               } focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400/60 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 rounded-sm`}
             >
-              {link.name}
+              <span className="relative inline-block pb-1">
+                {link.name}
+                <span
+                  className={`absolute left-1/2 -translate-x-1/2 -bottom-1 h-0.5 rounded-full bg-teal-400 transition-all duration-300 ${
+                    activeSection === link.id ? "w-full opacity-100" : "w-0 opacity-0"
+                  }`}
+                />
+              </span>
             </a>
           ))}
         </div>
