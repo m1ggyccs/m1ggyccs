@@ -48,11 +48,19 @@ export default function Education() {
                   <svg className="w-5 h-5 text-slate-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
                   <span>Vice President Lister (VPAA) and consistent Dean&apos;s Lister</span>
                 </p>
+                <p className="flex items-start gap-3">
+                  <span className="text-teal-500 mt-0.5 shrink-0">▹</span>
+                  <span>AWS Cloud Club TIP (2026)</span>
+                </p>
+                <p className="flex items-start gap-3">
+                  <span className="text-teal-500 mt-0.5 shrink-0">▹</span>
+                  <span>Open Source (2024)</span>
+                </p>
                 
                 <div className="pt-6 mt-4 border-t border-slate-800/50">
                   <p className="text-sm font-semibold text-slate-300 mb-3 font-mono">Relevant Coursework:</p>
                   <div className="flex flex-wrap gap-2 text-xs font-mono text-slate-400">
-                    {['Data Structures', 'Machine Learning', 'Artificial Intelligence', 'Database Systems', 'Project Management'].map((course) => (
+                    {['Data Structures', 'Machine Learning', 'Artificial Intelligence', 'Database Systems', 'Object Oriented Programming', 'Project Management'].map((course) => (
                       <span key={course} className="bg-slate-800/50 border border-slate-700/50 px-2.5 py-1.5 rounded-md">{course}</span>
                     ))}
                   </div>
@@ -91,6 +99,23 @@ export default function Education() {
                   <svg className="w-5 h-5 text-slate-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
                   <span>1st Runner-up, iACADEMY Expo (Avalon Dawnbreak 2D Platformer)</span>
                 </p>
+                <div className="pt-6 mt-4 border-t border-slate-800/50">
+                  <p className="text-sm font-semibold text-slate-300 mb-3 font-mono">Relevant Coursework:</p>
+                  <div className="flex flex-wrap gap-2 text-xs font-mono text-slate-400">
+                    {[
+                      'Programming Fundamentals',
+                      'Object-Oriented Programming',
+                      'Data Structures and Basic Algorithms',
+                      'Web Development',
+                      'Game Development',
+                      'Software Development Principles',
+                    ].map((course) => (
+                      <span key={course} className="bg-slate-800/50 border border-slate-700/50 px-2.5 py-1.5 rounded-md">
+                        {course}
+                      </span>
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
           </div>

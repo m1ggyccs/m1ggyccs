@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion, Variants } from "framer-motion";
+import Image from "next/image";
 
 const fadeInUp: Variants = {
   hidden: { opacity: 0, y: 40 },
@@ -20,8 +21,32 @@ export default function Skills() {
             <h4 className="text-xl font-bold text-teal-400 font-mono mb-2">Languages</h4>
             <div className="w-12 h-1 bg-teal-500/30 rounded-full mb-10"></div>
             <div className="grid grid-cols-2 gap-4 w-full">
-              {[{ name: 'TypeScript', icon: '📘' }, { name: 'JavaScript', icon: '⚡' }, { name: 'Java', icon: '☕' }, { name: 'Python', icon: '🐍' }, { name: 'SQL', icon: '💾' }, { name: 'AL', icon: '🏗️' }].map((skill) => (
-                <div key={skill.name} className="bg-slate-800/80 hover:bg-slate-700 transition-all py-5 px-2 rounded-2xl flex flex-col items-center justify-center text-center gap-3 border border-slate-700/50 shadow-md cursor-default"><span className="text-2xl">{skill.icon}</span><span className="text-sm font-semibold text-slate-300 font-mono">{skill.name}</span></div>
+              {[
+                { name: "TypeScript", iconSrc: "/logo/typescript.svg" },
+                { name: "JavaScript", iconSrc: "/logo/javascript.svg" },
+                { name: "Java", iconSrc: "/logo/java.svg" },
+                { name: "C++", iconSrc: "/logo/c++.svg" },
+                { name: "Python", iconSrc: "/logo/python.svg" },
+                { name: "SQL", iconSrc: "/logo/sql.svg" },
+                { name: "AL", iconSrc: "/logo/AL.svg" },
+              ].map((skill, idx, arr) => (
+                <div
+                  key={skill.name}
+                  className={`bg-slate-800/80 hover:bg-slate-700 transition-all py-5 px-2 rounded-2xl flex flex-col items-center justify-center text-center gap-3 border border-slate-700/50 shadow-md cursor-default ${
+                    idx === arr.length - 1 && arr.length % 2 !== 0
+                      ? "col-span-2 justify-self-center w-[calc((100%-1rem)/2)]"
+                      : ""
+                  }`}
+                >
+                  <Image
+                    src={skill.iconSrc}
+                    alt={skill.name}
+                    width={32}
+                    height={32}
+                    className="w-8 h-8"
+                  />
+                  <span className="text-sm font-semibold text-slate-300 font-mono">{skill.name}</span>
+                </div>
               ))}
             </div>
           </div>
@@ -31,8 +56,30 @@ export default function Skills() {
             <h4 className="text-xl font-bold text-teal-400 font-mono mb-2">Frameworks & Web</h4>
             <div className="w-12 h-1 bg-teal-500/30 rounded-full mb-10"></div>
             <div className="grid grid-cols-2 gap-4 w-full">
-              {[{ name: 'React', icon: '⚛️' }, { name: 'Next.js', icon: '▲' }, { name: 'Node.js', icon: '🟢' }, { name: 'Express', icon: '🚂' }, { name: 'REST APIs', icon: '🔌' }, { name: '.NET', icon: '🟣' }].map((skill) => (
-                <div key={skill.name} className="bg-slate-800/80 hover:bg-slate-700 transition-all py-5 px-2 rounded-2xl flex flex-col items-center justify-center text-center gap-3 border border-slate-700/50 shadow-md cursor-default"><span className="text-2xl">{skill.icon}</span><span className="text-sm font-semibold text-slate-300 font-mono">{skill.name}</span></div>
+              {[
+                { name: "React", iconSrc: "/logo/react.svg" },
+                { name: "Next.js", iconSrc: "/logo/nextjs.svg" },
+                { name: "Node.js", iconSrc: "/logo/nodejs.svg" },
+                { name: "Express", iconSrc: "/logo/express.svg" },
+                { name: ".NET", iconSrc: "/logo/dotnet.svg" },
+              ].map((skill, idx, arr) => (
+                <div
+                  key={skill.name}
+                  className={`bg-slate-800/80 hover:bg-slate-700 transition-all py-5 px-2 rounded-2xl flex flex-col items-center justify-center text-center gap-3 border border-slate-700/50 shadow-md cursor-default ${
+                    idx === arr.length - 1 && arr.length % 2 !== 0
+                      ? "col-span-2 justify-self-center w-[calc((100%-1rem)/2)]"
+                      : ""
+                  }`}
+                >
+                  <Image
+                    src={skill.iconSrc}
+                    alt={skill.name}
+                    width={32}
+                    height={32}
+                    className="w-8 h-8"
+                  />
+                  <span className="text-sm font-semibold text-slate-300 font-mono">{skill.name}</span>
+                </div>
               ))}
             </div>
           </div>
@@ -42,8 +89,32 @@ export default function Skills() {
             <h4 className="text-xl font-bold text-teal-400 font-mono mb-2">Platforms & Tools</h4>
             <div className="w-12 h-1 bg-teal-500/30 rounded-full mb-10"></div>
             <div className="grid grid-cols-2 gap-4 w-full">
-              {[{ name: 'Business Central', icon: '🏢' }, { name: 'SAP B1', icon: '💼' }, { name: 'MS-SQL', icon: '🗄️' }, { name: 'MongoDB', icon: '🍃' }, { name: 'Azure', icon: '☁️' }, { name: 'GitHub', icon: '🐙' }].map((skill) => (
-                <div key={skill.name} className="bg-slate-800/80 hover:bg-slate-700 transition-all py-5 px-2 rounded-2xl flex flex-col items-center justify-center text-center gap-3 border border-slate-700/50 shadow-md cursor-default"><span className="text-2xl">{skill.icon}</span><span className="text-sm font-semibold text-slate-300 font-mono">{skill.name}</span></div>
+              {[
+                { name: "Business Central", iconSrc: "/logo/businesscentral.svg" },
+                { name: "SAP B1", iconSrc: "/logo/sap.svg" },
+                { name: "MS-SQL", iconSrc: "/logo/ms-sql.svg" },
+                { name: "MongoDB", iconSrc: "/logo/mongodb.svg" },
+                { name: "Azure", iconSrc: "/logo/azure.svg" },
+                { name: "NetSuite", iconSrc: "/logo/netsuite.svg" },
+                { name: "GitHub", iconSrc: "/logo/github.svg" },
+              ].map((skill, idx, arr) => (
+                <div
+                  key={skill.name}
+                  className={`bg-slate-800/80 hover:bg-slate-700 transition-all py-5 px-2 rounded-2xl flex flex-col items-center justify-center text-center gap-3 border border-slate-700/50 shadow-md cursor-default ${
+                    idx === arr.length - 1 && arr.length % 2 !== 0
+                      ? "col-span-2 justify-self-center w-[calc((100%-1rem)/2)]"
+                      : ""
+                  }`}
+                >
+                  <Image
+                    src={skill.iconSrc}
+                    alt={skill.name}
+                    width={32}
+                    height={32}
+                    className="w-8 h-8"
+                  />
+                  <span className="text-sm font-semibold text-slate-300 font-mono">{skill.name}</span>
+                </div>
               ))}
             </div>
           </div>
@@ -53,7 +124,14 @@ export default function Skills() {
         <div className="pt-8">
           <h4 className="text-lg font-bold text-slate-400 font-mono mb-6 text-center">Core Competencies</h4>
           <div className="flex flex-wrap justify-center gap-3">
-            {['ERP Customization', 'Full-Stack Web Development', 'Machine Learning Fundamentals', 'Software Engineering', 'System Troubleshooting', 'Database Querying'].map((competency) => (
+            {[
+              'ERP Systems & Customization',
+              'Full-Stack Web Development',
+              'Software Development Practices',
+              'System Troubleshooting & Debugging',
+              'Database & Data Handling',
+              'Applied Machine Learning',
+            ].map((competency) => (
               <div key={competency} className="bg-slate-800/50 border border-slate-700/50 px-5 py-2.5 rounded-full text-sm font-medium text-teal-300 hover:bg-slate-700 cursor-default">{competency}</div>
             ))}
           </div>
