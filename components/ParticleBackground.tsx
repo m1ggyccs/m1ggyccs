@@ -3,19 +3,22 @@
 import React, { useEffect, useState } from 'react';
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
+import { useReducedMotion } from "framer-motion";
 
 export default function ParticleBackground() {
+  const prefersReducedMotion = useReducedMotion();
   const [init, setInit] = useState(false);
 
   useEffect(() => {
+    if (prefersReducedMotion) return;
     initParticlesEngine(async (engine) => {
       await loadSlim(engine);
     }).then(() => {
       setInit(true);
     });
-  }, []);
+  }, [prefersReducedMotion]);
 
-  if (!init) return null;
+  if (prefersReducedMotion || !init) return null;
 
   return (
     <div className="absolute inset-0 z-0 opacity-40 pointer-events-none fixed">

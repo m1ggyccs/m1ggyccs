@@ -6,23 +6,55 @@ export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
 
-  // ScrollSpy Logic
+  // ScrollSpy Logic (IntersectionObserver)
   useEffect(() => {
-    const handleScroll = () => {
-      const sections = ["about", "experience", "projects", "skills", "contact"];
-      let current = "";
-      for (const section of sections) {
-        const element = document.getElementById(section);
-        // The offset ensures the link lights up slightly before the section hits the absolute top
-        if (element && window.scrollY >= element.offsetTop - 300) {
-          current = section;
-        }
-      }
-      setActiveSection(current);
-    };
+    const sectionIds = ["about", "experience", "projects", "skills", "contact"] as const;
+    const navOffset = 140; // Approx. sticky header height (tuned for this layout)
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    // Initial active section avoids an empty highlight on refresh/jump navigation.
+    const initial = sectionIds.reduce((current, id) => {
+      const el = document.getElementById(id);
+      if (!el) return current;
+      return window.scrollY + navOffset >= el.offsetTop ? id : current;
+    }, "" as (typeof sectionIds)[number] | "");
+    setActiveSection(initial);
+
+    const ratioById = new Map<string, number>();
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          const target = entry.target as HTMLElement;
+          if (!target?.id) continue;
+          ratioById.set(target.id, entry.intersectionRatio);
+        }
+
+        let bestId = "";
+        let bestRatio = 0;
+        for (const id of sectionIds) {
+          const ratio = ratioById.get(id) ?? 0;
+          if (ratio > bestRatio) {
+            bestRatio = ratio;
+            bestId = id;
+          }
+        }
+
+        // Only update once we have a meaningful intersection.
+        if (bestId && bestRatio > 0) setActiveSection(bestId);
+      },
+      {
+        threshold: [0.1, 0.25, 0.5, 0.75],
+        // Focus the "active zone" near the top of the viewport, accounting for sticky nav.
+        rootMargin: "-120px 0px -60% 0px",
+      }
+    );
+
+    for (const id of sectionIds) {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    }
+
+    return () => observer.disconnect();
   }, []);
 
   const navLinks = [

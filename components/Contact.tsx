@@ -11,10 +11,13 @@ const fadeInUp: Variants = {
 export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setIsSuccess(false);
+    setErrorMessage(null);
     
     const formData = new FormData(e.currentTarget);
     formData.append("access_key", process.env.NEXT_PUBLIC_WEB3FORMS_KEY as string);
@@ -26,14 +29,22 @@ export default function Contact() {
       });
       const data = await response.json();
       
+      if (!response.ok) {
+        throw new Error(data?.message || "Failed to send message.");
+      }
+
       if (data.success) {
         setIsSuccess(true);
+        setErrorMessage(null);
         e.currentTarget.reset();
         // Hide success message after 5 seconds
         setTimeout(() => setIsSuccess(false), 5000); 
+      } else {
+        setErrorMessage(data?.message || "Failed to send message. Please try again.");
       }
     } catch (error) {
       console.error("Error submitting form", error);
+      setErrorMessage("Something went wrong. Please try again.");
     } finally {
       setIsSubmitting(false);
     }
@@ -126,6 +137,18 @@ export default function Contact() {
                   "Send Message 🚀"
                 )}
               </button>
+
+              {errorMessage && (
+                <div
+                  className={`text-sm px-4 py-3 rounded-lg border ${
+                    "bg-rose-500/10 text-rose-300 border-rose-500/20"
+                  }`}
+                  role="alert"
+                  aria-live="polite"
+                >
+                  {errorMessage}
+                </div>
+              )}
             </form>
           </div>
           

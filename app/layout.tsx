@@ -16,6 +16,7 @@ export const metadata: Metadata = {
 title: "Andrei Miguel David | Work Portfolio",
   description: "Portfolio of Andrei Miguel A. David - Software Engineer and Technical Consultant Intern specializing in Business Central and Full-stack development.",
   keywords: ["Software Engineer", "Business Central", "AL Development", "Andrei David"],
+  metadataBase: new URL("https://m1ggyccs.vercel.app"),
   openGraph: {
     title: "Andrei Miguel David | Work Portfolio",
     description: "Per aspera ad astra.",

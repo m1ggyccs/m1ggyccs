@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import { motion, useScroll, useSpring } from "framer-motion";
+import { MotionConfig, motion, useReducedMotion, useScroll, useSpring } from "framer-motion";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
@@ -25,34 +25,39 @@ export default function Portfolio() {
     damping: 30,
     restDelta: 0.001
   });
+  const prefersReducedMotion = useReducedMotion();
 
   return (
-    <main className="min-h-screen bg-slate-900 text-slate-300 font-sans selection:bg-teal-500/30 relative">
-      
-      {/* 🥇 The Reading Progress Bar */}
-      <motion.div
-        className="fixed top-0 left-0 right-0 h-1 bg-teal-400 origin-left z-[100] shadow-[0_0_10px_#2dd4bf]"
-        style={{ scaleX }}
-      />
-      
-      {/* Background & Nav */}
-      <ParticleBackground />
-      <Navbar />
+    <MotionConfig reducedMotion="user">
+      <main className="min-h-screen bg-slate-900 text-slate-300 font-sans selection:bg-teal-500/30 relative">
+        
+        {/* 🥇 The Reading Progress Bar */}
+        {!prefersReducedMotion && (
+          <motion.div
+            className="fixed top-0 left-0 right-0 h-1 bg-teal-400 origin-left z-[100] shadow-[0_0_10px_#2dd4bf]"
+            style={{ scaleX }}
+          />
+        )}
+        
+        {/* Background & Nav */}
+        <ParticleBackground />
+        <Navbar />
 
-      {/* Page Content */}
-      <Hero />
-      <About />
-      <Experience />
-      <Education />
-      <Projects />
-      <Skills />
-      <Contact />
-      <Footer />
+        {/* Page Content */}
+        <Hero />
+        <About />
+        <Experience />
+        <Education />
+        <Projects />
+        <Skills />
+        <Contact />
+        <Footer />
 
-      {/* Vercel Metrics */}
-      <Analytics />
-      <SpeedInsights />
-      
-    </main>
+        {/* Vercel Metrics */}
+        <Analytics />
+        <SpeedInsights />
+        
+      </main>
+    </MotionConfig>
   );
 }
