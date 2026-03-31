@@ -4,7 +4,7 @@
 
 <h1 align="center">👋 Hi! I'm Andrei Miguel A. David</h1>
 <p align="center">
-  <strong>Technical Consultant Intern | Software Engineer | ERP Solutions Developer</strong><br>
+  <strong>Technical Consultant Intern | Software Engineer | ERP & Systems-Focused Engineer</strong><br>
   🎓 Computer Science Undergrad @ <a href="https://www.tip.edu.ph" target="_blank">Technological Institute of the Philippines – Manila</a>
   🌐 <a href="https://www.linkedin.com/in/amigsdavid" target="_blank">LinkedIn</a> · <a href="https://github.com/m1ggyccs" target="_blank">GitHub</a>
 </p>
@@ -13,14 +13,16 @@
 
 ## 🚀 About Me
 
-I am a Software Engineer and Computer Science student graduating in June 2026. I possess a solid foundation in software engineering principles, full-stack development, and machine learning, strengthened through prior academic training at iACADEMY and hands-on experience in technical consulting.
+I’m a Software Engineer and Computer Science student graduating in June 2026 from the Technological Institute of the Philippines.
 
-Currently, I am a **Technical Consultant Intern at Mustard Seed Systems Corporation**, where I focus on developing and customizing Microsoft Dynamics 365 Business Central solutions. I am passionate about applying my technical foundation to real-world challenges and bridging the gap between business needs and robust software architecture.
+I enjoy building scalable full-stack applications and working on AI-driven systems that solve real-world problems. My experience comes from both academic training at iACADEMY and hands-on work in technical consulting, where I’ve learned how systems are applied in real business environments.
+
+Currently a **Technical Consultant Intern** at **Mustard Seed Systems Corporation** focusing on ERP Systems & Customization.
 
 ### **Core Engineering Focus:**
-- 🏢 **ERP Customization:** Customizing Microsoft Dynamics 365 Business Central using AL language.
-- 💻 **Full-Stack Systems:** Building robust applications using React, Node.js / Express, Next.js, and MongoDB.
-- 🧠 **AI & Machine Learning:** Implementing object detection models and gesture recognition systems using Python.
+- 🏢 **ERP & Business Systems** I work on customizing Microsoft Dynamics 365 Business Central using AL, and also handle NetSuite customization through scripting and form changes. I've also worked on troubleshooting issues in SAP Business One, mainly on system behavior and data-related concerns.
+- 💻 **Full-Stack Engineering:** I build web applications using React, Node.js / Express, Next.js, and MongoDB, with attention to structure and performance.
+- 🧠 **AI & Machine Learning:** I develop projects involving object detection and gesture recognition using Python, applying machine learning in practical use cases.
 
 ---
 
@@ -29,8 +31,8 @@ Currently, I am a **Technical Consultant Intern at Mustard Seed Systems Corporat
 **Technical Consultant Intern | Mustard Seed Systems Corporation**
 *(January 2026 – Present)*
 - Customize and enhance **Microsoft Dynamics 365 Business Central** solutions using AL language, including page extensions, table extensions, RDLC reports, and Business Central report logic.
-- Apply hands-on experience in **Business Central customization, troubleshooting, and support** across purchasing, finance, and reporting-related processes.
-- Customize **NetSuite forms** and create **custom buttons/actions** to support client-specific workflow and usability requirements.
+- Work on Business Central customization, troubleshooting, and support across purchasing, finance, and reporting processes.
+- Customize **NetSuite** forms and develop scripts and custom actions based on client requirements, supporting workflow automation and system behavior.
 - Diagnose and resolve **SAP Business One** functional and technical issues, including troubleshooting system behavior and supporting user concerns.
 - Assist in requirements gathering, business process analysis, and solution design for ERP-related client requests.
 - Provide technical support and basic backend/data assistance using **Microsoft SQL Server (MSSQL)**.
@@ -43,7 +45,7 @@ Currently, I am a **Technical Consultant Intern at Mustard Seed Systems Corporat
 `AL`, `SQL`, `TypeScript`, `JavaScript`, `Python`, `Java`, `C++`
 
 ### **Frameworks & Web**
-`React`, `Next.js`, `Node.js`, `Express.js`, `REST APIs`, `.NET (Basic)`
+`React`, `Next.js`, `Node.js`, `Express.js`, `.NET (Basic)`
 
 ### **Platforms & Tools**
 `Microsoft Dynamics 365 Business Central`, `NetSuite`, `SAP Business One`, `Microsoft SQL Server (MSSQL)`, `MongoDB`, `Azure`, `Git/GitHub`
