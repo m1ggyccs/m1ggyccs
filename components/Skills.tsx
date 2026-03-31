@@ -43,6 +43,7 @@ export default function Skills() {
                     alt={skill.name}
                     width={32}
                     height={32}
+                    sizes="32px"
                     className="w-8 h-8"
                   />
                   <span className="text-sm font-semibold text-slate-300 font-mono">{skill.name}</span>
@@ -76,6 +77,7 @@ export default function Skills() {
                     alt={skill.name}
                     width={32}
                     height={32}
+                    sizes="32px"
                     className="w-8 h-8"
                   />
                   <span className="text-sm font-semibold text-slate-300 font-mono">{skill.name}</span>
@@ -111,6 +113,7 @@ export default function Skills() {
                     alt={skill.name}
                     width={32}
                     height={32}
+                    sizes="32px"
                     className="w-8 h-8"
                   />
                   <span className="text-sm font-semibold text-slate-300 font-mono">{skill.name}</span>

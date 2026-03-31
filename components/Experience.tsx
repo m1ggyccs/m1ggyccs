@@ -21,7 +21,7 @@ export default function Experience() {
               <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-8 gap-4">
                 <div className="flex items-center gap-5">
                   <div className="w-16 h-16 shrink-0 bg-white rounded-xl p-1.5 border border-slate-700 shadow-md flex items-center justify-center overflow-hidden">
-                    <Image src="/mustard-seed.jpg" alt="Mustard Seed Logo" width={64} height={64} className="w-full h-full object-contain" />
+                    <Image src="/mustard-seed.jpg" alt="Mustard Seed Logo" width={64} height={64} sizes="64px" className="w-full h-full object-contain" />
                   </div>
                   <div>
                     <h4 className="text-2xl font-bold text-slate-100">Technical Consultant Intern</h4>

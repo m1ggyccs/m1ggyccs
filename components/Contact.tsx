@@ -14,6 +14,8 @@ export default function Contact() {
   const [isSuccess, setIsSuccess] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [successMessage, setSuccessMessage] = useState<string | null>(null);
+  const web3formsKey = process.env.NEXT_PUBLIC_WEB3FORMS_KEY;
+  const isFormConfigured = Boolean(web3formsKey);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -21,9 +23,15 @@ export default function Contact() {
     setIsSuccess(false);
     setErrorMessage(null);
     setSuccessMessage(null);
-    
+
+    if (!isFormConfigured || !web3formsKey) {
+      setErrorMessage("Contact form is temporarily unavailable. Please email me directly at amigsdavid@gmail.com.");
+      setIsSubmitting(false);
+      return;
+    }
+
     const formData = new FormData(e.currentTarget);
-    formData.append("access_key", process.env.NEXT_PUBLIC_WEB3FORMS_KEY as string);
+    formData.append("access_key", web3formsKey);
 
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
@@ -73,10 +81,10 @@ export default function Contact() {
             
             <div className="flex flex-col sm:flex-row gap-4 mb-10">
               <a href="mailto:amigsdavid@gmail.com" className="w-full sm:w-auto bg-teal-600 hover:bg-teal-500 text-white px-6 py-3 rounded-xl font-semibold shadow-lg shadow-teal-500/20 flex gap-3 justify-center transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400/60 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900">
-                <Image src="/logo/gmail.svg" alt="Gmail" width={20} height={20} className="w-5 h-5" /> amigsdavid@gmail.com
+                <Image src="/logo/gmail.svg" alt="Gmail" width={20} height={20} sizes="20px" className="w-5 h-5" /> amigsdavid@gmail.com
               </a>
               <a href="https://linkedin.com/in/amigsdavid/" target="_blank" rel="noreferrer" aria-label="LinkedIn (opens in a new tab)" className="w-full sm:w-auto bg-slate-800 hover:bg-slate-700 text-slate-100 px-6 py-3 rounded-xl font-semibold border border-slate-700 flex gap-3 justify-center transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400/60 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900">
-                <Image src="/logo/linkedin.svg" alt="LinkedIn" width={20} height={20} className="w-5 h-5" /> LinkedIn ↗
+                <Image src="/logo/linkedin.svg" alt="LinkedIn" width={20} height={20} sizes="20px" className="w-5 h-5" /> LinkedIn ↗
               </a>
             </div>
 
@@ -86,11 +94,11 @@ export default function Contact() {
     <a href="tel:+639696438031" className="hover:text-teal-400 transition-colors">+6396-9643-8031</a>
   </div>
   <div className="flex items-center gap-4">
-    <Image src="/logo/googlemaps.svg" alt="Google Maps" width={20} height={20} className="w-5 h-5" />
+    <Image src="/logo/googlemaps.svg" alt="Google Maps" width={20} height={20} sizes="20px" className="w-5 h-5" />
     <span>Makati, Metro Manila</span>
   </div>
   <div className="flex items-center gap-4">
-    <Image src="/logo/github.svg" alt="GitHub" width={20} height={20} className="w-5 h-5" />
+    <Image src="/logo/github.svg" alt="GitHub" width={20} height={20} sizes="20px" className="w-5 h-5" />
     <a href="https://github.com/m1ggyccs" target="_blank" rel="noreferrer" aria-label="GitHub profile (opens in a new tab)" className="hover:text-teal-400 transition-colors">
       github.com/m1ggyccs ↗
     </a>
@@ -127,11 +135,11 @@ export default function Contact() {
 
               <button 
                 type="submit" 
-                disabled={isSubmitting}
+                disabled={isSubmitting || !isFormConfigured}
                 className={`w-full py-4 rounded-xl font-bold transition-all flex justify-center items-center gap-2 ${
                   isSuccess 
                     ? "bg-emerald-500/20 text-emerald-400 border border-emerald-500/50" 
-                    : "bg-slate-100 text-slate-900 hover:bg-teal-400 hover:text-slate-900 shadow-lg"
+                    : "bg-slate-100 text-slate-900 hover:bg-teal-400 hover:text-slate-900 shadow-lg disabled:opacity-60 disabled:cursor-not-allowed"
                 } focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400/60 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900`}
               >
                 {isSubmitting ? (
@@ -144,6 +152,8 @@ export default function Contact() {
                   </span>
                 ) : isSuccess ? (
                   "✨ Message Sent Successfully!"
+                ) : !isFormConfigured ? (
+                  "Form Unavailable"
                 ) : (
                   "Send Message 🚀"
                 )}
@@ -175,7 +185,7 @@ export default function Contact() {
             href="mailto:amigsdavid@gmail.com"
             className="inline-flex items-center gap-2 rounded-xl bg-teal-600 hover:bg-teal-500 text-white px-3 py-2 text-xs font-semibold transition-colors"
           >
-            <Image src="/logo/gmail.svg" alt="Gmail" width={16} height={16} className="w-4 h-4" />
+            <Image src="/logo/gmail.svg" alt="Gmail" width={16} height={16} sizes="16px" className="w-4 h-4" />
             Email
           </a>
           <a
@@ -185,7 +195,7 @@ export default function Contact() {
             aria-label="LinkedIn (opens in a new tab)"
             className="inline-flex items-center gap-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-100 px-3 py-2 text-xs font-semibold border border-slate-700 transition-colors"
           >
-            <Image src="/logo/linkedin.svg" alt="LinkedIn" width={16} height={16} className="w-4 h-4" />
+            <Image src="/logo/linkedin.svg" alt="LinkedIn" width={16} height={16} sizes="16px" className="w-4 h-4" />
             LinkedIn
           </a>
         </div>

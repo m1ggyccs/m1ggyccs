@@ -30,7 +30,7 @@ export default function Education() {
               
               <div className="flex items-center gap-5 mb-8 mt-1 pl-2">
                 <div className="w-14 h-14 shrink-0 bg-white rounded-lg p-1 border border-slate-700 shadow-md flex items-center justify-center overflow-hidden">
-                  <Image src="/tip-logo.png" alt="TIP Logo" width={56} height={56} className="w-full h-full object-contain" />
+                  <Image src="/tip-logo.png" alt="TIP Logo" width={56} height={56} sizes="56px" className="w-full h-full object-contain" />
                 </div>
                 <div>
                   <h4 className="text-xl font-bold text-slate-100 leading-tight mb-1">Bachelor of Science in Computer Science</h4>
@@ -77,7 +77,7 @@ export default function Education() {
               
               <div className="flex items-center gap-5 mb-8 mt-1 pl-2">
                 <div className="w-14 h-14 shrink-0 bg-white rounded-lg p-1 border border-slate-700 shadow-md flex items-center justify-center overflow-hidden">
-                  <Image src="/iacademy-logo.png" alt="iACADEMY Logo" width={56} height={56} className="w-full h-full object-contain" />
+                  <Image src="/iacademy-logo.png" alt="iACADEMY Logo" width={56} height={56} sizes="56px" className="w-full h-full object-contain" />
                 </div>
                 <div>
                   <h4 className="text-xl font-bold text-slate-100 leading-tight mb-1">Senior High School - Software Development</h4>
