@@ -11,11 +11,28 @@ export default function ParticleBackground() {
 
   useEffect(() => {
     if (prefersReducedMotion) return;
-    initParticlesEngine(async (engine) => {
-      await loadSlim(engine);
-    }).then(() => {
-      setInit(true);
-    });
+
+    // Skip particles on smaller screens to reduce initial render cost.
+    if (!window.matchMedia("(min-width: 768px)").matches) return;
+
+    let cancelled = false;
+    let timeoutId: number | undefined;
+
+    const setupParticles = () => {
+      initParticlesEngine(async (engine) => {
+        await loadSlim(engine);
+      }).then(() => {
+        if (!cancelled) setInit(true);
+      });
+    };
+
+    // Defer heavy visual initialization until after first content has rendered.
+    timeoutId = window.setTimeout(setupParticles, 700);
+
+    return () => {
+      cancelled = true;
+      if (timeoutId) window.clearTimeout(timeoutId);
+    };
   }, [prefersReducedMotion]);
 
   if (prefersReducedMotion || !init) return null;

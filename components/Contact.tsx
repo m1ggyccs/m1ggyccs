@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
+import Image from "next/image";
 import { motion, Variants } from "framer-motion";
 
 const fadeInUp: Variants = {
@@ -71,11 +72,11 @@ export default function Contact() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 mb-10">
-              <a href="mailto:amigsdavid@email.com" className="w-full sm:w-auto bg-teal-600 hover:bg-teal-500 text-white px-6 py-3 rounded-xl font-semibold shadow-lg shadow-teal-500/20 flex gap-3 justify-center transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400/60 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900">
-                <span className="text-xl">✉️</span> amigsdavid@email.com
+              <a href="mailto:amigsdavid@gmail.com" className="w-full sm:w-auto bg-teal-600 hover:bg-teal-500 text-white px-6 py-3 rounded-xl font-semibold shadow-lg shadow-teal-500/20 flex gap-3 justify-center transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400/60 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900">
+                <Image src="/logo/gmail.svg" alt="Gmail" width={20} height={20} className="w-5 h-5" /> amigsdavid@gmail.com
               </a>
-              <a href="https://linkedin.com/in/amigsdavid/" target="_blank" rel="noreferrer" className="w-full sm:w-auto bg-slate-800 hover:bg-slate-700 text-slate-100 px-6 py-3 rounded-xl font-semibold border border-slate-700 flex gap-3 justify-center transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400/60 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900">
-                <span className="text-xl">💼</span> LinkedIn
+              <a href="https://linkedin.com/in/amigsdavid/" target="_blank" rel="noreferrer" aria-label="LinkedIn (opens in a new tab)" className="w-full sm:w-auto bg-slate-800 hover:bg-slate-700 text-slate-100 px-6 py-3 rounded-xl font-semibold border border-slate-700 flex gap-3 justify-center transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400/60 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900">
+                <Image src="/logo/linkedin.svg" alt="LinkedIn" width={20} height={20} className="w-5 h-5" /> LinkedIn ↗
               </a>
             </div>
 
@@ -85,13 +86,13 @@ export default function Contact() {
     <a href="tel:+639696438031" className="hover:text-teal-400 transition-colors">+6396-9643-8031</a>
   </div>
   <div className="flex items-center gap-4">
-    <span className="text-xl w-6 text-center">📍</span>
+    <Image src="/logo/googlemaps.svg" alt="Google Maps" width={20} height={20} className="w-5 h-5" />
     <span>Makati, Metro Manila</span>
   </div>
   <div className="flex items-center gap-4">
-    <span className="text-xl w-6 text-center">🐙</span>
-    <a href="https://github.com/m1ggyccs" target="_blank" rel="noreferrer" className="hover:text-teal-400 transition-colors">
-      github.com/m1ggyccs
+    <Image src="/logo/github.svg" alt="GitHub" width={20} height={20} className="w-5 h-5" />
+    <a href="https://github.com/m1ggyccs" target="_blank" rel="noreferrer" aria-label="GitHub profile (opens in a new tab)" className="hover:text-teal-400 transition-colors">
+      github.com/m1ggyccs ↗
     </a>
   </div>
 </div>

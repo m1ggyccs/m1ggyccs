@@ -25,8 +25,8 @@ export default function Projects() {
           <h3 className="text-3xl font-bold flex items-center gap-3 text-slate-100 font-mono">
             <span className="text-teal-500">#</span> Featured Projects
           </h3>
-          <a href="https://github.com/m1ggyccs" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-teal-400 transition-colors font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400/60 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 rounded-sm">
-            Full Repository &rarr;
+          <a href="https://github.com/m1ggyccs" target="_blank" rel="noreferrer" aria-label="Full GitHub repository list (opens in a new tab)" className="text-slate-400 hover:text-teal-400 transition-colors font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400/60 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 rounded-sm">
+            Full Repository ↗
           </a>
         </div>
         
@@ -39,7 +39,10 @@ export default function Projects() {
                 <div className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center text-xl border border-slate-700">💰</div>
                 <h4 className="text-xl font-bold text-slate-100 font-mono">Smart Budget Tracker</h4>
               </div>
-              <div className="space-y-3 text-xs text-slate-400 leading-relaxed flex-grow">
+              <div className="md:hidden text-sm text-slate-300 leading-relaxed flex-grow">
+                Budget analytics tool using machine learning models for category mapping and demand forecasting.
+              </div>
+              <div className="hidden md:block space-y-3 text-xs text-slate-400 leading-relaxed flex-grow">
                 <p><strong className="text-teal-400/80">S:</strong> Needed to analyze cross-cultural spending behaviors using limited datasets where transactions were vaguely categorized as &quot;Others&quot;.</p>
                 <p><strong className="text-teal-400/80">T:</strong> Clean unstructured data by mapping descriptions to categories, and identify the best forecasting model for small-scale data.</p>
                 <p><strong className="text-teal-400/80">A:</strong> Built a comparative engine evaluating Moving Average, Holt-Winters, and LSTM models side-by-side.</p>
@@ -50,7 +53,7 @@ export default function Projects() {
                   <span className="text-[10px] bg-slate-900/50 border border-slate-700 px-2 py-1 rounded font-mono">Python</span>
                   <span className="text-[10px] bg-slate-900/50 border border-slate-700 px-2 py-1 rounded font-mono">LSTM</span>
                 </div>
-                <a href="https://github.com/m1ggyccs/Smart-Budget-Tracking" target="_blank" rel="noreferrer" className="text-teal-400 hover:text-teal-300 text-sm font-bold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400/60 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 rounded-sm px-1">View Code →</a>
+                <a href="https://github.com/m1ggyccs/Smart-Budget-Tracking" target="_blank" rel="noreferrer" aria-label="Smart Budget Tracker code (opens in a new tab)" className="text-teal-400 hover:text-teal-300 text-sm font-bold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400/60 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 rounded-sm px-1">View Code ↗</a>
               </div>
             </SpotlightCard>
           </Tilt>
@@ -62,7 +65,10 @@ export default function Projects() {
                 <div className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center text-xl border border-slate-700">🏐</div>
                 <h4 className="text-xl font-bold text-slate-100 font-mono">VolleyVision</h4>
               </div>
-              <div className="space-y-3 text-xs text-slate-400 leading-relaxed flex-grow">
+              <div className="md:hidden text-sm text-slate-300 leading-relaxed flex-grow">
+                Computer-vision web app that identifies volleyball referee gestures in real time.
+              </div>
+              <div className="hidden md:block space-y-3 text-xs text-slate-400 leading-relaxed flex-grow">
                 <p><strong className="text-teal-400/80">S:</strong> Casual volleyball viewers struggle to keep up with complex referee hand signals during fast-paced matches.</p>
                 <p><strong className="text-teal-400/80">T:</strong> Develop a web-based computer vision tool to automatically interpret and track gestures in real-time.</p>
                 <p><strong className="text-teal-400/80">A:</strong> Trained a custom model using a proprietary dataset and integrated it with a Next.js web app for API communication and SEO.</p>
@@ -73,7 +79,7 @@ export default function Projects() {
                   <span className="text-[10px] bg-slate-900/50 border border-slate-700 px-2 py-1 rounded font-mono">OpenCV</span>
                   <span className="text-[10px] bg-slate-900/50 border border-slate-700 px-2 py-1 rounded font-mono">Next.js</span>
                 </div>
-                <a href="https://github.com/m1ggyccs/Volleyball-Gesture-System" target="_blank" rel="noreferrer" className="text-teal-400 hover:text-teal-300 text-sm font-bold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400/60 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 rounded-sm px-1">View Code →</a>
+                <a href="https://github.com/m1ggyccs/Volleyball-Gesture-System" target="_blank" rel="noreferrer" aria-label="VolleyVision code (opens in a new tab)" className="text-teal-400 hover:text-teal-300 text-sm font-bold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400/60 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 rounded-sm px-1">View Code ↗</a>
               </div>
             </SpotlightCard>
           </Tilt>
@@ -85,7 +91,10 @@ export default function Projects() {
                 <div className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center text-xl border border-slate-700">🧺</div>
                 <h4 className="text-xl font-bold text-slate-100 font-mono">M1G Laundry Tracker</h4>
               </div>
-              <div className="space-y-3 text-xs text-slate-400 leading-relaxed flex-grow">
+              <div className="md:hidden text-sm text-slate-300 leading-relaxed flex-grow">
+                Laundry operations tracker with order lifecycle monitoring and profitability visibility.
+              </div>
+              <div className="hidden md:block space-y-3 text-xs text-slate-400 leading-relaxed flex-grow">
                 <p><strong className="text-teal-400/80">S:</strong> A real laundry business was upgrading machinery but still relying on manual tracking for orders, backjobs, and revenue.</p>
                 <p><strong className="text-teal-400/80">T:</strong> Architect a modernized, full-stack tracking application to handle complex order lifecycles and business analytics.</p>
                 <p><strong className="text-teal-400/80">A:</strong> Designed a robust relational database schema using Postgres and Prisma to efficiently manage customer queues and financial data.</p>
@@ -96,7 +105,7 @@ export default function Projects() {
                   <span className="text-[10px] bg-slate-900/50 border border-slate-700 px-2 py-1 rounded font-mono">Next.js</span>
                   <span className="text-[10px] bg-slate-900/50 border border-slate-700 px-2 py-1 rounded font-mono">Prisma</span>
                 </div>
-                <a href="https://github.com/m1ggyccs/M1G-Laundry-Tracker" target="_blank" rel="noreferrer" className="text-teal-400 hover:text-teal-300 text-sm font-bold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400/60 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 rounded-sm px-1">View Code →</a>
+                <a href="https://github.com/m1ggyccs/M1G-Laundry-Tracker" target="_blank" rel="noreferrer" aria-label="M1G Laundry Tracker code (opens in a new tab)" className="text-teal-400 hover:text-teal-300 text-sm font-bold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400/60 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 rounded-sm px-1">View Code ↗</a>
               </div>
             </SpotlightCard>
           </Tilt>

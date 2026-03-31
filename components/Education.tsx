@@ -19,6 +19,9 @@ export default function Education() {
           <h3 className="text-3xl font-bold mb-8 flex items-center gap-3 text-slate-100 font-mono">
             <span className="text-teal-500">#</span> Education
           </h3>
+          <p className="text-slate-400 text-sm md:text-base mb-8">
+            Academic background and community involvement that support my work in software engineering and business systems.
+          </p>
           
           <div className="space-y-8">
             {/* College Degree */}
@@ -32,7 +35,7 @@ export default function Education() {
                 <div>
                   <h4 className="text-xl font-bold text-slate-100 leading-tight mb-1">Bachelor of Science in Computer Science</h4>
                   <p className="text-md text-teal-400 font-medium">
-                    <a href="https://www.tip.edu.ph/" target="_blank" rel="noreferrer" className="hover:text-teal-300 hover:underline transition-all">
+                    <a href="https://www.tip.edu.ph/" target="_blank" rel="noreferrer" aria-label="Technological Institute of the Philippines website (opens in a new tab)" className="hover:text-teal-300 hover:underline transition-all">
                       Technological Institute of the Philippines, Manila
                     </a>
                   </p>
@@ -79,7 +82,7 @@ export default function Education() {
                 <div>
                   <h4 className="text-xl font-bold text-slate-100 leading-tight mb-1">Senior High School - Software Development</h4>
                   <p className="text-md text-teal-400 font-medium">
-                    <a href="https://iacademy.edu.ph/" target="_blank" rel="noreferrer" className="hover:text-teal-300 hover:underline transition-all">
+                    <a href="https://iacademy.edu.ph/" target="_blank" rel="noreferrer" aria-label="iACADEMY website (opens in a new tab)" className="hover:text-teal-300 hover:underline transition-all">
                       iACADEMY
                     </a>
                   </p>
@@ -126,6 +129,9 @@ export default function Education() {
           <h3 className="text-3xl font-bold mb-8 flex items-center gap-3 text-slate-100 font-mono">
             <span className="text-teal-500">#</span> Certifications
           </h3>
+          <p className="text-slate-400 text-sm md:text-base mb-8">
+            Certifications focused on practical web engineering, data, and AI fundamentals.
+          </p>
           
           <ul className="space-y-4">
             {[

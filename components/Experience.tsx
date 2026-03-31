@@ -25,7 +25,7 @@ export default function Experience() {
                   </div>
                   <div>
                     <h4 className="text-2xl font-bold text-slate-100">Technical Consultant Intern</h4>
-                    <p className="text-lg text-teal-400 font-medium mt-1"><a href="https://www.mseedsystems.com/" target="_blank" rel="noreferrer" className="hover:text-teal-300 hover:underline">Mustard Seed Systems Corporation</a></p>
+                    <p className="text-lg text-teal-400 font-medium mt-1"><a href="https://www.mseedsystems.com/" target="_blank" rel="noreferrer" aria-label="Mustard Seed Systems Corporation website (opens in a new tab)" className="hover:text-teal-300 hover:underline">Mustard Seed Systems Corporation ↗</a></p>
                   </div>
                 </div>
                 <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-slate-800/80 text-slate-400 text-sm border border-slate-700 whitespace-nowrap font-mono mt-2 md:mt-0">January 2026 – Present</div>
