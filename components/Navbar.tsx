@@ -8,6 +8,7 @@ export default function Navbar() {
   const mobileButtonRef = useRef<HTMLButtonElement | null>(null);
   const mobileMenuRef = useRef<HTMLDivElement | null>(null);
   const pendingNavTargetRef = useRef<string | null>(null);
+  const pendingNavTimeoutRef = useRef<number | null>(null);
 
   // ScrollSpy Logic (IntersectionObserver)
   useEffect(() => {
@@ -34,14 +35,22 @@ export default function Navbar() {
           if (pendingEl) {
             const pendingTop = pendingEl.getBoundingClientRect().top;
             // Release lock once target reaches navbar offset line.
-            if (Math.abs(pendingTop - navOffset) <= 8) {
+            if (pendingTop <= navOffset + 8) {
               pendingNavTargetRef.current = null;
+              if (pendingNavTimeoutRef.current) {
+                window.clearTimeout(pendingNavTimeoutRef.current);
+                pendingNavTimeoutRef.current = null;
+              }
             } else {
               setActiveSection(pendingNavTargetRef.current);
               return;
             }
           } else {
             pendingNavTargetRef.current = null;
+            if (pendingNavTimeoutRef.current) {
+              window.clearTimeout(pendingNavTimeoutRef.current);
+              pendingNavTimeoutRef.current = null;
+            }
           }
         }
 
@@ -82,7 +91,13 @@ export default function Navbar() {
       observer.observe(item.el);
     }
 
-    return () => observer.disconnect();
+    return () => {
+      observer.disconnect();
+      if (pendingNavTimeoutRef.current) {
+        window.clearTimeout(pendingNavTimeoutRef.current);
+        pendingNavTimeoutRef.current = null;
+      }
+    };
   }, []);
 
   // Mobile menu UX: lock scroll + close on Escape + basic focus management.
@@ -166,6 +181,14 @@ export default function Navbar() {
   const onNavClick = (id: string) => (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     pendingNavTargetRef.current = id;
+    if (pendingNavTimeoutRef.current) {
+      window.clearTimeout(pendingNavTimeoutRef.current);
+    }
+    // Safety fallback so manual scrolling isn't blocked if smooth-scroll events are missed.
+    pendingNavTimeoutRef.current = window.setTimeout(() => {
+      pendingNavTargetRef.current = null;
+      pendingNavTimeoutRef.current = null;
+    }, 1200);
     setActiveSection(id);
     setIsMobileMenuOpen(false);
     scrollToId(id);
@@ -179,6 +202,12 @@ export default function Navbar() {
           className="text-xl font-bold tracking-tighter text-slate-100 font-mono hover:text-teal-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400/60 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 rounded-sm"
           onClick={() => {
             setIsMobileMenuOpen(false);
+            pendingNavTargetRef.current = null;
+            if (pendingNavTimeoutRef.current) {
+              window.clearTimeout(pendingNavTimeoutRef.current);
+              pendingNavTimeoutRef.current = null;
+            }
+            setActiveSection("");
             const prefersReducedMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
             window.scrollTo({ top: 0, behavior: prefersReducedMotion ? "auto" : "smooth" });
           }}
