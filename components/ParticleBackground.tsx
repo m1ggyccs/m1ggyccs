@@ -16,7 +16,6 @@ export default function ParticleBackground() {
     if (!window.matchMedia("(min-width: 768px)").matches) return;
 
     let cancelled = false;
-    let timeoutId: number | undefined;
 
     const setupParticles = () => {
       initParticlesEngine(async (engine) => {
@@ -26,12 +25,11 @@ export default function ParticleBackground() {
       });
     };
 
-    // Defer heavy visual initialization until after first content has rendered.
-    timeoutId = window.setTimeout(setupParticles, 700);
+    const timeoutId = window.setTimeout(setupParticles, 700);
 
     return () => {
       cancelled = true;
-      if (timeoutId) window.clearTimeout(timeoutId);
+      window.clearTimeout(timeoutId);
     };
   }, [prefersReducedMotion]);
 

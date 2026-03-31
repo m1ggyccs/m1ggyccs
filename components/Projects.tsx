@@ -4,11 +4,15 @@ import React from 'react';
 import { motion, Variants } from "framer-motion"; 
 import Tilt from 'react-parallax-tilt';
 import dynamic from 'next/dynamic';
+import type { Props as GitHubCalendarProps } from 'react-github-calendar';
 import SpotlightCard from './SpotlightCard'; 
 
 // FIXED: Explicitly typing the dynamic import so TypeScript knows what props to expect!
-const GitHubCalendar = dynamic<{ username: string; colorScheme?: string; theme?: any }>(
-  () => import('react-github-calendar').then((mod: any) => mod.default || mod.GitHubCalendar), 
+const GitHubCalendar = dynamic<GitHubCalendarProps>(
+  () =>
+    import('react-github-calendar').then(
+      (mod) => mod.GitHubCalendar as React.ComponentType<GitHubCalendarProps>
+    ),
   { ssr: false, loading: () => <div className="h-72 w-full animate-pulse bg-slate-800/50 rounded-3xl" /> }
 );
 
