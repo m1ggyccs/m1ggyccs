@@ -1,14 +1,15 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
+  const mobileButtonRef = useRef<HTMLButtonElement | null>(null);
+  const mobileMenuRef = useRef<HTMLDivElement | null>(null);
 
   // ScrollSpy Logic (IntersectionObserver)
   useEffect(() => {
-    // Include `education` for correct scroll-spy behavior even though there is no nav tab for it.
     const sectionIds = ["about", "experience", "education", "projects", "skills", "contact"] as const;
     const navOffset = 140; // Approx. sticky header height (tuned for this layout)
 
@@ -20,7 +21,7 @@ export default function Navbar() {
     }, "" as (typeof sectionIds)[number] | "");
     // Avoid synchronous state updates inside the effect body (prevents lint + cascading renders).
     requestAnimationFrame(() => {
-      setActiveSection(initial === "education" ? "experience" : initial);
+      setActiveSection(initial);
     });
 
     const observer = new IntersectionObserver(
@@ -45,7 +46,7 @@ export default function Navbar() {
         }
 
         if (bestId) {
-          setActiveSection(bestId === "education" ? "experience" : bestId);
+          setActiveSection(bestId);
         }
       },
       {
@@ -61,9 +62,65 @@ export default function Navbar() {
     return () => observer.disconnect();
   }, []);
 
+  // Mobile menu UX: lock scroll + close on Escape + basic focus management.
+  useEffect(() => {
+    if (!isMobileMenuOpen) {
+      document.body.style.overflow = "";
+      return;
+    }
+
+    document.body.style.overflow = "hidden";
+
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setIsMobileMenuOpen(false);
+        mobileButtonRef.current?.focus();
+        return;
+      }
+
+      // Simple focus trap for the mobile menu.
+      if (e.key === "Tab" && mobileMenuRef.current) {
+        const focusables = mobileMenuRef.current.querySelectorAll<HTMLElement>(
+          'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])'
+        );
+        if (!focusables.length) return;
+
+        const first = focusables[0];
+        const last = focusables[focusables.length - 1];
+        const active = document.activeElement as HTMLElement | null;
+
+        if (e.shiftKey) {
+          if (!active || active === first) {
+            e.preventDefault();
+            last.focus();
+          }
+        } else {
+          if (active === last) {
+            e.preventDefault();
+            first.focus();
+          }
+        }
+      }
+    };
+
+    window.addEventListener("keydown", onKeyDown);
+
+    // Focus the first menu item once opened.
+    requestAnimationFrame(() => {
+      const firstLink = mobileMenuRef.current?.querySelector<HTMLElement>('a[href]');
+      firstLink?.focus();
+    });
+
+    return () => {
+      window.removeEventListener("keydown", onKeyDown);
+      document.body.style.overflow = "";
+    };
+  }, [isMobileMenuOpen]);
+
   const navLinks = [
     { name: "About", href: "#about", id: "about" },
     { name: "Experience", href: "#experience", id: "experience" },
+    { name: "Education", href: "#education", id: "education" },
     { name: "Projects", href: "#projects", id: "projects" },
     { name: "Skills", href: "#skills", id: "skills" },
     { name: "Contact", href: "#contact", id: "contact" }, 
@@ -83,8 +140,10 @@ export default function Navbar() {
               key={link.name}
               href={link.href}
               className={`transition-colors ${
-                activeSection === link.id ? "text-teal-400 font-bold" : "text-slate-300 hover:text-teal-400"
-              }`}
+                activeSection === link.id
+                  ? "text-teal-400 font-bold"
+                  : "text-slate-300 hover:text-teal-400"
+              } focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400/60 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 rounded-sm`}
             >
               {link.name}
             </a>
@@ -93,7 +152,12 @@ export default function Navbar() {
 
         {/* Mobile Hamburger Button */}
         <button 
-          className="md:hidden text-slate-300 hover:text-teal-400 focus:outline-none"
+          ref={mobileButtonRef}
+          type="button"
+          aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={isMobileMenuOpen}
+          aria-controls="mobile-nav"
+          className="md:hidden text-slate-300 hover:text-teal-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400/60 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 rounded-md"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -108,13 +172,19 @@ export default function Navbar() {
 
       {/* Mobile Dropdown Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-slate-900 border-b border-slate-800 shadow-xl py-4 flex flex-col items-center space-y-4">
+        <div
+          id="mobile-nav"
+          ref={mobileMenuRef}
+          className="md:hidden absolute top-full left-0 w-full bg-slate-900 border-b border-slate-800 shadow-xl py-4 flex flex-col items-center space-y-4"
+        >
           {navLinks.map((link) => (
              <a 
                key={link.name} 
                href={link.href} 
                onClick={() => setIsMobileMenuOpen(false)} 
-               className={`font-medium ${activeSection === link.id ? "text-teal-400" : "text-slate-300"}`}
+               className={`font-medium ${
+                 activeSection === link.id ? "text-teal-400" : "text-slate-300"
+               } focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400/60 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 rounded-sm px-2 py-1`}
              >
                {link.name}
              </a>

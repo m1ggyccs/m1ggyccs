@@ -1,13 +1,15 @@
 "use client";
 
 import React, { useRef, useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 
 export default function MagneticButton({ children }: { children: React.ReactNode }) {
+  const prefersReducedMotion = useReducedMotion();
   const ref = useRef<HTMLDivElement>(null);
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
-const handleMouse = (e: React.MouseEvent<HTMLDivElement>) => {
+  const handleMouse = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (prefersReducedMotion) return;
     // Disable magnetic pull if the user doesn't have a mouse
     if (!window.matchMedia("(hover: hover)").matches) return;
 
@@ -22,6 +24,10 @@ const handleMouse = (e: React.MouseEvent<HTMLDivElement>) => {
   const reset = () => {
     setPosition({ x: 0, y: 0 });
   };
+
+  if (prefersReducedMotion) {
+    return <div className="relative inline-block z-50">{children}</div>;
+  }
 
   return (
     <motion.div

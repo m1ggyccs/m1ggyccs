@@ -40,13 +40,13 @@ export default function Hero() {
         {/* Applied Magnetic Buttons Here! */}
         <div className="flex flex-wrap justify-center gap-4 pt-8">
           <MagneticButton>
-            <a href="#projects" className="block bg-teal-600 hover:bg-teal-500 text-white px-7 py-3 rounded-md font-semibold transition-all shadow-lg shadow-teal-500/20">View My Work</a>
+            <a href="#projects" className="block bg-teal-600 hover:bg-teal-500 text-white px-7 py-3 rounded-md font-semibold transition-all shadow-lg shadow-teal-500/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400/60 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900">View My Work</a>
           </MagneticButton>
           <MagneticButton>
-            <a href="/resume.pdf" download="Andrei_David_Resume.pdf" onClick={() => track('Downloaded_Resume')} className="block bg-slate-800 hover:bg-slate-700 text-slate-100 px-7 py-3 rounded-md font-semibold transition-all border border-slate-600 hover:border-teal-500/50 flex items-center gap-2"> <span>📄</span> Download Resume </a>
+            <a href="/resume.pdf" download="Andrei_David_Resume.pdf" onClick={() => track('Downloaded_Resume')} className="block bg-slate-800 hover:bg-slate-700 text-slate-100 px-7 py-3 rounded-md font-semibold transition-all border border-slate-600 hover:border-teal-500/50 flex items-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400/60 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"> <span>📄</span> Download Resume </a>
           </MagneticButton>
           <MagneticButton>
-            <a href="https://github.com/m1ggyccs" target="_blank" rel="noreferrer" className="block bg-slate-900 hover:bg-slate-800 text-slate-100 px-7 py-3 rounded-md font-semibold transition-all border border-slate-700 hover:border-teal-500/50">Explore GitHub</a>
+            <a href="https://github.com/m1ggyccs" target="_blank" rel="noreferrer" className="block bg-slate-900 hover:bg-slate-800 text-slate-100 px-7 py-3 rounded-md font-semibold transition-all border border-slate-700 hover:border-teal-500/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400/60 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900">Explore GitHub</a>
           </MagneticButton>
         </div>
       </motion.div>

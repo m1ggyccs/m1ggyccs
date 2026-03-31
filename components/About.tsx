@@ -12,7 +12,7 @@ export default function About() {
   return (
     <motion.section id="about" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} variants={fadeInUp} className="bg-zinc-900/50 py-24 border-y border-zinc-800 relative z-10">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="grid md:grid-cols-2 gap-12 items-start text-zinc-400 text-lg leading-relaxed">
+        <div className="grid md:grid-cols-2 gap-12 items-start text-zinc-300 text-lg leading-relaxed">
           <div className="space-y-6">
             <h3 className="text-3xl font-bold mb-12 flex items-center gap-3 text-zinc-100"><span className="text-teal-500">#</span> About Me</h3>
             <p>I’m a Software Engineer and Computer Science student graduating in June 2026 from the Technological Institute of the Philippines.</p>

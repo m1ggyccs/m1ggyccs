@@ -25,7 +25,7 @@ export default function Projects() {
           <h3 className="text-3xl font-bold flex items-center gap-3 text-slate-100 font-mono">
             <span className="text-teal-500">#</span> Featured Projects
           </h3>
-          <a href="https://github.com/m1ggyccs" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-teal-400 transition-colors font-medium">
+          <a href="https://github.com/m1ggyccs" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-teal-400 transition-colors font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400/60 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 rounded-sm">
             Full Repository &rarr;
           </a>
         </div>
@@ -50,7 +50,7 @@ export default function Projects() {
                   <span className="text-[10px] bg-slate-900/50 border border-slate-700 px-2 py-1 rounded font-mono">Python</span>
                   <span className="text-[10px] bg-slate-900/50 border border-slate-700 px-2 py-1 rounded font-mono">LSTM</span>
                 </div>
-                <a href="https://github.com/m1ggyccs/Smart-Budget-Tracking" target="_blank" rel="noreferrer" className="text-teal-400 hover:text-teal-300 text-sm font-bold">View Code →</a>
+                <a href="https://github.com/m1ggyccs/Smart-Budget-Tracking" target="_blank" rel="noreferrer" className="text-teal-400 hover:text-teal-300 text-sm font-bold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400/60 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 rounded-sm px-1">View Code →</a>
               </div>
             </SpotlightCard>
           </Tilt>
@@ -73,7 +73,7 @@ export default function Projects() {
                   <span className="text-[10px] bg-slate-900/50 border border-slate-700 px-2 py-1 rounded font-mono">OpenCV</span>
                   <span className="text-[10px] bg-slate-900/50 border border-slate-700 px-2 py-1 rounded font-mono">Next.js</span>
                 </div>
-                <a href="https://github.com/m1ggyccs/Volleyball-Gesture-System" target="_blank" rel="noreferrer" className="text-teal-400 hover:text-teal-300 text-sm font-bold">View Code →</a>
+                <a href="https://github.com/m1ggyccs/Volleyball-Gesture-System" target="_blank" rel="noreferrer" className="text-teal-400 hover:text-teal-300 text-sm font-bold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400/60 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 rounded-sm px-1">View Code →</a>
               </div>
             </SpotlightCard>
           </Tilt>
@@ -96,7 +96,7 @@ export default function Projects() {
                   <span className="text-[10px] bg-slate-900/50 border border-slate-700 px-2 py-1 rounded font-mono">Next.js</span>
                   <span className="text-[10px] bg-slate-900/50 border border-slate-700 px-2 py-1 rounded font-mono">Prisma</span>
                 </div>
-                <a href="https://github.com/m1ggyccs/M1G-Laundry-Tracker" target="_blank" rel="noreferrer" className="text-teal-400 hover:text-teal-300 text-sm font-bold">View Code →</a>
+                <a href="https://github.com/m1ggyccs/M1G-Laundry-Tracker" target="_blank" rel="noreferrer" className="text-teal-400 hover:text-teal-300 text-sm font-bold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400/60 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 rounded-sm px-1">View Code →</a>
               </div>
             </SpotlightCard>
           </Tilt>
