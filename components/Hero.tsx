@@ -48,7 +48,7 @@ export default function Hero() {
             <a href="#projects" className="block bg-teal-600 hover:bg-teal-500 text-white px-7 py-3 rounded-md font-semibold transition-all shadow-lg shadow-teal-500/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400/60 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900">View My Work</a>
           </MagneticButton>
           <MagneticButton>
-            <a href="/resume.pdf" download="Andrei_David_Resume.pdf" onClick={() => track('Downloaded_Resume')} className="block bg-slate-900/70 hover:bg-slate-800 text-slate-100 px-7 py-3 rounded-md font-semibold transition-all border border-slate-700 hover:border-teal-500/40 flex items-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400/60 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"> <span>📄</span> Download Resume </a>
+            <a href="/David, Andrei Miguel_Resume.pdf" download="David, Andrei Miguel_Resume.pdf" onClick={() => track('Downloaded_Resume')} className="block bg-slate-900/70 hover:bg-slate-800 text-slate-100 px-7 py-3 rounded-md font-semibold transition-all border border-slate-700 hover:border-teal-500/40 flex items-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400/60 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"> <span>📄</span> Download Resume </a>
           </MagneticButton>
         </div>
         <a
