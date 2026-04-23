@@ -17,12 +17,15 @@ const fadeInUp: Variants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" as const } }
 };
 
+/** Served from `public/David, Andrei Miguel_Resume.pdf` */
+const RESUME_PDF_PATH = "/David%2C%20Andrei%20Miguel_Resume.pdf";
+
 export default function Hero() {
   return (
     <section className="relative z-10 max-w-6xl mx-auto px-6 py-24 md:py-28 flex flex-col items-center justify-center min-h-[75vh] text-center">
       <motion.div initial={false} animate="visible" variants={fadeInUp} className="mb-8 relative flex justify-center">
         <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-slate-800 ring-4 ring-teal-500/20 shadow-2xl shadow-teal-500/10 bg-slate-800">
-          <Image src="/avatar.jpg" alt="Miggy" width={160} height={160} sizes="160px" priority className="w-full h-full object-cover" />
+          <Image src="/avatar2.jpg" alt="Miggy" width={160} height={160} sizes="160px" priority className="w-full h-full object-cover" />
         </div>
         <div className="absolute bottom-2 right-2 w-6 h-6 bg-teal-400 rounded-full border-4 border-slate-900"></div>
       </motion.div>
@@ -48,7 +51,16 @@ export default function Hero() {
             <a href="#projects" className="block bg-teal-600 hover:bg-teal-500 text-white px-7 py-3 rounded-md font-semibold transition-all shadow-lg shadow-teal-500/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400/60 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900">View My Work</a>
           </MagneticButton>
           <MagneticButton>
-            <a href="/resume.pdf" download="Andrei_David_Resume.pdf" onClick={() => track('Downloaded_Resume')} className="block bg-slate-900/70 hover:bg-slate-800 text-slate-100 px-7 py-3 rounded-md font-semibold transition-all border border-slate-700 hover:border-teal-500/40 flex items-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400/60 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"> <span>📄</span> Download Resume </a>
+            <a
+              href={RESUME_PDF_PATH}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => track("Downloaded_Resume")}
+              aria-label="Open resume PDF (opens in a new tab)"
+              className="block bg-slate-900/70 hover:bg-slate-800 text-slate-100 px-7 py-3 rounded-md font-semibold transition-all border border-slate-700 hover:border-teal-500/40 flex items-center justify-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400/60 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
+            >
+              <span aria-hidden>📄</span> View Resume
+            </a>
           </MagneticButton>
         </div>
         <a
