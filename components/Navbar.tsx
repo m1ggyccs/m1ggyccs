@@ -160,7 +160,7 @@ export default function Navbar() {
     { name: "Skills", href: "#skills", id: "skills" },
     { name: "Contact", href: "#contact", id: "contact" },
     ...(SHOW_TEMP_PRESENTATION_TAB
-      ? [{ name: "OBTL Presentation", href: "/presentation" }]
+      ? [{ name: "E-Portfolio", href: "/presentation" }]
       : []),
   ];
 
