@@ -135,6 +135,7 @@ export default function Education() {
           
           <ul className="space-y-4">
             {[
+              { name: 'Six Sigma White Belt', provider: 'Six Sigma', date: 'Apr 2026' },
               { name: 'Responsive Web Design', provider: 'freeCodeCamp', date: 'Feb 2026' },
               { name: 'Python Data Associate', provider: 'DataCamp', date: 'Sep 2025' },
               { name: 'Microsoft Azure AI Fundamentals', provider: 'TESDA', date: 'Jun 2025' },
