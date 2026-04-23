@@ -1,17 +1,10 @@
 @import "tailwindcss";
 
-@theme inline {
-  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
-  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, monospace;
-}
-
 :root {
-  /* Locked to match your Portfolio's Slate-900 dark theme */
-  --background: #0f172a; 
-  --foreground: #cbd5e1; /* slate-300 */
+  --background: #0f172a;
+  --foreground: #cbd5e1;
 }
 
-/* Global Smooth Scrolling */
 html {
   scroll-behavior: smooth;
 }
@@ -19,29 +12,24 @@ html {
 body {
   background-color: var(--background);
   color: var(--foreground);
-  /* Tailwind and layout.tsx will handle the font-family automatically now */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* =========================================
-   Custom Dark-Themed Scrollbar
-   ========================================= */
 ::-webkit-scrollbar {
-  width: 12px; /* Slightly wider to accommodate the border */
+  width: 12px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #0f172a; /* matches slate-900 */
+  background: #0f172a;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1e293b; /* matches slate-800 */
+  background: #1e293b;
+  border: 3px solid #0f172a;
   border-radius: 6px;
-  /* Creates a transparent border to make the scrollbar "float" */
-  border: 3px solid #0f172a; 
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #2dd4bf; /* matches teal-400 */
+  background: #2dd4bf;
 }

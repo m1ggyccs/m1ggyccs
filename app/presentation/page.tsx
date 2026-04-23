@@ -3,7 +3,8 @@ import Image from "next/image";
 import Navbar from "@/components/Navbar";
 
 const CANVA_DECK_URL = "https://canva.link/svfv778tr2jnost";
-const CANVA_EMBED_URL = `${CANVA_DECK_URL}?embed`;
+const PDF_BUTTON_URL = "/temp/%5BCCS%20402%5D%20OBTL%20Portfolio.pdf";
+const PDF_EMBED_URL = "/temp/OBTL%20Presentation.pdf#view=FitH";
 
 export default function PresentationPage() {
   return (
@@ -18,7 +19,7 @@ export default function PresentationPage() {
           </div>
           <div className="flex flex-wrap gap-3">
             <a
-              href="/temp/obtl-presentation.pdf"
+              href={PDF_BUTTON_URL}
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center rounded-lg bg-teal-600 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-teal-500"
@@ -63,8 +64,8 @@ export default function PresentationPage() {
 
         <div className="overflow-hidden rounded-2xl border border-slate-700/70 bg-slate-950 shadow-2xl">
           <iframe
-            src={CANVA_EMBED_URL}
-            title="OBTL Canva Slide Deck"
+            src={PDF_EMBED_URL}
+            title="OBTL Presentation PDF"
             className="h-[76vh] w-full"
             allowFullScreen
           />
