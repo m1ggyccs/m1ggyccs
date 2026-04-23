@@ -57,7 +57,7 @@ export default function Hero() {
               aria-label="Open resume PDF (opens in a new tab)"
               className="block bg-slate-900/70 hover:bg-slate-800 text-slate-100 px-7 py-3 rounded-md font-semibold transition-all border border-slate-700 hover:border-teal-500/40 flex items-center justify-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400/60 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
             >
-              <span aria-hidden>📄</span> View Resume
+              View Resume
             </a>
           </MagneticButton>
         </div>
@@ -68,7 +68,7 @@ export default function Hero() {
           aria-label="Explore GitHub (opens in a new tab)"
           className="text-slate-400 hover:text-teal-300 transition-colors font-medium underline decoration-slate-700 hover:decoration-teal-400 underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400/60 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 rounded-sm"
         >
-          Explore GitHub ↗
+          Explore GitHub
         </a>
       </motion.div>
     </section>

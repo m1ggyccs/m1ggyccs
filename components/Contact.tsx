@@ -82,7 +82,7 @@ export default function Contact() {
                 <Image src="/logo/gmail.svg" alt="Gmail" width={20} height={20} sizes="20px" className="w-5 h-5" /> amigsdavid@gmail.com
               </a>
               <a href="https://linkedin.com/in/amigsdavid/" target="_blank" rel="noreferrer" aria-label="LinkedIn (opens in a new tab)" className="w-full sm:w-auto bg-slate-800 hover:bg-slate-700 text-slate-100 px-6 py-3 rounded-xl font-semibold border border-slate-700 flex gap-3 justify-center transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400/60 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900">
-                <Image src="/logo/linkedin.svg" alt="LinkedIn" width={20} height={20} sizes="20px" className="w-5 h-5" /> LinkedIn ↗
+                <Image src="/logo/linkedin.svg" alt="LinkedIn" width={20} height={20} sizes="20px" className="w-5 h-5" /> LinkedIn
               </a>
             </div>
 
@@ -98,7 +98,7 @@ export default function Contact() {
   <div className="flex items-center gap-4">
     <Image src="/logo/github.svg" alt="GitHub" width={20} height={20} sizes="20px" className="w-5 h-5" />
     <a href="https://github.com/m1ggyccs" target="_blank" rel="noreferrer" aria-label="GitHub profile (opens in a new tab)" className="hover:text-teal-400 transition-colors">
-      github.com/m1ggyccs ↗
+      github.com/m1ggyccs
     </a>
   </div>
 </div>
