@@ -2,6 +2,15 @@
 
 import React, { useEffect, useRef, useState } from "react";
 
+const SHOW_TEMP_PRESENTATION_TAB = true;
+
+type NavLink = {
+  name: string;
+  href: string;
+  id?: string;
+  external?: boolean;
+};
+
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
@@ -155,13 +164,16 @@ export default function Navbar() {
     };
   }, [isMobileMenuOpen]);
 
-  const navLinks = [
+  const navLinks: NavLink[] = [
     { name: "About", href: "#about", id: "about" },
     { name: "Experience", href: "#experience", id: "experience" },
     { name: "Education", href: "#education", id: "education" },
     { name: "Projects", href: "#projects", id: "projects" },
     { name: "Skills", href: "#skills", id: "skills" },
-    { name: "Contact", href: "#contact", id: "contact" }, 
+    { name: "Contact", href: "#contact", id: "contact" },
+    ...(SHOW_TEMP_PRESENTATION_TAB
+      ? [{ name: "OBTL Presentation", href: "/presentation" }]
+      : []),
   ];
 
   const scrollToId = (id: string) => {
@@ -221,9 +233,11 @@ export default function Navbar() {
             <a
               key={link.name}
               href={link.href}
-              onClick={onNavClick(link.id)}
+              onClick={link.id ? onNavClick(link.id) : undefined}
+              target={link.external ? "_blank" : undefined}
+              rel={link.external ? "noreferrer" : undefined}
               className={`rounded-lg px-3 py-2 transition-all duration-200 hover:scale-[1.02] ${
-                activeSection === link.id
+                link.id && activeSection === link.id
                   ? "text-teal-300 bg-teal-500/10 border border-teal-500/20"
                   : "text-slate-300 hover:text-teal-300 hover:bg-slate-800/70 border border-transparent"
               } focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400/60 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 rounded-sm`}
@@ -232,7 +246,7 @@ export default function Navbar() {
                 {link.name}
                 <span
                   className={`absolute left-1/2 -translate-x-1/2 -bottom-1 h-0.5 rounded-full bg-teal-300 transition-all duration-300 ${
-                    activeSection === link.id ? "w-full opacity-100" : "w-0 opacity-0"
+                    link.id && activeSection === link.id ? "w-full opacity-100" : "w-0 opacity-0"
                   }`}
                 />
               </span>
@@ -271,9 +285,11 @@ export default function Navbar() {
              <a 
                key={link.name} 
                href={link.href} 
-               onClick={onNavClick(link.id)}
+               onClick={link.id ? onNavClick(link.id) : () => setIsMobileMenuOpen(false)}
+               target={link.external ? "_blank" : undefined}
+               rel={link.external ? "noreferrer" : undefined}
                className={`font-medium min-h-11 w-[90%] max-w-xs inline-flex items-center justify-center rounded-xl px-4 py-2 transition-colors ${
-                 activeSection === link.id
+                 link.id && activeSection === link.id
                    ? "text-teal-300 bg-teal-500/10 border border-teal-500/20"
                    : "text-slate-300 hover:bg-slate-800/70"
                } focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400/60 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900`}
