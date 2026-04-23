@@ -49,7 +49,6 @@ export default function Contact() {
         setErrorMessage(null);
         setSuccessMessage("Thanks for reaching out — I’ll get back to you as soon as I can.");
         e.currentTarget.reset();
-        // Hide success message after 5 seconds
         setTimeout(() => {
           setIsSuccess(false);
           setSuccessMessage(null);
@@ -70,7 +69,6 @@ export default function Contact() {
       <div className="max-w-6xl mx-auto px-6">
         
         <div className="grid md:grid-cols-2 gap-16 items-center">
-          {/* Left Column: Text & Links */}
           <div>
             <h3 className="text-4xl md:text-5xl font-extrabold text-slate-100 mb-6 font-mono">
               <span className="text-teal-500">Let&apos;s</span> Connect
@@ -106,12 +104,10 @@ export default function Contact() {
 </div>
           </div>
 
-          {/* Right Column: The Form */}
           <div className="bg-slate-800/40 p-8 rounded-3xl border border-slate-700/50 shadow-2xl relative overflow-hidden">
             <h4 className="text-2xl font-bold text-slate-100 mb-6 font-mono">Send a Message</h4>
             
             <form onSubmit={handleSubmit} className="space-y-5 relative z-10">
-              {/* Requires Web3Forms anti-spam honeypot */}
               <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} />
 
               <div className="grid grid-cols-2 gap-5">
@@ -181,7 +177,6 @@ export default function Contact() {
         </div>
       </div>
 
-      {/* Sticky Mobile CTA */}
       <div className="md:hidden fixed bottom-3 pb-[calc(env(safe-area-inset-bottom)+0.5rem)] left-1/2 -translate-x-1/2 z-[110]">
         <div className="flex items-center gap-2 rounded-2xl border border-slate-700/70 bg-slate-900/90 backdrop-blur-md p-2 shadow-xl">
           <a

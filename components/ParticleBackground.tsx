@@ -11,7 +11,6 @@ export default function ParticleBackground() {
   useEffect(() => {
     if (prefersReducedMotion) return;
 
-    // Skip particles on smaller screens to reduce initial render cost.
     if (!window.matchMedia("(min-width: 768px)").matches) return;
 
     let cancelled = false;

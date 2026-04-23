@@ -19,31 +19,26 @@ export default function Navbar() {
   const pendingNavTargetRef = useRef<string | null>(null);
   const pendingNavTimeoutRef = useRef<number | null>(null);
 
-  // ScrollSpy Logic (IntersectionObserver)
   useEffect(() => {
     const sectionIds = ["about", "experience", "education", "projects", "skills", "contact"] as const;
-    const navOffset = 140; // Approx. sticky header height (tuned for this layout)
+    const navOffset = 140;
     const sections = sectionIds
       .map((id) => ({ id, el: document.getElementById(id) }))
       .filter((item): item is { id: (typeof sectionIds)[number]; el: HTMLElement } => item.el !== null);
 
-    // Initial active section avoids an empty highlight on refresh/jump navigation.
     const initial = sections.reduce((current, item) => {
       return window.scrollY + navOffset >= item.el.offsetTop ? item.id : current;
     }, "" as (typeof sectionIds)[number] | "");
-    // Avoid synchronous state updates inside the effect body (prevents lint + cascading renders).
     requestAnimationFrame(() => {
       setActiveSection(initial);
     });
 
     const observer = new IntersectionObserver(
       () => {
-        // Keep clicked nav tab active while smooth-scrolling to its target.
         if (pendingNavTargetRef.current) {
           const pendingEl = document.getElementById(pendingNavTargetRef.current);
           if (pendingEl) {
             const pendingTop = pendingEl.getBoundingClientRect().top;
-            // Release lock once target reaches navbar offset line.
             if (pendingTop <= navOffset + 8) {
               pendingNavTargetRef.current = null;
               if (pendingNavTimeoutRef.current) {
@@ -63,15 +58,12 @@ export default function Navbar() {
           }
         }
 
-        // Determine which section is "active" by looking at which section crosses the navOffset line.
-        // This is more stable than using intersection ratio when sections have uneven heights.
         let bestId = "";
         let bestTop = -Infinity;
 
         for (const item of sections) {
           const rect = item.el.getBoundingClientRect();
 
-          // Consider sections that are currently around the nav's top boundary.
           if (rect.top <= navOffset && rect.bottom > navOffset) {
             if (rect.top > bestTop) {
               bestTop = rect.top;
@@ -83,7 +75,6 @@ export default function Navbar() {
         if (bestId) {
           setActiveSection(bestId);
         } else {
-          // When the user is in the hero/top area (before About), clear active tab.
           const firstSection = sections[0]?.el;
           const firstTop = firstSection?.getBoundingClientRect().top ?? Number.POSITIVE_INFINITY;
           if (firstTop > navOffset) {
@@ -109,7 +100,6 @@ export default function Navbar() {
     };
   }, []);
 
-  // Mobile menu UX: lock scroll + close on Escape + basic focus management.
   useEffect(() => {
     if (!isMobileMenuOpen) {
       document.body.style.overflow = "";
@@ -125,7 +115,6 @@ export default function Navbar() {
         return;
       }
 
-      // Simple focus trap for the mobile menu.
       if (e.key === "Tab" && mobileMenuRef.current) {
         const focusables = mobileMenuRef.current.querySelectorAll<HTMLElement>(
           'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])'
@@ -152,7 +141,6 @@ export default function Navbar() {
 
     window.addEventListener("keydown", onKeyDown);
 
-    // Focus the first menu item once opened.
     requestAnimationFrame(() => {
       const firstLink = mobileMenuRef.current?.querySelector<HTMLElement>('a[href]');
       firstLink?.focus();
@@ -184,7 +172,6 @@ export default function Navbar() {
 
     const top = window.scrollY + target.getBoundingClientRect().top - navOffset;
     window.scrollTo({ top: Math.max(0, top), behavior: prefersReducedMotion ? "auto" : "smooth" });
-    // Remove the hash from the URL after navigation.
     if (window.location.hash) {
       history.replaceState(null, "", window.location.pathname + window.location.search);
     }
@@ -200,7 +187,6 @@ export default function Navbar() {
     if (pendingNavTimeoutRef.current) {
       window.clearTimeout(pendingNavTimeoutRef.current);
     }
-    // Safety fallback so manual scrolling isn't blocked if smooth-scroll events are missed.
     pendingNavTimeoutRef.current = window.setTimeout(() => {
       pendingNavTargetRef.current = null;
       pendingNavTimeoutRef.current = null;

@@ -7,7 +7,6 @@ import dynamic from 'next/dynamic';
 import type { Props as GitHubCalendarProps } from 'react-github-calendar';
 import SpotlightCard from './SpotlightCard'; 
 
-// FIXED: Explicitly typing the dynamic import so TypeScript knows what props to expect!
 const GitHubCalendar = dynamic<GitHubCalendarProps>(
   () =>
     import('react-github-calendar').then(

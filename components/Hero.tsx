@@ -5,7 +5,7 @@ import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import { motion, Variants } from "framer-motion";
 import MagneticButton from './MagneticButton';
-import { track } from '@vercel/analytics'; //
+import { track } from '@vercel/analytics';
 
 const TypeAnimation = dynamic(
   () => import('react-type-animation').then((mod) => mod.TypeAnimation),
@@ -17,7 +17,6 @@ const fadeInUp: Variants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" as const } }
 };
 
-/** Served from `public/David, Andrei Miguel_Resume.pdf` */
 const RESUME_PDF_PATH = "/David%2C%20Andrei%20Miguel_Resume.pdf";
 
 export default function Hero() {
@@ -45,7 +44,6 @@ export default function Hero() {
           &quot;Per aspera ad astra.&quot;
         </p>
         
-        {/* Applied Magnetic Buttons Here! */}
         <div className="flex flex-wrap justify-center gap-4 pt-8">
           <MagneticButton>
             <a href="#projects" className="block bg-teal-600 hover:bg-teal-500 text-white px-7 py-3 rounded-md font-semibold transition-all shadow-lg shadow-teal-500/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400/60 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900">View My Work</a>
