@@ -3,7 +3,7 @@ import Image from "next/image";
 import Navbar from "@/components/Navbar";
 
 const CANVA_DECK_URL = "https://canva.link/svfv778tr2jnost";
-const PDF_PRESENTATION_URL = "/temp/obtl-presentation.pdf#view=FitH";
+const CANVA_EMBED_URL = `${CANVA_DECK_URL}?embed`;
 
 export default function PresentationPage() {
   return (
@@ -63,8 +63,8 @@ export default function PresentationPage() {
 
         <div className="overflow-hidden rounded-2xl border border-slate-700/70 bg-slate-950 shadow-2xl">
           <iframe
-            src={PDF_PRESENTATION_URL}
-            title="OBTL PDF Slide Deck"
+            src={CANVA_EMBED_URL}
+            title="OBTL Canva Slide Deck"
             className="h-[76vh] w-full"
             allowFullScreen
           />

@@ -192,6 +192,10 @@ export default function Navbar() {
 
   const onNavClick = (id: string) => (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
+    if (window.location.pathname !== "/") {
+      window.location.assign(`/#${id}`);
+      return;
+    }
     pendingNavTargetRef.current = id;
     if (pendingNavTimeoutRef.current) {
       window.clearTimeout(pendingNavTimeoutRef.current);
