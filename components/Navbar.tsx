@@ -2,8 +2,6 @@
 
 import React, { useEffect, useRef, useState } from "react";
 
-const SHOW_TEMP_PRESENTATION_TAB = true;
-
 type NavLink = {
   name: string;
   href: string;
@@ -159,9 +157,6 @@ export default function Navbar() {
     { name: "Projects", href: "#projects", id: "projects" },
     { name: "Skills", href: "#skills", id: "skills" },
     { name: "Contact", href: "#contact", id: "contact" },
-    ...(SHOW_TEMP_PRESENTATION_TAB
-      ? [{ name: "E-Portfolio", href: "/presentation" }]
-      : []),
   ];
 
   const scrollToId = (id: string) => {
