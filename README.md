@@ -17,7 +17,7 @@ I’m a Software Engineer and Computer Science student graduating in June 2026 f
 
 I enjoy building scalable full-stack applications and working on AI-driven systems that solve real-world problems. My experience comes from both academic training at iACADEMY and hands-on work in technical consulting, where I’ve learned how systems are applied in real business environments.
 
-Currently a **Technical Consultant Intern** at **Mustard Seed Systems Corporation** focusing on ERP Systems & Customization.
+Currently a **Technical Consultant** at **Mustard Seed Systems Corporation** focusing on ERP Systems & Customization.
 
 ### **Core Engineering Focus:**
 - **ERP & Business Systems** I work on customizing Microsoft Dynamics 365 Business Central using AL, and also handle NetSuite customization through scripting and form changes. I've also worked on troubleshooting issues in SAP Business One, mainly on system behavior and data-related concerns.
@@ -30,8 +30,6 @@ Currently a **Technical Consultant Intern** at **Mustard Seed Systems Corporatio
 
 **Technical Consultant | Mustard Seed Systems Corporation**  
 */April 2026 – Present/*
-
----
 
 **Technical Consultant Intern | Mustard Seed Systems Corporation**  
 */January 2026 – April 2026/*
