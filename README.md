@@ -29,10 +29,10 @@ Currently a **Technical Consultant** at **Mustard Seed Systems Corporation** foc
 ## Professional Experience
 
 **Technical Consultant | Mustard Seed Systems Corporation**  
-*/April 2026 – Present/*
+*April 2026 – Present*
 
 **Technical Consultant Intern | Mustard Seed Systems Corporation**  
-*/January 2026 – April 2026/*
+*January 2026 – April 2026*
 
 - Assisted in customizing and enhancing **Microsoft Dynamics 365 Business Central** solutions using AL language and RDLC reports.
 - Supported troubleshooting and maintenance activities for purchasing, finance, and reporting modules.
