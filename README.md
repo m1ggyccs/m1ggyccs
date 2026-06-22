@@ -13,7 +13,7 @@
 
 ## About Me
 
-I’m a Software Engineer and Computer Science student graduating in June 2026 from the Technological Institute of the Philippines.
+I’m a Software Engineer and a BSCS graduate of the Technological Institute of the Philippines.
 
 I enjoy building scalable full-stack applications and working on AI-driven systems that solve real-world problems. My experience comes from both academic training at iACADEMY and hands-on work in technical consulting, where I’ve learned how systems are applied in real business environments.
 
@@ -56,7 +56,7 @@ Currently a **Technical Consultant** at **Mustard Seed Systems Corporation** foc
 
 ## Education & Certifications
 
-**Bachelor of Science in Computer Science** *Technological Institute of the Philippines, Manila (Graduating June 2026)* Vice President Lister (VPAA) & Consistent Dean’s Lister
+**Bachelor of Science in Computer Science** *Technological Institute of the Philippines, Manila (June 2022 - June 2026)* Vice President Lister (VPAA) & Consistent Dean’s Lister
 
 **Senior High School - Software Development** *iACADEMY (2019 - 2021)* 1st Runner-up, iACADEMY Expo (Avalon Dawnbreak 2D Platformer)
 
