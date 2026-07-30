@@ -4,7 +4,7 @@
 
 <h1 align="center">👋 Hi! I'm Andrei Miguel A. David</h1>
 <p align="center">
-  <strong>Technical Consultant | Software Engineer | ERP & Systems-Focused Engineer</strong><br>
+  <strong>Technical Consultant | Software Engineer | ERP Solutions Engineer</strong><br>
   Computer Science Undergrad @ <a href="https://www.tip.edu.ph" target="_blank">Technological Institute of the Philippines – Manila</a>
   <a href="https://www.linkedin.com/in/amigsdavid" target="_blank">LinkedIn</a> · <a href="https://github.com/m1ggyccs" target="_blank">GitHub</a>
 </p>
@@ -20,9 +20,11 @@ I enjoy building scalable full-stack applications and working on AI-driven syste
 Currently a **Technical Consultant** at **Mustard Seed Systems Corporation** focusing on ERP Systems Enhancement.
 
 ### **Core Engineering Focus:**
-- **ERP & Business Systems** I work on customizing Microsoft Dynamics 365 Business Central using AL, and also handle NetSuite customization through scripting and form changes. I've also worked on troubleshooting issues in SAP Business One, mainly on system behavior and data-related concerns.
-- **Full-Stack Engineering:** I build web applications using React, Node.js / Express, Next.js, and MongoDB, with attention to structure and performance.
-- **AI & Machine Learning:** I develop projects involving object detection and gesture recognition using Python, applying machine learning in practical use cases.
+- **ERP Solutions Engineering:** I design, enhance, integrate, and optimize enterprise business processes across multiple ERP ecosystems. My work extends beyond customization into solution architecture, workflow optimization, reporting, business process automation, and client-focused system enhancements.
+- **Enterprise Platforms:** Experienced with **Microsoft Dynamics 365 Business Central**, **Oracle NetSuite**, **SAP Business One**, **Odoo.sh**, and **Odoo Online**, delivering enhancements across Finance, Purchasing, Sales, Inventory, Warehousing, Manufacturing, Reporting, and Approval workflows.
+- **Business Central Development:** Build extensions using **AL**, develop RDLC and Word reports, integrate APIs, optimize posting logic, extend standard application behavior, and implement maintainable ERP solutions.
+- **Full-Stack Engineering:** Build scalable applications using React, Next.js, Node.js, Express, SQL, and MongoDB that complement enterprise systems and business operations.
+- **AI & Machine Learning:** Develop computer vision and machine learning solutions using Python for real-world automation and decision support.
 
 ---
 
@@ -34,10 +36,12 @@ Currently a **Technical Consultant** at **Mustard Seed Systems Corporation** foc
 **Technical Consultant Intern | Mustard Seed Systems Corporation**  
 *January 2026 – April 2026*
 
-- Assisted in customizing and enhancing **Microsoft Dynamics 365 Business Central** solutions using AL language and RDLC reports.
-- Supported troubleshooting and maintenance activities for purchasing, finance, and reporting modules.
-- Helped develop and modify **NetSuite** forms, scripts, and custom actions based on client requirements.
-- Assisted in resolving **SAP Business One** issues related to system functionality, user concerns, and data inconsistencies.
+- Design and implement ERP enhancements that improve business workflows, operational efficiency, and reporting across multiple industries.
+- Develop extensions for **Microsoft Dynamics 365 Business Central** using **AL**, including custom pages, tables, codeunits, integrations, APIs, posting logic, and RDLC/Word reports.
+- Enhance and maintain **Oracle NetSuite** through SuiteScript, SuiteFlow, custom forms, searches, and business process improvements.
+- Troubleshoot and optimize **SAP Business One** environments, resolving functional, database, reporting, and application issues.
+- Configure and enhance solutions in **Odoo.sh** and **Odoo Online**, supporting module implementations and workflow improvements.
+- Collaborate directly with clients to translate business requirements into scalable ERP solutions while balancing maintainability, performance, and upgrade compatibility.
 
 ---
 
@@ -50,7 +54,7 @@ Currently a **Technical Consultant** at **Mustard Seed Systems Corporation** foc
 `React`, `Next.js`, `Node.js`, `Express.js`, `.NET (Basic)`
 
 ### **Platforms & Tools**
-`Microsoft Dynamics 365 Business Central`, `NetSuite`, `SAP Business One`, `Microsoft SQL Server (MSSQL)`, `MongoDB`, `Azure`, `Git/GitHub`
+`Microsoft Dynamics 365 Business Central`, `Oracle NetSuite`, `SAP Business One`, `Odoo.sh`, `Odoo Online`, `Microsoft SQL Server (MSSQL)`, `MongoDB`, `Azure`, `Git/GitHub`
 
 ---
 
