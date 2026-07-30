@@ -17,11 +17,11 @@ I’m a Software Engineer and a BSCS graduate of the Technological Institute of 
 
 I enjoy building scalable full-stack applications and working on AI-driven systems that solve real-world problems. My experience comes from both academic training at iACADEMY and hands-on work in technical consulting, where I’ve learned how systems are applied in real business environments.
 
-Currently a **Technical Consultant** at **Mustard Seed Systems Corporation** focusing on ERP Systems Enhancement.
+Currently a **Technical Consultant** at <a href="https://mseedsystems.com/" target="_blank">**Mustard Seed Systems Corporation**</a> focusing on ERP Systems Enhancement.
 
 ### **Core Engineering Focus:**
 - **ERP Solutions Engineering:** I design, enhance, integrate, and optimize enterprise business processes across multiple ERP ecosystems. My work extends beyond customization into solution architecture, workflow optimization, reporting, business process automation, and client-focused system enhancements.
-- **Enterprise Platforms:** Experienced with **Microsoft Dynamics 365 Business Central**, **Oracle NetSuite**, **SAP Business One**, **Odoo.sh**, and **Odoo Online**, delivering enhancements across Finance, Purchasing, Sales, Inventory, Warehousing, Manufacturing, Reporting, and Approval workflows.
+- **Enterprise Platforms:** I currently work as a Technical Consultant, helping organizations enhance and optimize enterprise resource planning (ERP) solutions. My experience spans **Microsoft Dynamics 365 Business Central**, **Oracle NetSuite**, **SAP Business One**, **Odoo.sh**, and **Odoo Online**, where I contribute to system enhancements, business process improvements, reporting, integrations, and technical support.
 - **Business Central Development:** Build extensions using **AL**, develop RDLC and Word reports, integrate APIs, optimize posting logic, extend standard application behavior, and implement maintainable ERP solutions.
 - **Full-Stack Engineering:** Build scalable applications using React, Next.js, Node.js, Express, SQL, and MongoDB that complement enterprise systems and business operations.
 - **AI & Machine Learning:** Develop computer vision and machine learning solutions using Python for real-world automation and decision support.
