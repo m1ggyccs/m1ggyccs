@@ -60,16 +60,22 @@ Currently a **Technical Consultant** at <a href="https://mseedsystems.com/" targ
 
 ## Education & Certifications
 
-**Bachelor of Science in Computer Science** *Technological Institute of the Philippines, Manila (June 2022 - June 2026)* Vice President Lister (VPAA) & Consistent Dean’s Lister
+**Bachelor of Science in Computer Science** 
+*Technological Institute of the Philippines, Manila (June 2022 - June 2026)* 
+Vice President Lister (VPAA) & Consistent Dean’s Lister
 
-**Senior High School - Software Development** *iACADEMY (2019 - 2021)* 1st Runner-up, iACADEMY Expo (Avalon Dawnbreak 2D Platformer)
+**Senior High School - Software Development** 
+*iACADEMY (2019 - 2021)* 
+1st Runner-up, iACADEMY Expo (Avalon Dawnbreak 2D Platformer)
 
 ### **Recent Certifications:**
-- Responsive Web Design (freeCodeCamp) - Feb 2026
-- Python Data Associate (DataCamp) - Sep 2025
-- Microsoft Azure AI Fundamentals (TESDA) - Jun 2025
-- Web Development Fundamentals (IBM) - Jun 2025
-- Business Analysis & Process Management (Coursera) - Jun 2025
+-  <a href="https://www.coursera.org/account/accomplishments/verify/HHZ2GVI1UFBG" target="_blank"> AI Fundamentals (Google) </a> - May 2026
+-  <a href="https://www.linkedin.com/in/amigsdavid/overlay/Certifications/701735446/treasury/?profileId=ACoAAFG-XRYBEa4IOaSVSg2AQCmRzPQZ3o0Mn2o" target="_blank"> Six Sigma White Belt (The Council for Six Sigma Certification) </a> - Apr 2026
+-  <a href="https://www.freecodecamp.org/certification/m1ggyccs/responsive-web-design-v9" target="_blank"> Responsive Web Design (freeCodeCamp) </a> - Feb 2026
+-  <a href="https://www.datacamp.com/certificate/PDA0016746029284" target="_blank"> Python Data Associate (DataCamp) </a> - Sep 2025
+-  <a href="https://www.linkedin.com/in/amigsdavid/overlay/Certifications/1317299153/treasury/?profileId=ACoAAFG-XRYBEa4IOaSVSg2AQCmRzPQZ3o0Mn2o" target="_blank"> Microsoft Azure AI Fundamentals (TESDA) </a> - Jun 2025
+-  <a href="https://www.credly.com/badges/8b9a6d4f-b5c1-4c77-b9c6-62e64369e6f8/linked_in_profile" target="_blank"> Web Development Fundamentals (IBM) </a> - Jun 2025
+-  <a href="https://www.coursera.org/account/accomplishments/verify/GBGZUROFZEKA" target="_blank"> Business Analysis & Process Management (Coursera) </a> - Jun 2025
 
 ---
 
