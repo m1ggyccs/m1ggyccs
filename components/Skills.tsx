@@ -46,6 +46,7 @@ const skillGroups: { title: string; skills: Skill[] }[] = [
       { name: "MongoDB", iconSrc: "/logo/mongodb.svg" },
       { name: "Azure", iconSrc: "/logo/azure.svg" },
       { name: "NetSuite", iconSrc: "/logo/netsuite.svg" },
+      { name: "Odoo", iconSrc: "/logo/odoo.svg" },
       { name: "GitHub", iconSrc: "/logo/github.svg" },
     ],
   },

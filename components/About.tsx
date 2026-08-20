@@ -22,9 +22,9 @@ export default function About() {
           <div className="bg-slate-900 p-8 rounded-xl border border-slate-800 shadow-xl self-start w-full">
             <h4 className="text-xl font-semibold text-slate-100 mb-6">Core Engineering Focus</h4>
             <ul className="space-y-5">
-              <li className="flex items-start gap-4"><span className="text-teal-500 mt-1 shrink-0">▹</span><span><strong className="text-slate-200">ERP &amp; Business Systems:</strong> I work on customizing Microsoft Dynamics 365 Business Central using AL, and also handle NetSuite customization through scripting and form changes. I&apos;ve also worked on troubleshooting issues in SAP Business One, mainly on system behavior and data-related concerns.</span></li>
-              <li className="flex items-start gap-4"><span className="text-teal-500 mt-1 shrink-0">▹</span><span><strong className="text-slate-200">Full-Stack Engineering:</strong> I build web applications using React, Node.js / Express, Next.js, and MongoDB, with attention to structure and performance.</span></li>
-              <li className="flex items-start gap-4"><span className="text-teal-500 mt-1 shrink-0">▹</span><span><strong className="text-slate-200">AI &amp; Machine Learning:</strong> I develop projects involving object detection and gesture recognition using Python, applying machine learning in practical use cases.</span></li>
+              <li className="flex items-start gap-4"><span className="text-teal-500 mt-1 shrink-0">▹</span><span><strong className="text-slate-200">ERP &amp; Business Systems:</strong> Customize Business Central with AL, NetSuite with scripts and forms, and Odoo Online and Odoo.sh. I also troubleshoot SAP Business One issues.</span></li>
+              <li className="flex items-start gap-4"><span className="text-teal-500 mt-1 shrink-0">▹</span><span><strong className="text-slate-200">Full-Stack Engineering:</strong> Build structured, performant applications with React, Next.js, Node.js, Express, and MongoDB.</span></li>
+              <li className="flex items-start gap-4"><span className="text-teal-500 mt-1 shrink-0">▹</span><span><strong className="text-slate-200">AI &amp; Machine Learning:</strong> Develop Python projects for object detection and gesture recognition.</span></li>
             </ul>
           </div>
         </div>

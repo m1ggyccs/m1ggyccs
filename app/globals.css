@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-sans);
+  --font-serif: var(--font-geist-sans);
+}
+
 :root {
   --background: #0f172a;
   --foreground: #cbd5e1;
@@ -12,8 +18,14 @@ html {
 body {
   background-color: var(--background);
   color: var(--foreground);
+  font-family: var(--font-geist-sans), sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.font-mono,
+.font-serif {
+  font-family: var(--font-geist-sans), sans-serif;
 }
 
 ::-webkit-scrollbar {

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import dynamic from 'next/dynamic';
-import { MotionConfig, motion, useReducedMotion, useScroll, useSpring } from "framer-motion";
+import { MotionConfig, motion, useScroll, useSpring } from "framer-motion";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
@@ -29,17 +29,13 @@ export default function Portfolio() {
     damping: 30,
     restDelta: 0.001
   });
-  const prefersReducedMotion = useReducedMotion();
-
   return (
     <MotionConfig reducedMotion="user">
       <main className="min-h-screen bg-slate-900 text-slate-300 font-sans selection:bg-teal-500/30 relative">
-        {!prefersReducedMotion && (
-          <motion.div
-            className="fixed top-0 left-0 right-0 h-1 bg-teal-400 origin-left z-[100] shadow-[0_0_10px_#2dd4bf]"
-            style={{ scaleX }}
-          />
-        )}
+        <motion.div
+          className="fixed top-0 left-0 right-0 h-1 bg-teal-400 origin-left z-[100] shadow-[0_0_10px_#2dd4bf]"
+          style={{ scaleX }}
+        />
         {/* Background & Nav */}
         <ParticleBackground />
         <Navbar />

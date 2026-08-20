@@ -135,6 +135,7 @@ export default function Education() {
           
           <ul className="space-y-4">
             {[
+              { name: 'AI Fundamentals', provider: 'Google', date: 'May 2026', credentialId: 'HHZ2GVIUF8G' },
               { name: 'Six Sigma White Belt', provider: 'Six Sigma', date: 'Apr 2026' },
               { name: 'Responsive Web Design', provider: 'freeCodeCamp', date: 'Feb 2026' },
               { name: 'Python Data Associate', provider: 'DataCamp', date: 'Sep 2025' },
@@ -146,6 +147,7 @@ export default function Education() {
                 <div>
                   <h5 className="font-bold text-slate-200">{cert.name}</h5>
                   <p className="text-sm text-slate-500 mt-0.5">{cert.provider}</p>
+                  {'credentialId' in cert && <p className="text-xs text-slate-600 mt-1">ID: {cert.credentialId}</p>}
                 </div>
                 <span className="text-sm font-mono text-teal-400 bg-teal-500/10 px-3 py-1 rounded-full border border-teal-500/20">{cert.date}</span>
               </li>

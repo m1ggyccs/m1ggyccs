@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import { motion, Variants, useInView } from "framer-motion"; 
 import Tilt from 'react-parallax-tilt';
 import dynamic from 'next/dynamic';
@@ -21,13 +21,8 @@ const fadeInUp: Variants = {
 };
 
 export default function Projects() {
-  const [expandedProjects, setExpandedProjects] = useState<Record<string, boolean>>({});
   const calendarRef = useRef<HTMLDivElement | null>(null);
   const isCalendarInView = useInView(calendarRef, { once: true, margin: "200px 0px" });
-
-  const toggleProjectDetails = (projectKey: string) => {
-    setExpandedProjects((prev) => ({ ...prev, [projectKey]: !prev[projectKey] }));
-  };
 
   return (
     <motion.section id="projects" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} variants={fadeInUp} className="bg-slate-900/50 py-24 md:py-28 border-b border-slate-800 relative z-10 scroll-mt-24 md:scroll-mt-28">
@@ -46,26 +41,15 @@ export default function Projects() {
           {/* 1. Smart Budget Tracker */}
           <Tilt tiltMaxAngleX={5} tiltMaxAngleY={5} scale={1.02} className="h-full">
             <SpotlightCard className="p-6 h-full flex flex-col group transition-transform duration-300 hover:-translate-y-1">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center text-xl border border-slate-700">💰</div>
+              <div className="flex items-center mb-4">
                 <h4 className="text-xl font-bold text-slate-100 font-mono">Smart Budget Tracker</h4>
               </div>
               <div className="md:hidden text-sm text-slate-300 leading-relaxed flex-grow">
                 Budget analytics tool using machine learning models for category mapping and demand forecasting.
               </div>
-              <div className={`hidden md:block space-y-3 text-xs text-slate-400 leading-relaxed flex-grow overflow-hidden transition-[max-height] duration-300 ${expandedProjects.budget ? "max-h-[28rem]" : "max-h-40"}`}>
-                <p><strong className="text-teal-400/80">S:</strong> Needed to analyze cross-cultural spending behaviors using limited datasets where transactions were vaguely categorized as &quot;Others&quot;.</p>
-                <p><strong className="text-teal-400/80">T:</strong> Clean unstructured data by mapping descriptions to categories, and identify the best forecasting model for small-scale data.</p>
-                <p><strong className="text-teal-400/80">A:</strong> Built a comparative engine evaluating Moving Average, Holt-Winters, and LSTM models side-by-side.</p>
-                <p><strong className="text-teal-400/80">R:</strong> Successfully categorized the data and identified the highest-performing model, proving the viability of cross-cultural predictive budgeting.</p>
+              <div className="hidden md:block text-xs text-slate-400 leading-relaxed flex-grow">
+                <p>Built a comparative forecasting engine that categorizes messy spending data and evaluates Moving Average, Holt-Winters, and LSTM models for small-scale predictive budgeting.</p>
               </div>
-              <button
-                type="button"
-                onClick={() => toggleProjectDetails("budget")}
-                className="hidden md:inline-flex mt-2 text-xs text-teal-300 hover:text-teal-200 font-medium"
-              >
-                {expandedProjects.budget ? "Show less details" : "Show more details"}
-              </button>
               <div className="mt-6 pt-4 border-t border-slate-700/50 flex justify-between items-center">
                 <div className="flex gap-2">
                   <span className="text-[10px] bg-slate-900/50 border border-slate-700 px-2 py-1 rounded font-mono">Python</span>
@@ -79,26 +63,15 @@ export default function Projects() {
           {/* 2. Volleyball Gesture System */}
           <Tilt tiltMaxAngleX={5} tiltMaxAngleY={5} scale={1.02} className="h-full">
             <SpotlightCard className="p-6 h-full flex flex-col group transition-transform duration-300 hover:-translate-y-1">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center text-xl border border-slate-700">🏐</div>
+              <div className="flex items-center mb-4">
                 <h4 className="text-xl font-bold text-slate-100 font-mono">VolleyVision</h4>
               </div>
               <div className="md:hidden text-sm text-slate-300 leading-relaxed flex-grow">
                 Computer-vision web app that identifies volleyball referee gestures in real time.
               </div>
-              <div className={`hidden md:block space-y-3 text-xs text-slate-400 leading-relaxed flex-grow overflow-hidden transition-[max-height] duration-300 ${expandedProjects.volley ? "max-h-[28rem]" : "max-h-40"}`}>
-                <p><strong className="text-teal-400/80">S:</strong> Casual volleyball viewers struggle to keep up with complex referee hand signals during fast-paced matches.</p>
-                <p><strong className="text-teal-400/80">T:</strong> Develop a web-based computer vision tool to automatically interpret and track gestures in real-time.</p>
-                <p><strong className="text-teal-400/80">A:</strong> Trained a custom model using a proprietary dataset and integrated it with a Next.js web app for API communication and SEO.</p>
-                <p><strong className="text-teal-400/80">R:</strong> Achieved high accuracy in capturing signals despite a strict timeframe, successfully delivering a functional web prototype.</p>
+              <div className="hidden md:block text-xs text-slate-400 leading-relaxed flex-grow">
+                <p>Trained a custom computer-vision model to recognize volleyball referee gestures and integrated it into a Next.js web prototype for real-time interpretation.</p>
               </div>
-              <button
-                type="button"
-                onClick={() => toggleProjectDetails("volley")}
-                className="hidden md:inline-flex mt-2 text-xs text-teal-300 hover:text-teal-200 font-medium"
-              >
-                {expandedProjects.volley ? "Show less details" : "Show more details"}
-              </button>
               <div className="mt-6 pt-4 border-t border-slate-700/50 flex justify-between items-center">
                 <div className="flex gap-2">
                   <span className="text-[10px] bg-slate-900/50 border border-slate-700 px-2 py-1 rounded font-mono">OpenCV</span>
@@ -112,26 +85,15 @@ export default function Projects() {
           {/* 3. M1G Laundry Tracker */}
           <Tilt tiltMaxAngleX={5} tiltMaxAngleY={5} scale={1.02} className="h-full">
             <SpotlightCard className="p-6 h-full flex flex-col group transition-transform duration-300 hover:-translate-y-1">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center text-xl border border-slate-700">🧺</div>
+              <div className="flex items-center mb-4">
                 <h4 className="text-xl font-bold text-slate-100 font-mono">M1G Laundry Tracker</h4>
               </div>
               <div className="md:hidden text-sm text-slate-300 leading-relaxed flex-grow">
                 Laundry operations tracker with order lifecycle monitoring and profitability visibility.
               </div>
-              <div className={`hidden md:block space-y-3 text-xs text-slate-400 leading-relaxed flex-grow overflow-hidden transition-[max-height] duration-300 ${expandedProjects.laundry ? "max-h-[28rem]" : "max-h-40"}`}>
-                <p><strong className="text-teal-400/80">S:</strong> A real laundry business was upgrading machinery but still relying on manual tracking for orders, backjobs, and revenue.</p>
-                <p><strong className="text-teal-400/80">T:</strong> Architect a modernized, full-stack tracking application to handle complex order lifecycles and business analytics.</p>
-                <p><strong className="text-teal-400/80">A:</strong> Designed a robust relational database schema using Postgres and Prisma to efficiently manage customer queues and financial data.</p>
-                <p><strong className="text-teal-400/80">R:</strong> Delivered a system that simplified order tracking, resolved backjob confusion, and provided clear visibility into profitability.</p>
+              <div className="hidden md:block text-xs text-slate-400 leading-relaxed flex-grow">
+                <p>Designed a full-stack operations tracker with Postgres and Prisma to simplify order lifecycles, resolve backjob confusion, and surface profitability.</p>
               </div>
-              <button
-                type="button"
-                onClick={() => toggleProjectDetails("laundry")}
-                className="hidden md:inline-flex mt-2 text-xs text-teal-300 hover:text-teal-200 font-medium"
-              >
-                {expandedProjects.laundry ? "Show less details" : "Show more details"}
-              </button>
               <div className="mt-6 pt-4 border-t border-slate-700/50 flex justify-between items-center">
                 <div className="flex gap-2">
                   <span className="text-[10px] bg-slate-900/50 border border-slate-700 px-2 py-1 rounded font-mono">Next.js</span>
