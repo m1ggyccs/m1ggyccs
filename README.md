@@ -1,109 +1,144 @@
 <p align="center">
-  <img src="./public/CovernoBG.png" alt="Andrei Miguel A. David | Software Engineering & Tech Consulting" width="100%">
+  <img src="./public/CovernoBG.png" alt="Andrei Miguel A. David | Software Engineer & Technical Consultant" width="100%">
 </p>
 
 <h1 align="center">👋 Hi! I'm Andrei Miguel A. David</h1>
+
 <p align="center">
-  <strong>Technical Consultant | Software Engineer | ERP Solutions Engineer</strong><br>
-  Computer Science Undergrad @ <a href="https://www.tip.edu.ph" target="_blank">Technological Institute of the Philippines – Manila</a>
-  <a href="https://www.linkedin.com/in/amigsdavid" target="_blank">LinkedIn</a> · <a href="https://github.com/m1ggyccs" target="_blank">GitHub</a>
+  <strong>Software Engineer | Technical Consultant | ERP Solutions Engineer</strong><br>
+  Computer Science Graduate · Technical Consultant
+</p>
+
+<p align="center">
+  <a href="https://www.linkedin.com/in/amigsdavid" target="_blank">LinkedIn</a> ·
+  <a href="https://github.com/m1ggyccs" target="_blank">GitHub</a>
 </p>
 
 ---
 
 ## About Me
 
-I’m a Software Engineer and a BSCS graduate of the Technological Institute of the Philippines.
+I’m a **Software Engineer and Technical Consultant** with a Bachelor of Science in Computer Science from the Technological Institute of the Philippines.
 
-I enjoy building scalable full-stack applications and working on AI-driven systems that solve real-world problems. My experience comes from both academic training at iACADEMY and hands-on work in technical consulting, where I’ve learned how systems are applied in real business environments.
+My background combines software development with enterprise systems, giving me experience in both building software and understanding how it is used in real business environments. I currently work as a **Technical Consultant at Mustard Seed Systems Corporation**, where I handle ERP enhancements, customizations, troubleshooting, reporting, testing, and implementation support.
 
-Currently a **Technical Consultant** at <a href="https://mseedsystems.com/" target="_blank">**Mustard Seed Systems Corporation**</a> focusing on ERP Systems Enhancement.
+My experience spans **Microsoft Dynamics 365 Business Central, Odoo, SAP Business One, and Oracle NetSuite**, alongside full-stack development, databases, and API-based systems.
 
-### **Core Engineering Focus:**
-- **ERP Solutions Engineering:** I design, enhance, integrate, and optimize enterprise business processes across multiple ERP ecosystems. My work extends beyond customization into solution architecture, workflow optimization, reporting, business process automation, and client-focused system enhancements.
-- **Enterprise Platforms:** I currently work as a Technical Consultant, helping organizations enhance and optimize enterprise resource planning (ERP) solutions. My experience spans **Microsoft Dynamics 365 Business Central**, **Oracle NetSuite**, **SAP Business One**, **Odoo.sh**, and **Odoo Online**, where I contribute to system enhancements, business process improvements, reporting, integrations, and technical support.
-- **Business Central Development:** Build extensions using **AL**, develop RDLC and Word reports, integrate APIs, optimize posting logic, extend standard application behavior, and implement maintainable ERP solutions.
-- **Full-Stack Engineering:** Build scalable applications using React, Next.js, Node.js, Express, SQL, and MongoDB that complement enterprise systems and business operations.
-- **AI & Machine Learning:** Develop computer vision and machine learning solutions using Python for real-world automation and decision support.
+I enjoy understanding how systems work from the technical level up to the business process they support, and I’m particularly interested in building solutions that are practical, maintainable, and useful to the people who use them.
+
+### Core Engineering Focus
+
+* **ERP Solutions Engineering** — Enhance and optimize enterprise systems based on business requirements, including workflows, reporting, integrations, process improvements, and technical troubleshooting.
+* **Business Central Development** — Develop Microsoft Dynamics 365 Business Central extensions using **AL**, including page and table extensions, workflows, integrations, and RDLC reports.
+* **ERP Platforms** — Work across **Microsoft Dynamics 365 Business Central, Odoo Online, Odoo.sh, SAP Business One, and Oracle NetSuite**.
+* **Full-Stack Development** — Build applications using **React, Next.js, Node.js, Express, SQL, and MongoDB**.
+* **Database & Technical Troubleshooting** — Investigate application, database, connectivity, authentication, and configuration issues using SQL and system-level troubleshooting.
+* **AI & Computer Vision** — Develop AI-driven systems using Python, including computer vision and machine learning applications for real-world use cases.
 
 ---
 
 ## Professional Experience
 
-**Technical Consultant | Mustard Seed Systems Corporation**  
-*April 2026 – Present*
+### Technical Consultant | Mustard Seed Systems Corporation
 
-**Technical Consultant Intern | Mustard Seed Systems Corporation**  
-*January 2026 – April 2026*
+**April 2026 – Present**
 
-- Design and implement ERP enhancements that improve business workflows, operational efficiency, and reporting across multiple industries.
-- Develop extensions for **Microsoft Dynamics 365 Business Central** using **AL**, including custom pages, tables, codeunits, integrations, APIs, posting logic, and RDLC/Word reports.
-- Enhance and maintain **Oracle NetSuite** through SuiteScript, SuiteFlow, custom forms, searches, and business process improvements.
-- Troubleshoot and optimize **SAP Business One** environments, resolving functional, database, reporting, and application issues.
-- Configure and enhance solutions in **Odoo.sh** and **Odoo Online**, supporting module implementations and workflow improvements.
-- Collaborate directly with clients to translate business requirements into scalable ERP solutions while balancing maintainability, performance, and upgrade compatibility.
+I handle technical delivery for ERP enhancements, customizations, troubleshooting, testing, and implementation support. My work involves developing Business Central solutions using AL, enhancing ERP systems across multiple platforms, investigating technical and database issues, and working with functional teams and clients to turn business requirements into working solutions.
+
+* Develop Microsoft Dynamics 365 Business Central solutions using **AL**, including page extensions, table extensions, workflows, and RDLC reports.
+* Implement and enhance solutions across **Odoo, Oracle NetSuite, and SAP Business One** based on client requirements.
+* Troubleshoot ERP application, database, connectivity, authentication, and configuration issues.
+* Perform SQL-based investigation and data validation when resolving system and database issues.
+* Work with functional consultants and clients throughout implementation, testing, deployment, and support.
+* Take ownership of the technical delivery and accountability of assigned projects and enhancements.
+
+### Technical Consultant Intern | Mustard Seed Systems Corporation
+
+**January 2026 – April 2026**
+
+During my internship, I supported ERP development, customization, reporting, testing, and troubleshooting activities. I worked mainly with **Microsoft Dynamics 365 Business Central and SAP Business One**, assisting with development, reports, database investigation, and client issue resolution.
+
+* Assisted with **AL development** and Business Central customizations.
+* Supported **RDLC report development and modifications**.
+* Assisted with database investigation and technical troubleshooting.
+* Supported testing and issue resolution for ERP implementations.
+* Worked with technical and functional consultants throughout implementation and support activities.
 
 ---
 
 ## Technical Stack
 
-### **Languages**
-`AL`, `SQL`, `TypeScript`, `JavaScript`, `Python`, `Java`, `C++`
+### Languages
 
-### **Frameworks & Web**
-`React`, `Next.js`, `Node.js`, `Express.js`, `.NET (Basic)`
+`AL` · `SQL` · `TypeScript` · `JavaScript` · `Python` · `Java` · `C++` · `PHP`
 
-### **Platforms & Tools**
-`Microsoft Dynamics 365 Business Central`, `Oracle NetSuite`, `SAP Business One`, `Odoo.sh`, `Odoo Online`, `Microsoft SQL Server (MSSQL)`, `MongoDB`, `Azure`, `Git/GitHub`
+### Development
 
----
+`React` · `Next.js` · `Node.js` · `Express` · `REST APIs` · `Full-Stack Development`
 
-## Education & Certifications
+### ERP
 
-**Bachelor of Science in Computer Science** 
-*Technological Institute of the Philippines, Manila (June 2022 - June 2026)* 
-Vice President Lister (VPAA) & Consistent Dean’s Lister
+`Microsoft Dynamics 365 Business Central` · `Odoo Online` · `Odoo.sh` · `SAP Business One` · `Oracle NetSuite`
 
-**Senior High School - Software Development** 
-*iACADEMY (2019 - 2021)* 
-1st Runner-up, iACADEMY Expo (Avalon Dawnbreak 2D Platformer)
+### Databases & Tools
 
-### **Recent Certifications:**
--  <a href="https://www.coursera.org/account/accomplishments/verify/HHZ2GVI1UFBG" target="_blank">AI Fundamentals (Google)</a> - May 2026
--  <a href="https://www.linkedin.com/in/amigsdavid/overlay/Certifications/701735446/treasury/?profileId=ACoAAFG-XRYBEa4IOaSVSg2AQCmRzPQZ3o0Mn2o" target="_blank">Six Sigma White Belt (The Council for Six Sigma Certification)</a> - Apr 2026
--  <a href="https://www.freecodecamp.org/certification/m1ggyccs/responsive-web-design-v9" target="_blank">Responsive Web Design (freeCodeCamp)</a> - Feb 2026
--  <a href="https://www.datacamp.com/certificate/PDA0016746029284" target="_blank">Python Data Associate (DataCamp)</a> - Sep 2025
--  <a href="https://www.linkedin.com/in/amigsdavid/overlay/Certifications/1317299153/treasury/?profileId=ACoAAFG-XRYBEa4IOaSVSg2AQCmRzPQZ3o0Mn2o" target="_blank">Microsoft Azure AI Fundamentals (TESDA)</a> - Jun 2025
--  <a href="https://www.credly.com/badges/8b9a6d4f-b5c1-4c77-b9c6-62e64369e6f8/linked_in_profile" target="_blank">Web Development Fundamentals (IBM)</a> - Jun 2025
--  <a href="https://www.coursera.org/account/accomplishments/verify/GBGZUROFZEKA" target="_blank">Business Analysis & Process Management (Coursera)</a> - Jun 2025
+`Microsoft SQL Server` · `PostgreSQL` · `MongoDB` · `Prisma` · `Git` · `GitHub` · `RDLC` · `Report Builder` · `VS Code`
 
 ---
 
-## Featured Projects  
+## Education
 
-| Project | Description | Stack |
-|----------|--------------|--------|
-| [**Smart Budget Tracking** (2025)](https://github.com/m1ggyccs/Smart-Budget-Tracking) | Personal finance management system for tracking expenses, budgets, and spending insights. | Python · SQLite |
-| [**Volleyball Gesture System** (2025)](https://github.com/m1ggyccs/Volleyball-Gesture-System) | AI-powered gesture recognition and scoring system for volleyball matches. | Python · Next.js · MongoDB |
-| [**Medical Certificate Issuance System** (2025)](https://github.com/m1ggyccs/Medical_Certificate_Issuance_System) | Simulated workflow optimization for clinic certificate processing using database-backed automation. | Python · MySQL |
-| [**M1G Laundry Tracker** (2025)](https://github.com/m1ggyccs/M1G-Laundry-Tracker) | Laundry management system with real-time order tracking and staff scheduling. | Next.js · Prisma · MongoDB |
-| [**UniversityHub** (2024)](https://github.com/m1ggyccs/UniversityHub) | Event management and collaboration platform for academic communities. | Node.js · Express · MongoDB |
+### Bachelor of Science in Computer Science
 
----
+**Technological Institute of the Philippines – Manila**
+**June 2026**
 
-## Leadership & Involvement  
+Vice President Lister (VPAA) · Consistent Dean’s Lister
 
-- **AWS Cloud Club TIP** – Member (2025–Present)  
-- **Open Source TIP Manila** – Member (2024–Present)  
-- **Vice President Lister (VPAA)** & **Dean’s Lister**  
-- **Project Manager** in multiple academic and AI-driven research initiatives  
+### Software Development Track
 
-These experiences shaped my **leadership, collaboration, and project coordination** skills in both academic and technical settings.
+**iACADEMY Inc. – Makati**
+**May 2021**
 
 ---
 
-## Let’s Connect
+## Featured Projects
 
-- [LinkedIn – @amigsdavid](https://www.linkedin.com/in/amigsdavid)  
-- [GitHub – @m1ggyccs](https://github.com/m1ggyccs)  
-- Email: [amigsdavid@gmail.com](mailto:amigsdavid@gmail.com)
+| Project                                                                                | Description                                                                                                                                                                                      | Stack                      |
+| -------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------- |
+| [**AV Robot Distance Detection**](#)                                                   | Monocular distance-estimation system for an autonomous vehicle prototype using object detection, depth estimation, ground-plane metricization, and filtering for real-time distance measurement. | Python · YOLOv8n · MiDaS   |
+| [**Volleyball Gesture System**](https://github.com/m1ggyccs/Volleyball-Gesture-System) | AI-powered gesture recognition and automated volleyball scoring system.                                                                                                                          | Python · Next.js · MongoDB |
+| [**M1G Laundry Tracker**](https://github.com/m1ggyccs/M1G-Laundry-Tracker)             | Full-stack laundry management application focused on order tracking and operational workflow.                                                                                                    | Next.js · Prisma · MongoDB |
+| [**University Hub**](https://github.com/m1ggyccs/UniversityHub)                        | Event management and collaboration platform designed to streamline student event coordination.                                                                                                   | Node.js · MongoDB          |
+| **Avalon Dawnbreak**                                                                   | 2D platformer game developed for the iACADEMY Expo and awarded 1st Runner-up for design and development.                                                                                         | Game Development           |
+
+---
+
+## Certifications
+
+* **AI Fundamentals** — Google · May 2026
+* **Six Sigma White Belt** — The Council for Six Sigma Certification · April 2026
+* **Responsive Web Design** — freeCodeCamp · February 2026
+* **Python Data Associate** — DataCamp · September 2025
+* **Microsoft Azure AI Fundamentals** — TESDA · June 2025
+* **Web Development Fundamentals** — IBM · June 2025
+* **Business Analysis & Process Management** — Coursera · June 2025
+
+---
+
+## Leadership & Involvement
+
+* **AWS Cloud Club TIP** — Member
+* **Open Source TIP Manila** — Member
+* **Vice President Lister (VPAA)** & Consistent Dean’s Lister
+* **Project Manager** in academic and AI-driven research projects
+
+These experiences helped me develop stronger communication, collaboration, leadership, and project coordination skills alongside my technical background.
+
+---
+
+## Let's Connect
+
+* [LinkedIn – @amigsdavid](https://www.linkedin.com/in/amigsdavid)
+* [GitHub – @m1ggyccs](https://github.com/m1ggyccs)
+* Email: [amigsdavid@email.com](mailto:amigsdavid@email.com)
