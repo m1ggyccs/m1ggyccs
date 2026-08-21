@@ -43,7 +43,7 @@ I enjoy understanding how systems work from the technical level up to the busine
 
 **April 2026 – Present**
 
-I handle technical delivery for ERP enhancements, customizations, troubleshooting, testing, and implementation support. My work involves developing Business Central solutions using AL, enhancing ERP systems across multiple platforms, investigating technical and database issues, and working with functional teams and clients to turn business requirements into working solutions.
+I handle technical delivery for ERP enhancements, customizations, troubleshooting, reporting, testing, and implementation support. My work involves developing Business Central solutions using AL, enhancing ERP systems across multiple platforms, investigating technical and database issues, and working with functional teams and clients to turn business requirements into working solutions.
 
 * Develop Microsoft Dynamics 365 Business Central solutions using **AL**, including page extensions, table extensions, workflows, and RDLC reports.
 * Implement and enhance solutions across **Odoo, Oracle NetSuite, and SAP Business One** based on client requirements.

@@ -9,8 +9,8 @@ const geistSans = Geist({
 
 export const metadata: Metadata = {
 title: "Andrei Miguel David | Work Portfolio",
-  description: "Portfolio of Andrei Miguel A. David - Software Engineer and Technical Consultant Intern specializing in Business Central and Full-stack development.",
-  keywords: ["Software Engineer", "Business Central", "AL Development", "Andrei David"],
+  description: "Portfolio of Andrei Miguel A. David - Software Engineer and Technical Consultant specializing in ERP systems, Business Central, and full-stack development.",
+  keywords: ["Software Engineer", "Technical Consultant", "Business Central", "AL Development", "Andrei David"],
   metadataBase: new URL("https://m1ggyccs.vercel.app"),
   openGraph: {
     title: "Andrei Miguel David | Work Portfolio",

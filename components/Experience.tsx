@@ -36,6 +36,13 @@ export default function Experience() {
                   <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-slate-800/80 text-slate-400 text-sm border border-slate-700 whitespace-nowrap font-mono">April 2026 – Present</div>
                 </div>
 
+                <ul className="mt-5 space-y-4 text-slate-400 leading-relaxed pl-2 md:pl-20">
+                  <li className="flex gap-3"><span className="text-teal-500 mt-1 text-lg">▹</span><span>Deliver ERP enhancements and customizations across Microsoft Dynamics 365 Business Central, Odoo, SAP Business One, and NetSuite based on client requirements.</span></li>
+                  <li className="flex gap-3"><span className="text-teal-500 mt-1 text-lg">▹</span><span>Develop and maintain Business Central solutions using AL, including page and table extensions, workflow changes, and RDLC reporting updates.</span></li>
+                  <li className="flex gap-3"><span className="text-teal-500 mt-1 text-lg">▹</span><span>Investigate technical issues involving application behavior, database integrity, connectivity, authentication, and configuration across ERP systems.</span></li>
+                  <li className="flex gap-3"><span className="text-teal-500 mt-1 text-lg">▹</span><span>Partner with functional teams and clients during implementation, testing, deployment, and support to translate business needs into working solutions.</span></li>
+                </ul>
+
                 <div className="border-t border-slate-800/70 pt-7">
                   <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-3">
                     <div>
@@ -46,10 +53,9 @@ export default function Experience() {
                   </div>
 
                   <ul className="mt-5 space-y-4 text-slate-400 leading-relaxed pl-2 md:pl-20">
-                    <li className="flex gap-3"><span className="text-teal-500 mt-1 text-lg">▹</span><span>Customize and enhance Microsoft Dynamics 365 Business Central solutions using AL, including page and table extensions and RDLC reports.</span></li>
-                    <li className="flex gap-3"><span className="text-teal-500 mt-1 text-lg">▹</span><span>Work on Business Central customization, troubleshooting, and support across purchasing, finance, and reporting processes.</span></li>
-                    <li className="flex gap-3"><span className="text-teal-500 mt-1 text-lg">▹</span><span>Customize NetSuite forms and develop scripts and custom actions based on client requirements, supporting workflow automation and system behavior.</span></li>
-                    <li className="flex gap-3"><span className="text-teal-500 mt-1 text-lg">▹</span><span>Troubleshoot and resolve SAP Business One issues, focusing on system behavior, data concerns, and user-related problems.</span></li>
+                    <li className="flex gap-3"><span className="text-teal-500 mt-1 text-lg">▹</span><span>Supported Business Central development and customization work, including AL changes, report updates, and troubleshooting tasks.</span></li>
+                    <li className="flex gap-3"><span className="text-teal-500 mt-1 text-lg">▹</span><span>Assisted with SAP Business One and ERP issue resolution by validating data, reviewing system behavior, and supporting implementation activities.</span></li>
+                    <li className="flex gap-3"><span className="text-teal-500 mt-1 text-lg">▹</span><span>Helped with database investigation and technical validation to identify root causes and support client-facing issue resolution.</span></li>
                   </ul>
                 </div>
               </div>
