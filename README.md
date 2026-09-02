@@ -2,7 +2,7 @@
   <img src="./public/CovernoBG.png" alt="Andrei Miguel A. David | Software Engineer & Technical Consultant" width="100%">
 </p>
 
-<h1 align="center">👋 Hi! I'm Andrei Miguel A. David</h1>
+<h1 align="center">👋 Hi! It's Miggy</h1>
 
 <p align="center">
   <strong>Software Engineer | Technical Consultant | ERP Solutions Engineer</strong><br>
